@@ -1,0 +1,1454 @@
+/* =====================
+   GLOBAL STYLING
+   ===================== */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100..900&display=swap");
+
+.kurikulum-container {
+  font-family: "Montserrat", "Poppins", sans-serif;
+  color: #333;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 80px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1 0 auto;
+}
+
+.kurikulum-hero {
+  background-image: url("/herosection.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 88vh;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(255, 203, 0, 0.1);
+}
+
+.kurikulum-hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px 60px 20px;
+  z-index: 1;
+  box-sizing: border-box;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+
+.kurikulum-hero-title {
+  font-size: 42px;
+  margin-bottom: 10px;
+  background: #fff4e0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.atlantis-plus-teks {
+  font-size: clamp(36px, 7vw, 70px);
+  background: #ffd000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.smp-teks {
+  font-size: clamp(36px, 7vw, 70px);
+  margin-bottom: 10px;
+  background: #fff4e0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.kurikulum-hero-subtitle {
+  font-size: 1.1em;
+  margin-bottom: 0;
+  background: #ffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 100;
+}
+
+/* ============================
+   RESPONSIVE HERO SECTION
+   ============================ */
+
+/* Tablet Landscape & Laptop Kecil (≤1200px) */
+@media screen and (max-width: 1200px) {
+  .kurikulum-smk-hero {
+    min-height: 80vh;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+
+  .kurikulum-smk-hero-overlay {
+    padding: 30px 15px 50px 15px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+}
+
+/* Tablet Potrait (≤992px) */
+@media screen and (max-width: 992px) {
+  .kurikulum-smk-hero {
+    min-height: 70vh;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+
+  .kurikulum-smk-hero-overlay {
+    padding: 25px 15px 40px 15px;
+  }
+
+  .kurikulum-smk-hero-title {
+    font-size: clamp(24px, 5vw, 36px);
+  }
+
+  .atlantis-plus-teks,
+  .smk-teks {
+    font-size: clamp(20px, 5vw, 40px);
+  }
+
+  .kurikulum-smk-hero-subtitle {
+    font-size: clamp(0.85em, 2.5vw, 1em);
+  }
+}
+
+/* Mobile Landscape (≤768px) */
+@media screen and (max-width: 768px) {
+  .kurikulum-smk-hero {
+    min-height: 60vh;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+
+  .kurikulum-smk-hero-overlay {
+    padding: 20px 12px 30px 12px;
+  }
+
+  .kurikulum-smk-hero-title {
+    font-size: clamp(20px, 6vw, 32px);
+  }
+
+  .atlantis-plus-teks,
+  .smk-teks {
+    font-size: clamp(18px, 6vw, 32px);
+  }
+}
+
+/* Mobile Potrait Kecil (≤576px) */
+@media screen and (max-width: 576px) {
+  .kurikulum-smk-hero {
+    min-height: 50vh;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+
+  .kurikulum-smk-hero-overlay {
+    padding: 15px 10px 25px 10px;
+  }
+
+  .kurikulum-smk-hero-title {
+    font-size: clamp(18px, 7vw, 28px);
+  }
+
+  .atlantis-plus-teks,
+  .smk-teks {
+    font-size: clamp(16px, 7vw, 28px);
+  }
+
+  .kurikulum-smk-hero-subtitle {
+    font-size: clamp(0.8em, 3.5vw, 0.95em);
+  }
+}
+
+/* Extra Kecil (≤400px) */
+@media screen and (max-width: 400px) {
+  .kurikulum-smk-hero {
+    min-height: 45vh;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+
+  .kurikulum-smk-hero-title {
+    font-size: clamp(16px, 8vw, 24px);
+  }
+
+  .atlantis-plus-teks,
+  .smk-teks {
+    font-size: clamp(14px, 8vw, 24px);
+  }
+}
+
+/* =====================
+   INFO SECTION (base)
+   ===================== */
+.curriculum-smk-info-section {
+  width: 70%;
+  margin: 40px auto;
+  background-color: #fff9ef;
+  border-radius: 8px;
+  box-shadow: -2px 20px 15.4px 3px rgba(0, 0, 0, 0.38);
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  bottom: 150px;
+  z-index: 1;
+  margin-bottom: -120px;
+}
+
+.curriculum-smk-info-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  flex-wrap: wrap; /* biar gak overflow di layar kecil */
+  gap: 10px;
+}
+
+.info-kurikulum-smk-box {
+  background-color: #e53935;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  margin-right: 20px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+.date-box {
+  color: #777;
+  font-size: 0.9em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.curriculum-image-container {
+  display: block;
+  text-align: center;
+  margin: 0 auto 20px auto;
+  width: 100%;
+}
+
+.curriculum-main-image {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 930px;
+  height: auto;
+  aspect-ratio: 930 / 523;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.curriculum-school-description {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 3%;
+  color: #000000;
+  text-align: left;
+  margin: 30px auto;
+  max-width: 950px;
+  display: block;
+  font-family: "Albert Sans", sans-serif;
+}
+
+
+/* ============================
+   RESPONSIVE MEDIA QUERIES
+   ============================ */
+
+/* Layar besar (desktop lebar) */
+@media (min-width: 1400px) {
+  .curriculum-smk-info-section {
+    width: 60%;
+  }
+  .curriculum-school-description {
+    font-size: 18px;
+  }
+}
+
+/* Laptop standar */
+@media (max-width: 1200px) {
+  .curriculum-smk-info-section {
+    width: 75%;
+    bottom: 100px;
+    margin-bottom: -80px;
+  }
+}
+
+/* Tablet landscape */
+@media (max-width: 992px) {
+  .curriculum-smk-info-section {
+    width: 85%;
+    bottom: 80px;
+    margin-bottom: -60px;
+  }
+  .curriculum-school-description {
+    font-size: 16px;
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) {
+  .curriculum-smk-info-section {
+    width: 90%;
+    bottom: 60px;
+    margin-bottom: -40px;
+    padding: 15px;
+  }
+  .info-kurikulum-smk-box {
+    font-size: 0.85em;
+    padding: 8px 15px;
+  }
+  .curriculum-school-description {
+    font-size: 15px;
+    text-align: justify;
+  }
+}
+
+/* Smartphone */
+@media (max-width: 576px) {
+  .curriculum-smk-info-section {
+    width: 95%;
+    bottom: 40px;
+    margin-bottom: -20px;
+    padding: 12px;
+  }
+  .curriculum-smk-info-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .info-kurikulum-smk-box {
+    margin-right: 0;
+    margin-bottom: 8px;
+    font-size: 0.8em;
+  }
+  .date-box {
+    font-size: 0.8em;
+  }
+  .curriculum-school-description {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+/* Smartphone kecil */
+@media (max-width: 400px) {
+  .curriculum-smk-info-section {
+    padding: 10px;
+    bottom: 30px;
+  }
+  .curriculum-school-description {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================
+   THREE PILLAR SECTION
+   ========================================= */
+.three-pillar-full-section {
+  padding: 60px 0;
+  margin-top: -30px;
+}
+
+.the-pillar-smk {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.pillar-box {
+  flex: 1 1 33.33%;
+  max-width: 345px;
+  padding: 35px 30px;
+  border-radius: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  height: 272px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.pillar-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.pillar-box.program-keahlian {
+  background-color: #1d1819;
+  border-top-left-radius: 19px;
+  border-bottom-left-radius: 19px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.pillar-box.praktek-lapangan {
+  background-color: #a21317;
+  border-radius: 0;
+}
+
+.pillar-box.kewirausahaan {
+  background-color: #1d1819;
+  color: #ffffff;
+  border-top-right-radius: 19px;
+  border-bottom-right-radius: 19px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.pillar-title {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+}
+
+.pillar-description {
+  font-size: 15px;
+  margin-bottom: 30px;
+  flex-grow: 1;
+  padding-right: 20px;
+  text-align: left;
+  font-family: "Albert Sans", sans-serif;
+  color: #fff4e0;
+}
+
+.pillar-icon {
+  width: 111px;
+  height: 111px;
+  padding: 10px;
+  position: absolute;
+  bottom:0;
+  right: 10px;
+  z-index: 2;
+}
+
+/* =========================================
+   RESPONSIVE - THREE PILLAR SECTION
+   ========================================= */
+
+/* Tablet landscape & small desktop */
+@media screen and (max-width: 991px) {
+  .pillar-box {
+    flex: 1 1 45%;
+    max-width: 45%;
+    height: auto; /* biar tinggi fleksibel mengikuti konten */
+    margin-bottom: 20px;
+    padding: 25px 20px;
+  }
+
+  .pillar-title {
+    font-size: 22px;
+  }
+
+  .pillar-description {
+    font-size: 14px;
+    padding-right: 10px;
+  }
+
+  .pillar-icon {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* Mobile - 1 kolom */
+@media screen and (max-width: 767px) {
+  .the-pillar-smk {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .pillar-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px !important; /* rapikan semua jadi rounded */
+    padding: 20px 18px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .pillar-title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .pillar-description {
+    font-size: 14px;
+    text-align: center;
+    padding: 0;
+  }
+
+  .pillar-icon {
+    position: static;
+    margin-top: 15px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Extra small (≤480px) */
+@media screen and (max-width: 480px) {
+  .pillar-title {
+    font-size: 18px;
+  }
+
+  .pillar-description {
+    font-size: 13px;
+  }
+
+  .pillar-icon {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+
+
+/* =========================================
+   PROGRAM KEAHLIAN SECTION
+   ========================================= */
+.program-keahlian-section {
+  background-color: rgba(162, 19, 23, 1);
+  color: white;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.program-keahlian-header h1 {
+  font-size: clamp(24px, 5vw, 50px);
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #fff4e0;
+  font-family: "Paytone One", sans-serif;
+}
+
+.jurusan-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  color: #fff4e0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.fasilitas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fasilitas-card {
+  flex: 0 0 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.fasilitas-image {
+  width: 100%;
+  height: 229px;
+  object-fit: cover;
+  box-shadow: 0px 3px 7.4px 3px rgba(0, 0, 0, 0.28);
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.fasilitas-placeholder {
+  width: 100%;
+  height: 212px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.circular-cards-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.circular-card {
+  width: 136px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.circular-card-image {
+  width: 136px;
+  height: 136px;
+  object-fit: cover;
+}
+
+.circular-card-description {
+  margin-top: 10px;
+  font-size: clamp(12px, 2vw, 14px);
+  font-weight: 400;
+  text-align: center;
+  color: #fff4e0;
+  font-family: "Albert Sans", sans-serif;
+  line-height: 1.4;
+  max-width: 136px;
+}
+
+.program-description-container {
+  max-width: 900px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.program-description-text {
+  font-size: clamp(16px, 2.5vw, 18px);
+  line-height: 1.6;
+  font-weight: 400;
+  text-align: justify;
+  font-family: "Albert Sans", sans-serif;
+  color: #fff4e0;
+}
+
+/* =========================================
+   RESPONSIVE PROGRAM KEAHLIAN
+   ========================================= */
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .program-keahlian-header h1 {
+    font-size: clamp(22px, 4vw, 40px);
+  }
+
+  .jurusan-header h2 {
+    font-size: 28px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+  }
+
+  .fasilitas-grid {
+    gap: 15px;
+    max-width: 95%;
+  }
+
+  .fasilitas-card {
+    flex: 0 0 300px;
+  }
+
+  .program-description-container {
+    max-width: 95%;
+    padding: 0 10px;
+  }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+  .program-keahlian-section {
+    padding: 30px 15px;
+  }
+
+  .program-keahlian-header h1 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .jurusan-header h2 {
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+
+  .fasilitas-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .fasilitas-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .fasilitas-image,
+  .fasilitas-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* bikin semua selaras */
+    height: auto;
+  }
+
+  .circular-cards-container {
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .circular-card {
+    width: 100px;
+  }
+
+  .circular-card-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .circular-card-description {
+    font-size: 12px;
+    max-width: 100px;
+  }
+
+  .program-description-container {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .program-description-text {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
+/* Extra small devices (≤480px) */
+@media (max-width: 480px) {
+  .program-keahlian-header h1 {
+    font-size: 20px;
+  }
+
+  .jurusan-header h2 {
+    font-size: 18px;
+  }
+
+  .fasilitas-image,
+  .fasilitas-placeholder {
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
+  .circular-card {
+    width: 90px;
+  }
+
+  .circular-card-image {
+    width: 90px;
+    height: 90px;
+  }
+
+  .circular-card-description {
+    font-size: 11px;
+    max-width: 90px;
+  }
+
+  .program-description-text {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+
+/* =========================================
+   PRAKTEK SECTION
+   ========================================= */
+.praktik-section {
+  background-color: #1d1819;
+  color: white;
+  padding: 70px 0;
+  width: 100%;
+}
+
+.praktik-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.praktik-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.praktik-title {
+  font-size: clamp(28px, 5vw, 50px); /* Adjusted for smaller screens */
+  font-weight: 400;
+  margin-bottom: 20px;
+  font-family: "Paytone One", sans-serif;
+}
+
+.praktik-desc {
+  font-size: clamp(14px, 2.5vw, 16px);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 650px;
+  color: #fff4e0;
+  font-weight: 400;
+  font-family: "Albert Sans", sans-serif;
+}
+
+.praktik-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.praktik-icon {
+  width: 104px;
+  height: 104px;
+  flex-shrink: 0;
+}
+
+.praktik-card h3 {
+  font-size: clamp(16px, 2.5vw, 18px); /* skala responsif */
+  font-family: "Albert Sans", sans-serif;
+  font-weight: 900; /* black = 900 */
+  font-style: normal; /* 'Black' di Figma = font-weight, bukan font-style */
+  line-height: 100%; /* sesuai figma */
+  letter-spacing: 0.03em; /* 3% = 0.03em */
+  color: #fff4e0;
+  margin-bottom: 8px;
+  max-width: 500px;
+}
+
+.praktik-card p {
+  font-size: clamp(12px, 2vw, 14px);
+  font-family: "Albert Sans", sans-serif;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #ccc;
+  max-width: 500px;
+}
+
+.praktik-images-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 140px;
+  align-self: flex-start;
+}
+
+.praktik-images-container img {
+  width: 100%;
+  max-width: 326px;
+  height: 200px; /* seragam di semua gambar */
+  object-fit: cover;
+  display: block;
+}
+
+.praktik-image-1 {
+  border-top-left-radius: 27px;
+  border-top-right-radius: 27px;
+}
+
+.praktik-image-2 {
+  border-bottom-left-radius: 27px;
+  border-bottom-right-radius: 27px;
+}
+
+/* ============================
+   RESPONSIVE PRAKTEK SECTION
+   ============================ */
+
+/* Tablet & Desktop: biarkan tetap 2 kolom */
+@media (min-width: 769px) {
+  .praktik-content {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .praktik-images-container {
+    margin-top: 140px;
+    align-self: flex-start;
+  }
+}
+
+/* Tablet (980px - 771px) */
+@media (max-width: 980px) and (min-width: 771px) {
+  .praktik-content {
+    gap: 25px;
+    padding: 0 20px;
+  }
+
+  .praktik-text {
+    min-width: 260px;
+  }
+
+  .praktik-title {
+    font-size: 32px;
+  }
+
+  .praktik-desc {
+    font-size: 15px;
+    max-width: 500px;
+  }
+
+  .praktik-card h3 {
+    font-size: 16px;
+    max-width: 400px;
+  }
+
+  .praktik-card p {
+    font-size: 13px;
+    max-width: 400px;
+  }
+
+  .praktik-images-container {
+    margin-top: 100px; /* biar nggak terlalu jauh dari teks */
+  }
+
+  .praktik-images-container img {
+    max-width: 280px;
+    height: 180px; /* tetap seragam */
+  }
+}
+
+/* HP: stack jadi 1 kolom */
+@media (max-width: 768px) {
+  .praktik-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .praktik-text {
+    min-width: auto;
+  }
+
+  .praktik-card {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .praktik-images-container {
+    margin-top: 20px;
+    align-self: center;
+    width: 100%;
+    max-width: 326px;
+  }
+
+  .praktik-images-container img {
+    width: 100%;
+    height: 200px; /* selaras di HP juga */
+  }
+}
+
+
+
+
+
+/* =========================================
+   KEWIRAUSAHAAN SECTION
+   ========================================= */
+.kewirausahaan-section {
+  background-color: #a51c1c;
+  color: white;
+   padding: 50px 0 120px 0; /* atas 50px, kanan 0, bawah 120px, kiri 0 */
+  text-align: center;
+}
+
+.kewirausahaan-header {
+  text-align: center;
+}
+
+.kewirausahaan-header .title {
+  font-size: clamp(28px, 5vw, 50px); /* Adjusted for smaller screens */
+  font-weight: 800;
+  margin-bottom: 5px;
+  font-family: "Paytone One", sans-serif;
+  letter-spacing: 0.2vw;
+  text-align: center;
+  color: white;
+}
+
+.kewirausahaan-header .subtitle {
+  font-size: clamp(18px, 3.5vw, 30px);
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: white !important;
+  font-family: "Montserrat", sans-serif;
+  -webkit-text-fill-color: white !important;
+}
+
+.kewirausahaan-header .description {
+  max-width: 1000px;
+  margin: 0 auto 50px auto;
+  text-align: left;
+  line-height: 1.6;
+  font-size: clamp(14px, 2.5vw, 16px);
+  color: rgba(255, 244, 224, 1);
+  font-family: "Albert Sans", sans-serif;
+}
+
+.kewirausahaan-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.kewirausahaan-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1 1 auto;
+  min-width: 300px;
+}
+
+.kewirausahaan-card {
+  background: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 364px;
+  height: 110px;
+  margin: 0 auto;
+}
+
+.kewirausahaan-icon img {
+  width: 95px;
+  height: 95px;
+  object-fit: contain;
+  display: block;
+}
+
+.kewirausahaan-divider {
+  width: 2px;
+  height: 60px;
+  border-left: 2px dashed #999;
+  margin: 0 15px;
+}
+
+.kewirausahaan-card-text h3 {
+  margin: 0 0 8px 0;
+  font-size: clamp(16px, 2.5vw, 18px);
+  font-weight: 600;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+}
+
+.kewirausahaan-card-text p {
+  margin: 0;
+  font-size: clamp(12px, 2vw, 14px);
+  color: #030303;
+  text-align: left;
+  line-height: 1.2;
+  font-weight: 500;
+  font-family: "Albert Sans", sans-serif;
+}
+
+.kewirausahaan-image-container img {
+  width: 100%;
+  max-width: 610px;
+  height: auto; /* Maintain aspect ratio */
+  aspect-ratio: 610 / 382; /* Preserve original proportions */
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 4px 9px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+/* ===========================
+   RESPONSIVE KEWIRAUSAHAAN
+   =========================== */
+
+/* 1053px sampai 769px → gambar di atas, card di bawah */
+@media (max-width: 1053px) and (min-width: 769px) {
+  .kewirausahaan-content {
+    flex-direction: column; /* ubah ke susun vertikal */
+    align-items: center;
+    gap: 30px;
+  }
+
+  .kewirausahaan-image-container {
+    order: -1; /* gambar tampil duluan */
+    width: 100%;
+    max-width: 600px; /* agak lebih besar dari versi HP */
+  }
+
+  .kewirausahaan-cards-container {
+    width: 100%;
+    max-width: 700px;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .kewirausahaan-card {
+    max-width: 100%;
+    height: auto;
+    padding: 18px;
+  }
+
+  .kewirausahaan-icon img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .kewirausahaan-card-text h3 {
+    font-size: 18px;
+  }
+
+  .kewirausahaan-card-text p {
+    font-size: 15px;
+  }
+}
+
+/* Tablet kecil & HP (≤768px) → tetap stack */
+@media (max-width: 768px) {
+  .kewirausahaan-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .kewirausahaan-header .description {
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .kewirausahaan-cards-container {
+    width: 100%;
+    max-width: 100%;
+    gap: 15px;
+  }
+
+  .kewirausahaan-card {
+    max-width: 100%;
+    height: auto;
+    padding: 12px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .kewirausahaan-icon img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+  }
+
+  .kewirausahaan-divider {
+    display: none;
+  }
+
+  .kewirausahaan-card-text {
+    text-align: center;
+  }
+
+  .kewirausahaan-card-text h3 {
+    font-size: 16px;
+  }
+
+  .kewirausahaan-card-text p {
+    font-size: 13px;
+  }
+
+  .kewirausahaan-image-container img {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: auto;
+  }
+}
+
+
+
+/* =========================================
+   GALERI SECTION
+   ========================================= */
+.galeri-wrapper {
+  background-color: #fdf9f2;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  
+}
+
+.galeri-container {
+  display: flex;
+  background-color: #1d1819;
+  border-radius: 29px;
+  overflow: hidden;
+  padding: 20px 20px;
+  gap: 80px;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+}
+
+.galeri-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.galeri-text h2 {
+  font-size: clamp(20px, 4vw, 36px);
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.galeri-text h2 span {
+  color: #ffb800;
+}
+
+.galeri-arrow {
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.galeri-images {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.galeri-images img {
+  width: 100%;
+  max-width: 631px;
+  height: auto;
+  aspect-ratio: 631 / 333; /* Preserve original proportions */
+  border-radius: 22px;
+  object-fit: cover;
+  scroll-snap-align: start;
+}
+
+/* =========================
+   RESPONSIVE - GALERI
+   ========================= */
+@media (max-width: 1000px) and (min-width: 800px){
+  .galeri-container {
+    gap: 20px;            /* jarak lebih kecil */
+    width: 680px;     /* padding diperkecil */
+  }
+
+  .galeri-text h2 {
+    font-size: clamp(18px, 5vw, 28px); /* teks ikut kecil */
+    margin-bottom: 15px;
+  }
+
+  .galeri-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .galeri-images img {
+    width: 400px;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 779px) and (min-width: 681px) {
+   .galeri-container {
+    gap: 20px;            /* jarak lebih kecil */
+    width: 680px;     /* padding diperkecil */
+  }
+
+  .galeri-images img {
+    width: 400px;
+    border-radius: 15px;
+  }
+
+  
+}
+
+@media (max-width: 681px) and (min-width: 480px) {
+   .galeri-container {
+    gap: 20px;            /* jarak lebih kecil */
+    width: 450px;     /* padding diperkecil */
+    height: auto;
+    position: relative; /* penting! */
+  }
+
+  .galeri-images img {
+    width: 400px;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .galeri-text h2 {
+    position: relative;
+    right: 150px;
+    max-width: 100px;
+    font-size: 25px;
+  }
+
+  .galeri-arrow {
+   position: absolute;
+   top: 35px;
+   
+  }
+
+  
+}
+
+@media (max-width: 479px) and (min-width: 360px) {
+  .galeri-container {
+    gap: 20px;            /* jarak lebih kecil */
+    width: 350px;     /* padding diperkecil */
+    height: auto;
+    position: relative; /* penting! */
+  }
+
+  .galeri-images img {
+    width: 330px;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .galeri-text h2 {
+    position: relative;
+    right: 100px;
+    max-width: 100px;
+    font-size: 25px;
+  }
+
+  .galeri-arrow {
+   position: absolute;
+   top: 15px;
+   
+  }
+}
+
+@media (max-width: 480px) {
+  .galeri-container {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .galeri-text h2 {
+    font-size: clamp(16px, 5vw, 22px);
+  }
+
+  .galeri-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .galeri-images img {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+}

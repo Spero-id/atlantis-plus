@@ -1,0 +1,260 @@
+/* =====================
+    KURIKULUM HERO SECTION
+    ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+.OlimpiadeSMP-container {
+    font-family: 'Montserrat', 'Poppins', sans-serif;
+    color: #333;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 80px;
+    /* sesuaikan jika navbar lebih tinggi */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Agar footer selalu di bawah, dorong konten utama ke atas */
+.main-content {
+    flex: 1 0 auto;
+}
+
+.OlimpiadeSMP-hero {
+    background-image: url('/herosection.jpg');
+    /* Pastikan path gambar hero section Anda benar */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 88vh;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(255, 203, 0, 0.10);
+}
+
+.OlimpiadeSMP-hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px 60px 20px;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.OlimpiadeSMP-hero-title {
+    font-size: 42px;
+    margin-bottom: 10px;
+    background: #FFF4E0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 400;
+    /* Perbaiki typo dari 400z menjadi 400 */
+    letter-spacing: 1px;
+}
+
+.OlimpiadeSMP-teks1 {
+    font-size: clamp(36px, 7vw, 70px);
+    background: #ffd000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.OlimpiadeSMP-teks {
+    font-size: clamp(36px, 7vw, 70px);
+    margin-bottom: 10px;
+    background: #FFF4E0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.OlimpiadeSMP-hero-subtitle {
+    font-size: 1.1em;
+    margin-bottom: 0;
+    background: #ffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 100;
+}
+
+
+/* ===== Penghargaan Atas ===== */
+.penghargaan-container-atas {
+    padding: 40px 0;
+}
+
+.penghargaan-container-atas .penghargaan-row {
+    display: flex;
+    width: 1300px;
+    height: 432px;
+    margin: auto;
+    background: #fff;
+    border-radius: 55px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.penghargaan-container-atas .red-bg {
+    background: linear-gradient(to right, #EC3237 60%, #fff 40%);
+}
+
+.penghargaan-container-atas .penghargaan-text {
+    flex: 1;
+    padding: 40px;
+    color: white;
+}
+
+.penghargaan-container-atas .red-bg .penghargaan-text {
+    background: linear-gradient(to bottom, #EC3237 0%, #920303 100%);
+    color: white;
+}
+
+.penghargaan-container-atas h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.penghargaan-container-atas .sub {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.penghargaan-container-atas p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.penghargaan-container-atas .penghargaan-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.penghargaan-container-atas .penghargaan-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== Penghargaan Bawah ===== */
+.penghargaan-container-bawah {
+    padding: 40px 0;
+}
+
+.penghargaan-container-bawah .penghargaan-row {
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.penghargaan-container-bawah .penghargaan-text {
+    flex: 1;
+    padding: 40px;
+    color: #333;
+}
+
+.penghargaan-container-bawah h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.penghargaan-container-bawah .sub {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.penghargaan-container-bawah p {
+    font-size: 20px;
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+.penghargaan-container-bawah .penghargaan-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.penghargaan-container-bawah .penghargaan-img img {
+    max-width: 580px;
+    height: 496px;
+    border-radius: 59px;
+    border: 3px solid #c4161c;
+}
+
+/* ===== Champion Section ===== */
+.champion-section {
+    background-color: #c4161c;
+    padding: 40px 0;
+    text-align: center;
+    color: white;
+}
+
+.champion-section h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.champion-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.champion-card {
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 220px;
+    text-align: center;
+}
+
+.champion-card img {
+    width: 100%;
+    display: block;
+}
+
+.champion-card p {
+    font-size: 14px;
+    font-weight: bold;
+    background: #000;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+}

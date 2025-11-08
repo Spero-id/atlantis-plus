@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@400&display=swap');
+
+/* =====================
+   GLOBAL RESET & CONTAINER
+   ===================== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.jurusan-container {
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  color: #333;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 80px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =====================
+   JURUSAN HERO SECTION
+   ===================== */
+.jurusan-hero {
+  background-image: url('/herosection.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 88vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(255, 203, 0, 0.10);
+}
+
+.jurusan-hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px 60px;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.jurusan-hero-title {
+  font-size: clamp(24px, 4vw, 28px);
+  margin-bottom: 10px;
+  background: #FFFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.atlantis-plus-teks {
+  font-size: clamp(36px, 7vw, 70px);
+  background: #ffd000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.smk-teks {
+  font-size: clamp(36px, 7vw, 70px);
+  margin-bottom: 10px;
+  background: #FFFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.jurusan-hero-subtitle {
+  font-size: clamp(14px, 2.5vw, 16px);
+  margin-bottom: 0;
+  background: #ffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 100;
+}
+
+/* =====================
+   JURUSAN SEKOLAH SECTION
+   ===================== */
+.jurusan-sekolah-section {
+  font-family: 'Montserrat', sans-serif;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  border-top-left-radius: 193px;
+  border-top-right-radius: 211px;
+  box-sizing: border-box;
+  position: relative;
+  top: -220px;
+  background-color: #FFF4E0;
+  z-index: 2;
+}
+
+.jurusan-sekolah-title {
+  font-size: clamp(20px, 4vw, 25px);
+  font-weight: 400;
+  color: #EC3237;
+  margin-bottom: 30px;
+  font-family: 'Lexend Exa', sans-serif;
+}
+
+.jurusan-top-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 30px;
+}
+
+.jurusan-middle-text {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+  line-height: 1.6;
+  color: #555;
+  font-size: clamp(14px, 2.5vw, 16px);
+  max-width: 450px;
+}
+
+.jurusan-middle-text .jurusan-sekolah-title {
+  text-align: left;
+  margin-bottom: 20px;
+  display: block;
+  width: 100%;
+}
+
+.jurusan-sekolah-top-image-wrapper {
+  flex: 1;
+  max-width: 508px;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.jurusan-main-illustration {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* =====================
+   JURUSAN SECTION (Grid mirip Fasilitas)
+   ===================== */
+.jurusan-section {
+  font-family: 'Montserrat', sans-serif;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.jurusan-section h2 {
+  font-size: clamp(20px, 4vw, 25px);
+  font-weight: 400;
+  color: #EC3237;
+  margin-bottom: 30px;
+  font-family: 'Lexend Exa', sans-serif;
+}
+
+.jurusan-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.jurusan-card-jurusan {
+  flex: 0 0 clamp(250px, 45%, 330px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* bikin tombol selalu sejajar bawah */
+  align-items: center;
+  text-align: center;
+  border-radius: 28px;
+  padding: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+
+.jurusan-card-jurusan:hover {
+  transform: translateY(-5px);
+}
+
+.jurusan-card-image {
+  width: 100%;
+  height: 329px;
+  object-fit: contain;
+  margin-bottom: -50px;
+}
+
+.jurusan-card-jurusan h3 {
+  font-size: clamp(16px, 2.5vw, 18px);
+  font-weight: 600;
+  margin: 10px 0;
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  text-align: left;
+  margin-right: 140px;
+}
+
+.jurusan-more-info-button {
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 2px solid #000000; /* sesuai border-width: 2px */
+  width: 240px;
+  height: 51px;
+  border-radius: 25.5px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900; /* Black */
+  font-style: normal;
+  font-size: 20px;
+  line-height: 21px;
+  letter-spacing: 5%; /* tidak valid → pakai em */
+  letter-spacing: 0.05em;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex; /* supaya teks selalu rata tengah */
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.jurusan-more-info-button:hover {
+  background-color: #c41f25;
+  border-color: #c41f25;
+}
+
+
+.jurusan-description {
+  margin-top: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(14px, 2.5vw, 16px);
+  line-height: 1.6;
+  color: #555;
+}
+
+

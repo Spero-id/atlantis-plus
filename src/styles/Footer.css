@@ -1,0 +1,211 @@
+/* Pastikan Anda memiliki styling footer yang sudah ada */
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  box-shadow: 0 -0.25rem 0 #000; /* 4px → rem */
+}
+
+.footer-left {
+  background-color:#FFF9EF;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0.4rem, 0.6vw + 0.3rem, 0.8rem) clamp(0.6rem, 1vw + 0.5rem, 1rem);
+  box-shadow: 0 -0.25rem 0 #000;
+}
+
+.footer-left img {
+  width: clamp(4rem, 6vw, 6.25rem); /* 100px = 6.25rem */
+  margin: 0 clamp(0.3rem, 1vw, 0.6rem);
+}
+
+.footer-right {
+  background-color:#323232;
+  color: white;
+  flex: 3;
+  padding: clamp(1rem, 2vw, 1.9rem);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: clamp(10rem, 30vw, 12.5rem); /* 200px */
+  margin-bottom: clamp(1rem, 2vw, 1.3rem);
+}
+
+.footer-section h4 {
+  margin-bottom: clamp(0.4rem, 1vw, 0.6rem);
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  color: #f4c842;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: clamp(0.3rem, 0.8vw, 0.4rem);
+}
+
+.footer-section li a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section li a:hover {
+  color: #f4c842;
+}
+
+.footer-section p {
+  margin: clamp(0.3rem, 0.6vw, 0.4rem) 0;
+  line-height: 1.5;
+}
+
+.footer-desc {
+  margin-top: clamp(0.5rem, 1vw, 0.7rem);
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
+  color: #ccc;
+}
+
+/* ======================================================== */
+/* ICONS */
+/* ======================================================== */
+.footer-section p svg {
+  margin-right: clamp(0.3rem, 0.8vw, 0.5rem);
+  vertical-align: middle;
+  font-size: 1.1em;
+  color: #ffffff;
+}
+
+/* ======================================================== */
+/* FOOTER DROPDOWN MENU */
+/* ======================================================== */
+
+.footer-dropdown-item {
+  position: relative;
+  list-style: none;
+  margin-bottom: clamp(0.3rem, 0.6vw, 0.4rem);
+}
+
+.footer-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: clamp(0.1rem, 0.4vw, 0.2rem) 0;
+  color: inherit;
+  transition: color 0.3s ease;
+  font-size: 1em;
+  line-height: 1.5;
+  margin-right: clamp(0.8rem, 3vw, 1.25rem);
+}
+
+.footer-dropdown-toggle:hover {
+  color: #f4c842;
+}
+
+.footer-arrow-down {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+  font-size: 0.8em;
+  padding-left: clamp(0.2rem, 0.5vw, 0.3rem);
+}
+
+.footer-dropdown-item.open .footer-arrow-down {
+  transform: rotate(-90deg);
+}
+
+.footer-dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: clamp(0.3rem, 1vw, 0.5rem) 0 0 clamp(0.6rem, 2vw, 0.9rem);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  will-change: max-height;
+}
+
+.footer-dropdown-menu.open {
+  max-height: 12.5rem; /* 200px */
+}
+
+.footer-dropdown-menu li {
+  margin-bottom: clamp(0.2rem, 0.6vw, 0.3rem);
+}
+
+.footer-dropdown-menu li a {
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: block;
+  padding: clamp(0.1rem, 0.4vw, 0.2rem) 0;
+}
+
+.footer-dropdown-menu li a:hover {
+  color: #f4c842;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer-left {
+    width: 100%;
+    justify-content: center;
+    padding: clamp(0.8rem, 2vw, 1rem) 0;
+    box-shadow: 0 0.25rem 0 #000;
+  }
+
+  .footer-left img {
+    width: clamp(3.5rem, 8vw, 5rem);
+    margin: 0 clamp(0.3rem, 1vw, 0.6rem);
+  }
+
+  .footer-right {
+    flex-direction: column;
+    padding: clamp(1rem, 3vw, 1.3rem);
+  }
+
+  .footer-section {
+    min-width: unset;
+    width: 100%;
+    margin-bottom: clamp(1rem, 3vw, 1.6rem);
+  }
+
+  .footer-section h4 {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+
+  .footer-desc {
+    font-size: clamp(0.75rem, 1.5vw, 0.85rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-left img {
+    width: clamp(3rem, 10vw, 4rem);
+    margin: 0 clamp(0.2rem, 1vw, 0.3rem);
+  }
+
+  .footer-right {
+    padding: clamp(0.8rem, 3vw, 1rem);
+  }
+
+  .footer-section h4 {
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+  }
+
+  .footer-section li,
+  .footer-section p {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+  }
+}

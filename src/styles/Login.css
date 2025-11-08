@@ -1,0 +1,506 @@
+.login-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden; /* Penting untuk clipping wave */
+}
+
+/* --- Left Panel --- */
+.login-left-panel {
+  flex: 1.1; /* Mengambil lebih banyak ruang */
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  overflow: hidden; /* Untuk memastikan gambar tidak keluar */
+ 
+}
+
+.login-left-panel .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+   
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Bayangan teks untuk keterbacaan */
+}
+
+.welcome-title {
+  font-size: 4em;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -2px;
+  text-align: justify;
+  position: relative;
+  left: 100px;
+}
+
+
+.welcome-text {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  text-align: justify;
+  left: 100px;
+  position: relative; 
+}
+
+.back-to-website-btn {
+  background-color: #D5D5D347;
+  border-radius: 27px;
+  color: #fff;
+  padding: 12px 50px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  left: 50px;
+
+}
+
+.back-to-website-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* --- Right Panel --- */
+.login-right-panel {
+  flex: 1; /* Mengambil ruang sisanya */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 450px; /* Lebar minimum untuk formulir */
+  overflow: hidden;
+}
+
+.right-panel-wave {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50% / 0 0 100% 100%; /* Bentuk gelombang (contoh) */
+  z-index: 0; /* Pastikan di belakang konten kartu */
+}
+
+
+/* Dots pada gelombang merah (membutuhkan pseudo-element atau div terpisah) */
+.right-panel-wave::before,
+.right-panel-wave::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.2); /* Warna dots putih transparan */
+  border-radius: 50%;
+  z-index: 1; /* Di atas gelombang tapi di bawah kartu */
+}
+.right-panel-wave::before {
+  width: 80px;
+  height: 80px;
+  top: 15%;
+  left: 10%;
+}
+.right-panel-wave::after {
+  width: 40px;
+  height: 40px;
+  bottom: 20%;
+  left: 30%;
+}
+
+.login-card-wrapper {
+  position: relative;
+  z-index: 2; /* Pastikan di atas gelombang merah */
+  width: 80%; /* Lebar kartu login */
+  max-width: 400px;
+  padding: 30px;
+  text-align: center;
+}
+
+.login-logos {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.login-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.login-title {
+  font-size: 2em;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.login-subtitle {
+  font-size: 1.1em;
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.login-tagline {
+  font-size: 0.9em;
+  color: #e44d26; /* Warna merah */
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.login-input {
+  width: calc(100% - 10px) !important; /* Kurangi padding dan ikon */
+  padding: 20px 20px !important;
+  padding-right: 40px; /* Ruang untuk ikon */
+  border: 1px solid #ddd !important;
+  border-radius: 19px !important;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s;
+  background-color: #fff; /* Warna putih untuk input */
+}
+
+.login-input:focus {
+  border-color: #e44d26;
+}
+
+.input-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1.2em;
+}
+
+.login-btn {
+  background-color: #e44d26;
+  color: #fff;
+  padding: 20px 20px;
+  border: none;
+  border-radius: 19px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.login-btn:hover {
+  background-color: #c0392b;
+}
+
+.or-divider {
+  margin: 20px 0;
+  font-size: 0.9em;
+  color: #888;
+  position: relative;
+}
+
+
+
+.google-login-btn {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px 0;
+  width: 50px; /* Ukuran tombol Google */
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  margin: 0 auto; /* Tengah tombol */
+}
+
+.google-login-btn:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.google-icon {
+  width: 30px;
+  height: 30px;
+}
+
+
+/* --- Responsiveness --- */
+@media (max-width: 992px) { /* Tablet Portrait & Landscape, Small Laptops */
+  .login-container {
+    flex-direction: column; /* Tumpuk panel kiri dan kanan */
+  }
+
+  .login-left-panel {
+    flex: none; /* Hapus flex grow/shrink */
+    width: 100%; /* Ambil lebar penuh */
+    min-height: 280px; /* Tinggi minimum di tablet */
+    padding-bottom: 40px; /* Tambahan padding agar konten tidak terlalu dekat dengan bawah */
+    margin-top: 70px;
+  }
+
+  .welcome-title {
+    font-size: 3.5em; /* Sedikit lebih kecil dari desktop */
+    margin-bottom: 8px;
+  }
+  .welcome-text {
+    font-size: 1.05em;
+    margin-bottom: 25px;
+  }
+  .back-to-website-btn {
+    padding: 10px 20px;
+    font-size: 0.95em;
+  }
+
+  .login-right-panel {
+    flex: none; /* Hapus flex grow/shrink */
+    width: 100%; /* Ambil lebar penuh */
+    min-width: unset; /* Hapus min-width tetap */
+    padding: 40px 20px; /* Tambahkan padding agar ada ruang di sekitar kartu */
+    box-sizing: border-box; /* Pastikan padding dihitung dalam lebar */
+  }
+
+  .right-panel-wave {
+    /* Sesuaikan gelombang untuk tampil di bagian bawah panel kiri atau di atas panel kanan */
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Ketinggian gelombang lebih kecil */
+    transform: translateY(0%) rotate(0deg); /* Reset transformasi */
+    border-radius: 0; /* Hapus border-radius desktop */
+    /* Tambahkan border-radius untuk efek gelombang di bagian atas */
+    border-top-left-radius: 50% 100px;
+    border-top-right-radius: 50% 100px;
+    z-index: 0; /* Pastikan di belakang kartu */
+  }
+   .right-panel-wave::before,
+   .right-panel-wave::after {
+     display: none; /* Sembunyikan dots di mobile jika terlihat aneh atau mengganggu */
+   }
+
+  .login-card-wrapper {
+    width: 90%; /* Ambil lebih banyak lebar di tablet */
+    max-width: 450px; /* Biarkan maksimal sedikit lebih besar */
+    padding: 30px;
+  }
+  .login-logos {
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .login-logo {
+    width: 50px;
+    height: 50px;
+  }
+  .login-title {
+    font-size: 1.8em;
+  }
+  .login-subtitle {
+    font-size: 1em;
+  }
+  .login-tagline {
+    font-size: 0.85em;
+    margin-bottom: 25px;
+  }
+  .login-input {
+    padding: 10px 15px;
+    padding-right: 35px; /* Sesuaikan ruang ikon */
+  }
+  .input-icon {
+    font-size: 1.1em;
+  }
+  .login-btn {
+    padding: 10px 18px;
+    font-size: 1.05em;
+  }
+  .google-login-btn {
+    width: 48px;
+    height: 48px;
+  }
+  .google-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 768px) { /* Mostly Tablet Portrait */
+  .login-left-panel {
+    min-height: 250px; /* Sedikit lebih kecil untuk tablet portrait */
+  }
+  .welcome-title {
+    font-size: 3em;
+  }
+  .welcome-text {
+    font-size: 1em;
+  }
+  .back-to-website-btn {
+    padding: 9px 18px;
+    font-size: 0.9em;
+  }
+  .login-right-panel {
+    padding: 30px 15px; /* Padding lebih kecil */
+  }
+  .login-card-wrapper {
+    width: 95%; /* Lebih lebar di tablet portrait */
+    padding: 25px;
+  }
+  .login-title {
+    font-size: 1.6em;
+  }
+  .login-subtitle {
+    font-size: 0.95em;
+  }
+  .login-tagline {
+    font-size: 0.8em;
+    margin-bottom: 20px;
+  }
+  .login-input {
+    font-size: 0.95em;
+  }
+  .login-btn {
+    font-size: 1em;
+  }
+}
+
+
+@media (max-width: 576px) { /* Mobile Devices */
+  .login-left-panel {
+    min-height: 200px; /* Minimal tinggi untuk HP */
+    padding-bottom: 20px;
+  }
+  .welcome-title {
+    font-size: 2.5em; /* Lebih kecil lagi untuk HP */
+  }
+  .welcome-text {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+  }
+  .back-to-website-btn {
+    padding: 8px 16px;
+    font-size: 0.85em;
+  }
+
+  .login-right-panel {
+    padding: 25px 10px; /* Padding minimal untuk HP */
+  }
+
+  .right-panel-wave {
+    height: 80px; /* Gelombang lebih pendek di HP */
+    border-top-left-radius: 50% 80px; /* Sesuaikan radius */
+    border-top-right-radius: 50% 80px;
+  }
+
+  .login-card-wrapper {
+    width: 100%; /* Ambil lebar penuh di HP */
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Bayangan lebih halus */
+  }
+  .login-logos {
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  .login-logo {
+    width: 40px;
+    height: 40px;
+  }
+  .login-title {
+    font-size: 1.5em;
+  }
+  .login-subtitle {
+    font-size: 0.9em;
+  }
+  .login-tagline {
+    font-size: 0.75em;
+    margin-bottom: 15px;
+  }
+  .login-form {
+    gap: 15px; /* Jarak antar input lebih kecil */
+  }
+  .login-input {
+    padding: 10px 12px;
+    padding-right: 30px;
+    font-size: 0.9em;
+  }
+  .input-icon {
+    font-size: 1em;
+    right: 12px;
+  }
+  .login-btn {
+    padding: 9px 15px;
+    font-size: 0.95em;
+  }
+  .or-divider {
+    margin: 15px 0;
+    font-size: 0.8em;
+  }
+  .google-login-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .google-icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Tambahan: Untuk layar yang sangat kecil (misal iPhone SE atau Android lama) */
+@media (max-width: 400px) {
+  .login-left-panel {
+    min-height: 180px;
+  }
+  .welcome-title {
+    font-size: 2em;
+  }
+  .welcome-text {
+    font-size: 0.8em;
+  }
+  .back-to-website-btn {
+    font-size: 0.8em;
+    padding: 7px 14px;
+  }
+  .login-card-wrapper {
+    padding: 15px;
+  }
+  .login-title {
+    font-size: 1.3em;
+  }
+  .login-subtitle {
+    font-size: 0.85em;
+  }
+  .login-tagline {
+    font-size: 0.7em;
+    margin-bottom: 10px;
+  }
+  .login-input {
+    padding: 8px 10px;
+    font-size: 0.85em;
+  }
+  .input-icon {
+    font-size: 0.9em;
+  }
+  .login-btn {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+}

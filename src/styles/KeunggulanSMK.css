@@ -1,0 +1,564 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap");
+
+/* KeunggulanSMK.css */
+
+.keunggulanSMK-container {
+  font-family: "Montserrat", "Poppins", sans-serif;
+  color: #333;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+/* Agar footer selalu di bawah, dorong konten utama ke atas */
+.main-content {
+  flex: 1 0 auto;
+}
+
+.keunggulanSMK-hero {
+  background-image: url("/herosection.jpg"); /* Pastikan path gambar hero section Anda benar */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 88vh;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Tetap flex-end untuk meniru Prestasi yang teksnya di bawah */
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(255, 203, 0, 0.1);
+}
+
+.keunggulanSMK-hero-overlay {
+  position: absolute; /* Tetap absolute agar menutupi hero */
+  bottom: 0; /* Tetap di bawah */
+  left: 0; /* Tetap di kiri */
+  width: 100%;
+  height: 100%; /* Menutupi seluruh area hero */
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Pusatkan konten secara vertikal */
+  align-items: center; /* Pusatkan konten secara horizontal */
+  text-align: center; /* Pastikan teks juga di tengah */
+  padding: 40px 20px 60px 20px; /* Padding yang sama dengan Prestasi */
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.keunggulanSMK-hero-title {
+  font-size: 42px; /* Ukuran bisa disesuaikan, atau pakai clamp seperti Prestasi */
+  font-weight: 800;
+  color: #fff4e0;
+  margin-bottom: 0.2em;
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+.keunggulanSMK-container-teks {
+  color: #fff4e0;
+  font-size: 65px;
+}
+
+.keunggulanSMK-container-teks2 {
+  color: #ffd000;
+  font-size: 65px;
+}
+
+.keunggulanSMK-info-section {
+  width: 100%; /* biar full sampai kiri-kanan layar */
+  margin: 0; /* hapus auto biar gak ketengah */
+  padding: 60px 20px;
+  border-top-left-radius: 193px;
+  border-top-right-radius: 193px;
+  box-sizing: border-box;
+  position: relative;
+  top: -180px;
+  background-color: #FFF4E0;
+  z-index: 2;
+}
+
+
+/* --- Styling untuk Konten Keunggulan --- */
+.keunggulanSMK-content-wrapper {
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px; /* Jarak antara section Keunggulan dan English Day */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ini penting untuk memusatkan anak-anaknya */
+}
+
+.keunggulanSMK-materi-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ec3237;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.keunggulanSMK-materi-intro {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 80px;
+  text-align: left;
+  font-weight: 600;
+  max-width: 1000px;
+}
+
+/* --- Styling untuk Konten Keunggulan (2 kolom) --- */
+.keunggulanSMK-cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+  gap: 100px 0px; /* Jarak antar card */
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.keunggulanSMK-card {
+  background: none;
+  padding: 25px;
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  color: #333;
+  gap: 20px; /* Jarak antara ikon dan teks */
+}
+
+/* Kontainer teks (judul + deskripsi) */
+.cardSMK-text-content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.cardSMK-title-smp,
+.cardSMK-title {
+  font-size: 1.4em;
+  font-weight: 800;
+  color: #ec3237;
+  margin-bottom: 8px;
+}
+
+.CardSMK-tittle2 {
+  font-size: 16px;
+  font-weight: 800;
+  color: black;
+}
+
+.cardSMK-description {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Ikon + background */
+.cardSMK-icon-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 120px;
+  height: 150px;
+}
+
+.cardSMK-icon-background {
+  width: 150px;
+  height: 219px;
+  background: linear-gradient(
+    180deg,
+    #a21317 10.78%,
+    rgba(44, 1, 1, 0.05) 100%
+  );
+  position: relative;
+}
+
+.cardSMK-icon {
+  position: absolute;
+  top: -70px;
+  left: 60%;
+  transform: translateX(-50%);
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
+}
+
+/* --- Responsivitas --- */
+@media (max-width: 991px) {
+  /* Tablet */
+  .keunggulanSMK-cards-container {
+    grid-template-columns: 1fr; /* jadi 1 kolom */
+  }
+
+  .keunggulanSMK-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cardSMK-text-content {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  .cardSMK-description {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Mobile */
+  .keunggulanSMK-title-section {
+    font-size: 1.8em;
+  }
+
+  .keunggulanSMK-subtitle {
+    font-size: 1em;
+  }
+
+  .keunggulanSMK-card {
+    padding: 20px;
+  }
+
+  .cardSMK-icon-wrapper {
+    width: 100px;
+    height: 120px;
+  }
+
+  .cardSMK-icon {
+    width: 90px;
+    height: 90px;
+    top: -45px;
+  }
+}
+
+/* Section Wrapper */
+.ujiKompetensi-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* Judul */
+.ujiKompetensi-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ec3237;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+/* Container Gambar */
+.ujiKompetensi-images {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+/* Gambar */
+.ujiKompetensi-image {
+  width: 510px;
+  height: 432px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Deskripsi */
+.ujiKompetensi-description {
+  max-width: 900px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.05em; /* 5% */
+  color: #333;
+  text-align: left;
+}
+
+/* =====================
+   UJI KOMPETENSI SECTION STYLES
+   ===================== */
+
+.uji-kompetensi-section {
+  width: 100%;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+/* Header Section */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Praktek Kerja Header */
+.praktek-kerja-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.praktek-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #ec3237;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* Praktek Kerja Description */
+.praktek-description-container {
+  max-width: 950px;
+  margin: 0 auto 50px auto;
+  padding: 0 20px;
+}
+
+.praktek-description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #000000;
+  text-align: left;
+  font-family: "Albert Sans", sans-serif;
+  margin: 0;
+}
+
+/* Icons Grid */
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 30px;
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  padding: 0 20px;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.icon-image {
+  width: 101px;
+  height: 101px;
+  object-fit: contain;
+}
+
+.icon-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ec3237;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  font-family: "Albert Sans", sans-serif;
+}
+
+.icon-description {
+  font-size: 16px;
+  line-height: 1;
+  color: #000000;
+  margin: 0;
+  max-width: 200px;
+  text-align: left;
+  font-family: "Albert Sans", sans-serif;
+}
+
+/* Bottom Gallery */
+.bottom-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.bottom-image-item {
+  flex: 1;
+  max-width: 3332px;
+  min-width: 302px;
+}
+
+.bottom-gallery-image {
+  width: 100%;
+  height: 302px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.bottom-gallery-image:hover {
+  transform: scale(1.05);
+}
+
+/* =====================
+   RESPONSIVE DESIGN
+   ===================== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2.2em;
+  }
+
+  .praktek-title {
+    font-size: 2em;
+  }
+
+  .icons-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 25px;
+  }
+
+  .image-gallery {
+    gap: 15px;
+  }
+
+  .bottom-gallery {
+    gap: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .uji-kompetensi-section {
+    padding: 40px 15px;
+  }
+
+  .section-title {
+    font-size: 1.8em;
+    letter-spacing: 1px;
+  }
+
+  .praktek-title {
+    font-size: 1.6em;
+    letter-spacing: 1px;
+  }
+
+  .icons-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .image-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-item {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .gallery-image {
+    height: 180px;
+  }
+
+  .bottom-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bottom-image-item {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .bottom-gallery-image {
+    height: 160px;
+  }
+
+  .main-description,
+  .praktek-description {
+    font-size: 0.95em;
+    text-align: left;
+  }
+
+  .icon-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icon-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon-title {
+    font-size: 1em;
+  }
+
+  .icon-description {
+    font-size: 0.85em;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 660px) {
+  .keunggulanSMK-info-section {
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .cardSMK-title-smp,
+  .cardSMK-title {
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+  .cardSMK-title-smp,
+  .cardSMK-title {
+    margin-top: 100px;
+  }
+
+  .cardSMK-icon-background {
+    right: 20px;
+  }
+
+  .cardSMK-icon {
+    left: 55px;
+    width: 128px;
+    height: 128px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5em;
+  }
+
+  .praktek-title {
+    font-size: 1.4em;
+  }
+
+  .uji-kompetensi-section {
+    padding: 30px 10px;
+  }
+}

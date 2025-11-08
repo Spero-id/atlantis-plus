@@ -1,0 +1,897 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* =====================
+    GLOBAL RESET & CONTAINER
+    ===================== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.kg-smp-container {
+  font-family: "Montserrat", "Poppins", sans-serif;
+  color: #333;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+.main-content {
+  flex: 1 0 auto;
+}
+
+/* =========================
+    HERO SECTION
+    ========================= */
+.kg-smp-hero {
+  background-image: url("/herosection.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 88vh;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(255, 203, 0, 0.1);
+}
+
+.kg-smp-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px 60px;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.kg-smp-hero-title {
+  font-size: clamp(32px, 6vw, 42px);
+  font-weight: 800;
+  color: #fff4e0;
+  margin-bottom: 0.2em;
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+.kg-smp-teks1 {
+  color: #fff4e0;
+  font-size: clamp(40px, 8vw, 65px);
+}
+
+.kg-smp-teks2 {
+  color: #ffd000;
+  font-size: clamp(40px, 8vw, 65px);
+}
+
+/* =========================
+    INFO SECTION
+    ========================= */
+.keunggulanSMP-info-section {
+  width: 100%;
+  margin: 0;
+  padding: 60px 20px;
+  border-top-left-radius: 193px;
+  border-top-right-radius: 211px;
+  box-sizing: border-box;
+  position: relative;
+  top: -180px;
+  background-color: #FFF4E0;
+  z-index: 2;
+}
+
+/* =========================
+    KEUNGGULAN CONTENT
+    ========================= */
+.keunggulan-content-wrapper {
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.keunggulan-materi-title {
+  font-size: clamp(18px, 4vw, 20px);
+  font-weight: bold;
+  color: #ec3237;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.keunggulan-materi-intro {
+  font-size: clamp(14px, 2.5vw, 16px);
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 600;
+  max-width: 800px;
+}
+
+/* =========================
+    KEUNGGULAN CARDS
+    ========================= */
+.keunggulan-cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 100px;
+}
+
+.keunggulan-card {
+  background: none;
+  padding: 25px;
+  width: 500px;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  border-top: 5px solid transparent;
+  color: #333;
+  justify-content: space-between;
+}
+
+.card-text-content {
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+}
+
+.card-title-smp,
+.card-title {
+  font-size: clamp(18px, 3vw, 22px);
+  font-weight: 800;
+  color: #ec3237;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: clamp(12px, 2vw, 14px);
+  line-height: 1.5;
+  color: #000000;
+  text-align: left;
+}
+
+.card-icon-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 150px;
+  height: 188px;
+}
+
+.card-icon-background {
+  width: 100%;
+  height: 100%;
+  background-color: #b22b1b;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 137px;
+  height: 137px;
+  object-fit: contain;
+}
+
+/* =========================
+    KEUNGGULAN BOTTOM SECTION
+    ========================= */
+.keunggulan-bottom-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.keunggulan-image-and-output {
+  width: 100%;
+  max-width: 950px;
+  aspect-ratio: 16/7;
+  position: relative;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.keunggulan-main-illustration {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  z-index: 5;
+}
+
+.output-label {
+  position: relative;
+  margin-left: -8%;
+  width: 15%;
+  height: 100%;
+  background-color: #a21317;
+  color: #fff;
+  border-top-right-radius: 50px !important;
+  border-bottom-right-radius: 50px !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.keunggulan-pembekalan {
+  width: 90%;
+  max-width: 950px;
+  min-height: 80px;
+  background-color: #a21317;
+  display: flex;
+  color: #fff;
+  font-size: clamp(14px, 2vw, 16px);
+  text-align: justify;
+  align-items: center;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+  padding: 10px 20px;
+  margin-top: -30px;
+}
+
+.keunggulan-pembekalan p {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* =========================
+    ENGLISH DAY SECTION
+    ========================= */
+.english-day-container {
+  padding: 40px 20px;
+  font-family: "Albert Sans", Arial, sans-serif;
+}
+
+.english-day-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.english-day-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.english-day-title {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 800;
+  font-size: clamp(18px, 4vw, 20px);
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  color: #ef4444;
+  margin-bottom: 30px;
+}
+
+.english-day-description {
+  font-family: "Albert Sans", Arial, sans-serif;
+  font-weight: 500;
+  font-size: clamp(14px, 2.5vw, 16px);
+  line-height: 100%;
+  letter-spacing: 0.03em;
+  color: #374151;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.english-day-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+  justify-items: center;
+}
+
+.english-day-card {
+  width: 100%;
+  max-width: 326px;
+  height: 378px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.english-day-card-image {
+  width: 205px;
+  height: 205px;
+  margin: 0 auto 20px auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.english-day-card-title {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  font-size: clamp(18px, 3vw, 20px);
+  line-height: 100%;
+  letter-spacing: 0.06em;
+  margin-bottom: 15px;
+}
+
+.basic-title,
+.middle-title,
+.high-title {
+  color: #ef4444;
+}
+
+.english-day-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.english-day-card-text {
+  font-family: "Albert Sans", Arial, sans-serif;
+  font-weight: 500;
+  font-size: clamp(14px, 2.5vw, 16px);
+  line-height: 100%;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+/* =========================
+    ADDITIONAL IMAGE SECTION
+    ========================= */
+.additional-image-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  position: relative;
+}
+
+.additional-image-section::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+  background-color: #a21317;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+.additional-image-section .additional-main-image {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+/* =========================
+    TAHFIDZ QUR'AN SECTION
+    ========================= */
+.tahfidz-quran-section {
+  width: 100%;
+  margin-top: 60px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.tahfidz-quran-header-box {
+  color: #b22b1b;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 0 auto 30px auto;
+  max-width: 400px;
+}
+
+.tahfidz-quran-title {
+  font-size: clamp(18px, 3.5vw, 22px);
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.tahfidz-quran-intro {
+  font-size: clamp(14px, 2.5vw, 16px);
+  line-height: 1.6;
+  color: #555;
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0 20px;
+  font-weight: 600;
+}
+
+.tahfidz-juz30-card {
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto 80px auto;
+  color: #000000;
+  position: relative;
+}
+
+.tahfidz-juz30-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.tahfidz-juz30-title {
+  font-size: clamp(20px, 4vw, 24px);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #b22b1b;
+  text-align: center;
+}
+
+.tahfidz-juz30-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.tahfidz-juz30-image-wrapper {
+  flex-shrink: 0;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 80px;
+}
+
+.tahfidz-juz30-icon {
+  width: 328px;
+  height: 328px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(178, 43, 27, 1) 30%,
+    rgba(178, 43, 27, 0) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tahfidz-juz30-moon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 180px;
+  color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-20deg);
+  z-index: 1;
+}
+
+.tahfidz-juz30-description {
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.7;
+  flex-grow: 1;
+  text-align: justify;
+}
+
+.tahfidz-vertical-label-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #a71d1d;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  padding: 55px 20px 0 80px;
+}
+
+.tahfidz-main-image {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  aspect-ratio: 16/6;
+  border-top-left-radius: 96px;
+  border-bottom-left-radius: 96px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tahfidz-output-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/* =========================
+    GALLERY SECTION
+    ========================= */
+.gallery-section {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  justify-items: center;
+}
+
+.gallery-image {
+  width: 100%;
+  max-width: 253px;
+  height: 286px;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+/* =========================
+    RESPONSIVE DESIGN
+    ========================= */
+
+/* Large screens (>1200px) */
+@media (min-width: 1201px) {
+  .kg-smp-hero {
+    min-height: 88vh;
+  }
+  .keunggulan-cards-container {
+    flex-wrap: nowrap;
+    max-width: 900px;
+  }
+  .keunggulan-card {
+    width: 500px;
+  }
+  .tahfidz-quran-intro {
+    padding: 0 250px;
+  }
+}
+
+/* Medium screens (993px - 1200px) */
+@media (max-width: 1200px) {
+  .kg-smp-hero {
+    min-height: 80vh;
+  }
+  .keunggulan-card {
+    width: 400px;
+  }
+  .card-icon-wrapper {
+    width: 120px;
+    height: 150px;
+  }
+  .card-icon {
+    width: 110px;
+    height: 110px;
+    top: -60px;
+  }
+  .tahfidz-quran-intro {
+    padding: 0 100px;
+  }
+  .tahfidz-juz30-icon {
+    width: 250px;
+    height: 250px;
+  }
+  .tahfidz-juz30-moon {
+    font-size: 140px;
+  }
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablets (769px - 992px) */
+@media (max-width: 992px) {
+  .kg-smp-hero {
+    min-height: 70vh;
+  }
+  .keunggulan-cards-container {
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+  }
+  .keunggulan-card {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+  }
+  .card-text-content {
+    padding-right: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .card-description {
+    text-align: center;
+  }
+  .card-icon-wrapper {
+    width: 100px;
+    height: 125px;
+  }
+  .card-icon {
+    width: 90px;
+    height: 90px;
+    top: -50px;
+  }
+  .tahfidz-quran-intro {
+    padding: 0 50px;
+  }
+  .tahfidz-juz30-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .tahfidz-juz30-description {
+    text-align: center;
+  }
+  .tahfidz-juz30-icon {
+    width: 200px;
+    height: 200px;
+  }
+  .tahfidz-juz30-moon {
+    font-size: 120px;
+  }
+  .tahfidz-vertical-label-wrapper {
+    padding: 30px 10px 0 40px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 992px) {
+  .card-description {
+    margin-bottom: 50px;
+  }
+
+  .tahfidz-juz30-icon {
+    position: relative;
+    left: 45px;
+  }
+
+  .tahfidz-juz30-title {
+    margin-bottom: 50px;
+  }
+
+  .tahfidz-juz30-description {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1152px) {
+  .keunggulan-pembekalan {
+    position: relative;
+    
+  }
+}
+
+
+
+/* Mobile phones (481px - 768px) */
+@media (max-width: 768px) {
+  .kg-smp-hero {
+    min-height: 60vh;
+  }
+  .keunggulanSMP-info-section {
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    top: -100px;
+    padding: 40px 15px;
+  }
+  .keunggulan-cards-container {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .keunggulan-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 95%;
+    max-width: 350px;
+    padding: 15px;
+  }
+  .card-text-content {
+    margin-top: 20px;
+    padding: 0;
+    text-align: center;
+  }
+  .card-icon-wrapper {
+    width: 80px;
+    height: 100px;
+  }
+  .card-icon {
+    width: 70px;
+    height: 70px;
+    top: -40px;
+  }
+  .output-label {
+    width: 25%;
+    margin-left: -12%;
+  }
+  .english-day-cards-container {
+    grid-template-columns: 1fr;
+  }
+  .tahfidz-juz30-icon {
+    width: 180px;
+    height: 180px;
+  }
+  .tahfidz-juz30-moon {
+    font-size: 100px;
+  }
+  .tahfidz-vertical-label-wrapper {
+    padding: 20px 10px 0 30px;
+  }
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small screens (≤480px) */
+@media (max-width: 480px) {
+  .kg-smp-hero {
+    min-height: 50vh;
+  }
+  .keunggulanSMP-info-section {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    top: -50px;
+    padding: 30px 10px;
+  }
+  .keunggulan-cards-container {
+    margin-top: 40px;
+  }
+  .keunggulan-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .card-text-content {
+    order: 1;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  .card-icon-wrapper {
+    order: 2;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    margin-top: 10px;
+  }
+  .card-icon {
+    top: -60px;
+    width: 100px;
+    height: 100px;
+  }
+  .output-label {
+    width: 30%;
+    margin-left: -15%;
+  }
+  .keunggulan-pembekalan {
+    min-height: 60px;
+    padding: 8px 15px;
+  }
+  .tahfidz-juz30-icon {
+    width: 150px;
+    height: 150px;
+  }
+  .tahfidz-juz30-moon {
+    font-size: 80px;
+  }
+  .tahfidz-vertical-label-wrapper {
+    padding: 15px 8px 0 20px;
+  }
+  .gallery-image {
+    height: 250px;
+  }
+}
+
+/* Extra small screens (≤360px) */
+@media (max-width: 360px) {
+  .kg-smp-hero {
+    min-height: 45vh;
+  }
+  .kg-smp-hero-title {
+    font-size: clamp(18px, 4vw, 24px);
+  }
+  .kg-smp-teks1,
+  .kg-smp-teks2 {
+    font-size: clamp(25px, 5vw, 35px);
+  }
+  .keunggulanSMP-info-section {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    top: -30px;
+    padding: 20px 8px;
+  }
+  .keunggulan-cards-container {
+    margin-top: 30px;
+    gap: 20px;
+  }
+  .english-day-cards-container {
+    grid-template-columns: 1fr;
+  }
+  .english-day-card {
+    height: 300px;
+    padding: 15px;
+  }
+  .english-day-card-image {
+    width: 120px;
+    height: 120px;
+  }
+  .gallery-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .gallery-image {
+    height: 200px;
+    border-radius: 20px;
+  }
+}
+
+/* Orientation specific adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+  .kg-smp-hero {
+    min-height: 100vh;
+  }
+  .keunggulanSMP-info-section {
+    top: -80px;
+  }
+}
+
+/* High resolution displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .kg-smp-hero {
+    background-image: url("/herosection@2x.jpg");
+  }
+}

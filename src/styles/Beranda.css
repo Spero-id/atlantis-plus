@@ -1,0 +1,1387 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* =====================
+    GLOBAL RESET & CONTAINER
+    ===================== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.beranda-container {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 5rem; /* 80px */
+  box-sizing: border-box;
+}
+
+.hero {
+  background-image: url("/herosection.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 94vh !important;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  bottom: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 26, 26, 0.76);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.25rem; 
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.hero-overlay h1 {
+  font-size: clamp(4.0625rem, 8vw, 5rem);
+  margin-bottom: 0.625rem; 
+  z-index: 2;
+  background: linear-gradient(to right, #e53935, #ffc300 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  line-height: 1.1;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.highlight {
+  color: red;
+  font-weight: bold;
+}
+
+.yellow {
+  color: #ffc300;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.subtitle {
+  margin-top: -0.625rem; /* -10px */
+  font-size: clamp(1.5625rem, 4vw, 2.1875rem);
+  margin-bottom: 1.875rem; /* 30px */
+  background: #FFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.school-buttons {
+  display: flex;
+  gap: 1.25rem; /* 20px */
+  margin-bottom: 1.25rem; /* 20px */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.school-btn {
+  background: transparent;
+  color: #ffffff;
+  border: 0.125rem solid #ffffff; /* 2px */
+  padding: 0.9375rem 1.875rem; /* 15px 30px */
+  border-radius: 1.875rem; /* 30px */
+  display: flex;
+  align-items: center;
+  gap: 0.625rem; /* 10px */
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.35s ease-in-out;
+  box-shadow: 0 0 0 transparent;
+  font-size: clamp(0.875rem, 2.5vw, 1rem); /* 14px, 2.5vw, 16px */
+  pointer-events: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.school-btn img {
+  width: 1.5rem; /* 24px */
+  height: 1.5rem; /* 24px */
+}
+
+/* =========================
+    WHO WE ARE SECTION
+    ========================= */
+.who-we-are {
+  padding: 3.125rem 1.875rem; /* 50px 30px */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.who-we-are h2 {
+  color: #e53935;
+  font-size: clamp(1.5625rem, 5vw, 1.75rem);
+  margin-bottom: 1.25rem; /* 20px */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.who-we-are p {
+  max-width: 61.25rem; /* 980px */
+  margin: 0 auto;
+  font-size: clamp(0.9375rem, 2.5vw, 1rem); /* 15px, 2.5vw, 16px */
+  line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* =========================
+    GALLERY SECTION
+    ========================= */
+.beranda-gallery {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0 2rem; /* 48px 0 32px */
+  padding: 1.5rem 0; /* 24px 0 */
+  box-sizing: border-box;
+}
+
+.gallery-row {
+  display: grid;
+  gap: clamp(0.3125rem, 1vw, 0.5rem) !important; /* 5px, 1vw, 8px */
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 68.75rem; /* 1100px */
+  padding: 0 1.25rem; /* 20px */
+  box-sizing: border-box;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 18.75rem; /* 300px */
+  min-width: 11.25rem; /* 180px */
+  background: none;
+  box-sizing: border-box;
+}
+
+.gallery-img {
+  width: 330px;
+  height: 248px;
+  object-fit: cover;
+  margin-bottom: 1rem; /* 16px */
+  background: none;
+  border-radius: 0.625rem; /* 10px */
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1); /* 4px 10px */
+  transition: box-shadow 0.2s;
+  display: block;
+}
+
+.gallery-img:hover {
+  box-shadow: 0 0.375rem 0.9375rem rgba(0, 0, 0, 0.2); /* 6px 15px */
+}
+
+.gallery-caption {
+  font-size: 1.1rem;
+  color: #ce0a0a;
+  margin-top: 0;
+  text-align: left;
+  font-weight: 500;
+  width: 100%;
+  align-self: flex-start;
+}
+
+/* =========================
+    PROGRAM SECTION
+    ========================= */
+.program-section {
+  position: relative;
+  overflow: hidden;
+  padding: 3.75rem 0; /* 60px 0 */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bg-left,
+.bg-right {
+  position: absolute;
+  top: 0;
+  width: 33.0166rem; /* 528.265px */
+  height: 35.625rem; /* 570px */
+  background-image: url("/HouseBeranda.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+}
+
+.bg-left {
+  left: -209px; /* Tetap px */
+}
+
+.bg-right {
+  right: -209px; /* Tetap px */
+  transform: scaleX(-1);
+}
+
+.program-container {
+  position: relative;
+  width: 100%;
+  padding: 0 2.5rem; /* 40px */
+  text-align: center;
+  z-index: 1;
+}
+
+.red-text span {
+  color: red;
+  font-weight: 700;
+  font-size: clamp(1.5625rem, 5vw, 1.75rem);
+}
+
+.program-container h2 {
+  color: #000000;
+  font-weight: 500;
+  font-size: clamp(1.25rem, 5vw, 1.75rem);
+}
+
+.program-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem; /* 20px */
+}
+
+.program-cards {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem; /* 20px */
+  flex-wrap: wrap;
+  margin-top: 2.5rem; /* 40px */
+}
+
+.program-card {
+  position: relative;
+  width: 31.875rem; /* 510px */
+  height: 24rem; /* 384px */
+  max-width: 100%;
+  overflow: hidden;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.program-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 66.46%, rgba(0, 0, 0, 0.93) 100%);
+  color: white;
+  padding: 0.9375rem; /* 15px */
+  text-align: left;
+}
+
+.card-overlay h3 {
+  margin: 0;
+  font-size: 1.125rem; /* 18px */
+  font-weight: bold;
+}
+
+.card-overlay p {
+  margin: 0.3125rem 0 0; /* 5px 0 0 */
+  font-size: 0.875rem; /* 14px */
+}
+
+.slider-arrow {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 2.8125rem; /* 45px */
+  height: 2.8125rem; /* 45px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  cursor: pointer;
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2); /* 2px 5px */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 2;
+}
+
+.slider-arrow:hover {
+  background-color: #c0392b;
+  transform: scale(1.1);
+}
+
+.program-cards-wrapper {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+    ANIMASI SLIDER
+   ========================= */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(3.125rem); /* 50px */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-3.125rem); /* -50px */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.program-card.active {
+  animation: slideInRight 0.6s ease forwards;
+}
+
+.program-card.prev {
+  animation: slideInLeft 0.6s ease forwards;
+}
+
+/* =========================
+    IMAGE SCHOOL SECTION
+    ========================= */
+.beranda-image-school-section {
+  width: 100%;
+}
+
+.beranda-image-school-section img {
+  width: 100%;
+  height: auto;
+  max-height: 56.25rem; /* 900px */
+  display: block;
+}
+
+/* =========================
+    TIMELINE SECTION
+    ========================= */
+.timeline-section {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  padding: 3.75rem 1.25rem; /* 60px 20px */
+  text-align: center;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.timeline-header {
+  margin-bottom: 3.125rem; /* 50px */
+}
+
+.timeline-title {
+  font-size: clamp(1.5625rem, 5vw, 1.75rem) !important;
+  font-weight: 800;
+  letter-spacing: 0.125rem; /* 2px */
+  color: #df2f34;
+}
+
+.timeline-title span {
+  color: #000000;
+  font-size: clamp(1.5625rem, 5vw, 1.75rem);
+  font-weight: 500;
+}
+
+.timeline-main {
+  position: relative;
+  max-width: 75rem; /* 1200px */
+  margin: 0 auto;
+}
+
+.timeline-main::after {
+  content: "";
+  position: absolute;
+  width: 0.1875rem; /* 3px */
+  background-color: #000000;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -0.1875rem; /* -3px */
+}
+
+.timeline-item {
+  padding: 0.625rem 2.5rem; /* 10px 40px */
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.timeline-content {
+  padding: 1.25rem 1.875rem; /* 20px 30px */
+  border-radius: 0.5rem; /* 8px */
+  position: relative;
+  border: 0.0625rem solid #df2f34; /* 1px */
+}
+
+.timeline-year {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #df2f34;
+  margin-bottom: 0.625rem; /* 10px */
+  letter-spacing: 0.0625rem; /* 1px */
+}
+
+.timeline-description {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #000000;
+}
+
+.timeline-item.left {
+  left: 0;
+  padding-right: 3.75rem; /* 60px */
+}
+
+.timeline-item.right {
+  left: 50%;
+  padding-left: 3.75rem; /* 60px */
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  width: 1.5625rem; /* 25px */
+  height: 1.5625rem; /* 25px */
+  right: -0.875rem; /* -14px */
+  background-color: #ffffff;
+  border: 0.25rem solid #df2f34; /* 4px */
+  top: 30px; /* Tetap px */
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.left::after {
+  right: -0.875rem; /* -14px */
+}
+
+.timeline-item.right::after {
+  left: -0.875rem; /* -14px */
+}
+
+.timeline-item.left .timeline-content::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 30px; /* Tetap px */
+  width: 0;
+  z-index: 1;
+  right: -0.9375rem; /* -15px */
+  border: medium solid #df2f34;
+  border-width: 0.625rem 0 0.625rem 0.9375rem; /* 10px 0 10px 15px */
+  border-color: transparent transparent transparent #df2f34;
+}
+
+.timeline-item.right .timeline-content::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 30px; /* Tetap px */
+  width: 0;
+  z-index: 1;
+  left: -0.9375rem; /* -15px */
+  border: medium solid #df2f34;
+  border-width: 0.625rem 0.9375rem 0.625rem 0; /* 10px 15px 10px 0 */
+  border-color: transparent #df2f34 transparent transparent;
+}
+
+/* =========================
+    KEGIATAN KAMI SECTION
+    ========================= */
+.kegiatan-section {
+  padding: 4.375rem 0 3.75rem; /* 70px 0 60px */
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.kegiatan-title {
+  color: #df2f34;
+  font-size: clamp(1.5625rem, 5vw, 1.75rem);
+  font-weight: 700;
+  margin-bottom: 3rem; /* 48px */
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.kegiatan-cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3.75rem; /* 60px */
+  flex-wrap: wrap;
+  max-width: 75rem; /* 1200px */
+  margin: 0 auto;
+  padding: 0 1.25rem; /* 20px */
+  box-sizing: border-box;
+}
+
+.kegiatan-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 14.9375rem; /* 239px */
+  background: none;
+  border: none;
+  transition: transform 0.25s cubic-bezier(0.4, 2, 0.6, 1), box-shadow 0.2s,
+    border-color 0.2s;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.kegiatan-card-img {
+  width: 12rem; /* 192px */
+  height: 12rem; /* 192px */
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-color: #ffffff;
+  border: 0.125rem solid #000000; /* 2px */
+  margin-bottom: 1.375rem; /* 22px */
+  box-shadow: 0 0.25rem 1.125rem rgba(2, 2, 2, 0.08); /* 4px 18px */
+  transition: border-color 0.2s, transform 0.25s cubic-bezier(0.4, 2, 0.6, 1),
+    box-shadow 0.2s;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.kegiatan-card:hover .kegiatan-card-img {
+  border-color: transparent;
+  transform: scale(1.08);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.664); /* 8px 32px */
+}
+
+.kegiatan-card-judul {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 700;
+  color: #ec3237;
+  margin-bottom: 0.5rem; /* 8px */
+  margin-top: 0;
+  letter-spacing: 0.05em;
+  font-style: bold;
+}
+
+.kegiatan-card-desc {
+  font-size: 0.9375rem; /* 15px */
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #000000;
+  line-height: 1.5;
+  margin: 0 0 0.5rem 0; /* 0 0 8px 0 */
+}
+
+.bg-left-kegiatan,
+.bg-right-kegiatan {
+  position: absolute;
+  top: 0;
+  width: 33rem; /* 528px */
+  height: 35.625rem; /* 570px */
+  background-image: url("/ImageBackgroundProgram.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+}
+
+.bg-left-kegiatan {
+  left: -209px; /* Tetap px */
+  transform: scaleX(-1);
+}
+
+.bg-right-kegiatan {
+  right: -209px; /* Tetap px */
+}
+
+/* =========================
+    NEWS SECTION
+    ========================= */
+.news-section {
+  position: relative;
+  padding: 3.75rem 0; /* 60px 0 */
+  text-align: center;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.news-title {
+  margin-bottom: 1.25rem; /* 20px */
+  line-height: 1.4;
+}
+
+.red-text {
+  color: red;
+  font-weight: 700;
+  font-size: clamp(1.5625rem, 5vw, 1.75rem);
+}
+
+.blue-text {
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  font-size: clamp(1.25rem, 5vw, 1.75rem);
+}
+
+.news-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem; /* 32px */
+  max-width: 75rem; /* 1200px */
+  margin: 0 auto;
+}
+
+.news-banner {
+  width: 43.3125rem; /* 693px */
+  height: 33.125rem; /* 530px */
+  margin-bottom: 0;
+  box-shadow: 0 0.25rem 1.125rem rgba(255, 203, 0, 0.13); /* 4px 18px */
+  z-index: 2;
+}
+
+.news-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* 20px */
+  flex: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.news-card {
+  background-color: #ffffff;
+  width: 20.5625rem; /* 329px */
+  padding: 0.625rem; /* 10px */
+  height: 9.6875rem; /* 155px */
+  text-align: left;
+  box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.1); /* 2px 6px */
+  transition: transform 0.3s ease;
+  border-radius: 0.125rem; /* 2px */
+  z-index: 2;
+}
+
+.news-card:hover {
+  transform: translateY(-0.3125rem); /* -5px */
+}
+
+.highlighted {
+  border: 0.125rem solid #ff4343; /* 2px */
+  background-color: #a21317;
+  color: #ffffff;
+  height: 11.25rem; /* 180px */
+}
+
+.news-date {
+  margin-top: 0.9375rem; /* 15px */
+  color: #1D1819;
+  font-size: 0.875rem; /* 14px */
+}
+
+.news-card.highlighted .news-date {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.bg-left-news,
+.bg-right-news {
+  position: absolute;
+  bottom: 0;
+  width: 17.875rem; /* 286px */
+  height: 17.875rem; /* 286px */
+  background-image: url("/Daun.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+}
+
+.bg-left-news {
+  left: -50px; /* Tetap px */
+}
+
+.bg-right-news {
+  right: -50px; /* Tetap px */
+  transform: scaleX(-1);
+}
+/* =========================
+    RESPONSIVE DESIGN
+    ========================= */
+
+/* Large screens (>1200px) */
+@media (min-width: 1201px) {
+  .hero {
+    min-height: 100vh;
+  }
+  .hero-overlay h1 {
+    font-size: clamp(3.125rem, 8vw, 5rem);
+  }
+  .subtitle {
+    font-size: clamp(1.5625rem, 4vw, 2.1875rem);
+  }
+  .school-btn {
+    padding: 0.9375rem 1.875rem;
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+  }
+  .alamat {
+    bottom: 5rem;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+  }
+  .who-we-are {
+    padding: 3.125rem 1.875rem;
+  }
+  .gallery-row {
+    gap: 6.25rem;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 68.75rem;
+  }
+  .gallery-item {
+    max-width: 18.75rem;
+  }
+  .gallery-img {
+    width: 100%;
+    height: 15.5rem;
+  }
+  .program-unggulan-title {
+    font-size: clamp(1.75rem, 5vw, 2rem);
+  }
+  .atlantis-plus-blue {
+    font-size: clamp(1.375rem, 4vw, 1.6875rem);
+  }
+  .beranda-program-img-atlantis {
+    font-size: 5rem;
+  }
+  .program-banner-img {
+    max-width: 75rem;
+    height: auto;
+  }
+  .program-card {
+    width: 31.875rem;
+    height: 24rem;
+  }
+  .beranda-image-school-section img {
+    max-height: 37.5rem;
+  }
+  .timeline-title {
+    font-size: 3em;
+  }
+  .kegiatan-cards {
+    gap: 3.75rem;
+    max-width: 75rem;
+  }
+  .kegiatan-card {
+    width: 14.9375rem;
+  }
+  .kegiatan-card-img {
+    width: 12rem;
+    height: 12rem;
+  }
+  .news-banner {
+    width: 43.3125rem;
+    height: 33.125rem;
+  }
+  .news-card {
+    width: 20.5625rem;
+    height: 9.6875rem;
+  }
+  .highlighted {
+    height: 11.25rem;
+  }
+}
+
+/* Medium screens (901px - 1200px) */
+@media (max-width: 1200px) {
+  .hero {
+    min-height: 95vh;
+    bottom: 1.5rem;
+    width: 100vw;
+    right: 1.25rem;
+  }
+  .hero-overlay {
+    padding: 0.9375rem;
+  }
+  .hero-overlay h1 {
+    font-size: clamp(2.5rem, 7vw, 3.75rem);
+  }
+  .subtitle {
+    font-size: clamp(1.25rem, 3.5vw, 1.875rem);
+  }
+  .school-btn {
+    padding: 0.75rem 1.5625rem;
+    font-size: clamp(0.8125rem, 2.3vw, 0.9375rem);
+  }
+  .alamat {
+    bottom: 3.75rem;
+    font-size: clamp(0.6875rem, 1.8vw, 0.8125rem);
+  }
+  .who-we-are {
+    padding: 2.5rem 1.25rem;
+  }
+  .who-we-are h2 {
+    font-size: clamp(1.375rem, 4.5vw, 1.625rem);
+  }
+  .who-we-are p {
+    font-size: clamp(0.8125rem, 2.3vw, 0.9375rem);
+  }
+  .gallery-row {
+    gap: 3.125rem;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 56.25rem;
+    padding: 0 0.9375rem;
+  }
+  .gallery-item {
+    max-width: 100%;
+  }
+  .gallery-img {
+    height: 12.5rem;
+  }
+  .program-unggulan-section {
+    padding: 0 0.9375rem;
+  }
+  .program-unggulan-title {
+    font-size: clamp(1.5rem, 4.5vw, 1.75rem);
+  }
+  .atlantis-plus-blue {
+    font-size: clamp(1.125rem, 3.5vw, 1.5rem);
+  }
+  .beranda-program-img-atlantis {
+    font-size: 3.75rem;
+  }
+  .program-banner-img {
+    max-width: 100%;
+  }
+  .program-section {
+    padding: 2.5rem 0;
+  }
+  .bg-left,
+  .bg-right {
+    width: 25rem;
+    height: 28.125rem;
+  }
+  .program-card {
+    width: 25rem;
+    height: 18.75rem;
+  }
+  .beranda-image-school-section img {
+    max-height: 31.25rem;
+  }
+  .timeline-title {
+    font-size: 2.5em;
+  }
+  .kegiatan-cards {
+    gap: 1.875rem;
+    max-width: 56.25rem;
+    padding: 0 0.9375rem;
+  }
+  .kegiatan-card {
+    width: calc(50% - 0.9375rem);
+    max-width: 15rem;
+  }
+  .kegiatan-card-img {
+    width: 10.625rem;
+    height: 10.625rem;
+  }
+  .news-content {
+    gap: 1.25rem;
+  }
+  .news-banner {
+    width: 100%;
+    max-width: 37.5rem;
+    height: auto;
+    aspect-ratio: 4/3;
+  }
+  .news-card {
+    width: 100%;
+    max-width: 25rem;
+    height: 8.75rem;
+  }
+  .highlighted {
+    height: 10rem;
+  }
+}
+
+/* Tablets (769px - 900px) */
+@media (max-width: 900px) {
+  .hero {
+    min-height: 95vh;
+    margin: 0;
+    padding: 0;
+  }
+  .hero-overlay h1 {
+    font-size: clamp(2.1875rem, 6vw, 3.125rem);
+  }
+  .subtitle {
+    font-size: clamp(1.125rem, 3vw, 1.75rem);
+  }
+  .school-buttons {
+    gap: 0.9375rem;
+  }
+  .school-btn {
+    padding: 0.625rem 1.25rem;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+  }
+  .alamat {
+    bottom: 3.125rem;
+    font-size: clamp(0.625rem, 1.7vw, 0.75rem);
+  }
+  .who-we-are {
+    padding: 1.875rem 0.9375rem;
+  }
+  .gallery-row {
+    gap: 1.875rem;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 43.75rem;
+  }
+  .gallery-img {
+    height: 11.25rem;
+  }
+  .program-unggulan-title {
+    font-size: clamp(1.375rem, 4vw, 1.625rem);
+  }
+  .atlantis-plus-blue {
+    font-size: clamp(1rem, 3vw, 1.375rem);
+  }
+  .beranda-program-img-atlantis {
+    font-size: 2.5rem;
+  }
+  .program-card {
+    width: 21.875rem;
+    height: 16.25rem;
+  }
+  .bg-left,
+  .bg-right {
+    display: none;
+  }
+  .beranda-image-school-section img {
+    max-height: 25rem;
+  }
+  .timeline-main::after {
+    left: 1.25rem;
+  }
+  .timeline-item {
+    width: 100%;
+    padding-left: 3.75rem;
+    padding-right: 0.625rem;
+  }
+  .timeline-item.right {
+    left: 0;
+  }
+  .timeline-item.left::after,
+  .timeline-item.right::after {
+    left: 0.625rem;
+  }
+  .timeline-item.left .timeline-content::before,
+  .timeline-item.right .timeline-content::before {
+    left: 2.8125rem;
+    border-width: 0.625rem 0 0.625rem 0.9375rem;
+    border-color: transparent transparent transparent #df2f34;
+  }
+  .kegiatan-section {
+    padding: 2.5rem 0 1.875rem;
+  }
+  .kegiatan-title {
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+  }
+  .kegiatan-cards {
+    gap: 1.25rem;
+    max-width: 43.75rem;
+  }
+  .kegiatan-card {
+    width: calc(50% - 0.625rem);
+    max-width: 13.75rem;
+  }
+  .kegiatan-card-img {
+    width: 10.625rem;
+    height: 10.625rem;
+  }
+  .bg-left-kegiatan,
+  .bg-right-kegiatan {
+    display: none;
+  }
+  .news-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .news-banner {
+    max-width: 31.25rem;
+    height: auto;
+  }
+  .news-cards {
+    align-items: center;
+  }
+  .news-card {
+    max-width: 21.875rem;
+    height: 8.125rem;
+  }
+  .highlighted {
+    height: 9.375rem;
+  }
+  .bg-left-news,
+  .bg-right-news {
+    display: none;
+  }
+
+  .card-overlay h3 {
+    font-size: clamp(0.9375rem, 3vw, 1.25rem);
+  }
+
+  .card-overlay p {
+    font-size: clamp(0.625rem, 2vw, 0.75rem);
+
+  }
+}
+
+/* Mobile phones (401px - 768px) */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
+    bottom: 1.5rem;
+    width: 100vw;
+    left: 0;
+  }
+  .hero-overlay h1 {
+    font-size: clamp(1.875rem, 5vw, 2.5rem);
+  }
+  .subtitle {
+    font-size: clamp(1rem, 2.8vw, 1.5rem);
+  }
+  .school-buttons {
+    gap: 0.625rem;
+  }
+  .school-btn {
+    padding: 0.5rem 0.9375rem;
+    font-size: clamp(0.6875rem, 1.8vw, 0.8125rem);
+  }
+  .alamat {
+    bottom: 2.5rem;
+    font-size: clamp(0.5625rem, 1.5vw, 0.6875rem);
+  }
+  .who-we-are {
+    padding: 1.25rem 0.625rem;
+  }
+  .who-we-are h2 {
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+  }
+  .who-we-are p {
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+  }
+  .gallery-row {
+    grid-template-columns: 1fr;
+    gap: 1.5625rem;
+    max-width: 25rem;
+    padding: 0 0.625rem;
+  }
+  .gallery-item {
+    max-width: 20rem;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .gallery-img {
+    height: 11.25rem;
+    aspect-ratio: 16/9;
+  }
+  .gallery-caption {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  .program-unggulan-section {
+    margin: 1.875rem 0 1.25rem;
+    padding: 0 0.625rem;
+  }
+  .program-unggulan-title {
+    font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+  }
+  .atlantis-plus-blue {
+    font-size: clamp(0.875rem, 2.8vw, 1.25rem);
+  }
+  .beranda-program-img-atlantis {
+    font-size: 1.875rem;
+  }
+  .program-banner-img {
+    max-width: 100%;
+    height: auto;
+  }
+  .program-section {
+    padding: 1.875rem 0;
+  }
+  .program-container {
+    padding: 0 0.9375rem;
+  }
+  .program-card {
+    width: 100%;
+    max-width: 18.75rem;
+    height: auto;
+    aspect-ratio: 4/3;
+  }
+  .beranda-image-school-section img {
+    max-height: 21.875rem;
+  }
+  .timeline-section {
+    padding: 2.5rem 0.9375rem;
+  }
+  .timeline-title {
+    font-size: 2em;
+  }
+  .timeline-year {
+    font-size: 1.5em;
+  }
+  .timeline-description {
+    font-size: 0.9em;
+  }
+  .kegiatan-section {
+    padding: 1.875rem 0 1.25rem;
+  }
+  .kegiatan-title {
+    font-size: clamp(1.125rem, 3.5vw, 1.375rem);
+    margin-bottom: 1.25rem;
+  }
+  .kegiatan-cards {
+    flex-direction: column;
+    gap: 0.9375rem;
+    max-width: 98%;
+    align-items: center;
+  }
+  .kegiatan-card {
+    width: 100%;
+    max-width: 20rem;
+  }
+  .kegiatan-card-img {
+    width: 9.375rem;
+    height: 9.375rem;
+  }
+  .kegiatan-card-judul {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+  }
+  .kegiatan-card-desc {
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+  }
+  .news-section {
+    padding: 2.5rem 0;
+  }
+  .news-banner {
+    max-width: 25rem;
+    height: auto;
+  }
+  .news-card {
+    max-width: 18.75rem;
+    height: 7.5rem;
+  }
+  .highlighted {
+    height: 8.75rem;
+  }
+
+  .card-overlay h3 {
+    font-size: clamp(0.9375rem, 3vw, 1.25rem);
+  }
+
+  .card-overlay p {
+    font-size: clamp(0.625rem, 2vw, 0.75rem);
+
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .hero {
+    min-height: 95vh;
+    bottom: 1.5rem;
+    bottom: 1.5rem;
+    width: 100vw;
+    left: 0;
+  }
+
+  .card-overlay h3 {
+    font-size: clamp(0.9375rem, 3vw, 1.25rem);
+  }
+
+  .card-overlay p {
+    font-size: clamp(0.625rem, 2vw, 0.75rem);
+
+  }
+}  
+
+@media (min-width: 361px) and (max-width: 768px) {
+  .hero {
+    min-height: 94vh;
+    bottom: 1.5rem;
+    bottom: 1.5rem;
+    width: 100vw;
+    left: 0;
+  }
+
+   .news-card {
+    max-width: 17.5rem;
+    height: 9.25rem;
+  }
+
+  .card-overlay h3 {
+    font-size: clamp(0.9375rem, 3vw, 1.25rem);
+  }
+
+  .card-overlay p {
+    font-size: clamp(0.625rem, 2vw, 0.75rem);
+
+  }
+}
+
+/* Small screens (≤400px) */
+@media (max-width: 360px) {
+  .hero {
+    min-height: 50vh;
+    bottom: 1.5rem;
+    bottom: 1.5rem;
+    width: 100vw;
+    left: 0;
+  }
+
+  .hero-overlay h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+  .subtitle {
+    font-size: clamp(0.875rem, 2.5vw, 1.25rem);
+  }
+  .school-buttons {
+    gap: 0.5rem;
+  }
+  .school-btn {
+    padding: 0.375rem 0.75rem;
+    font-size: clamp(0.625rem, 1.6vw, 0.75rem);
+  }
+  .alamat {
+    bottom: 1.875rem;
+    font-size: clamp(0.5rem, 1.4vw, 0.625rem);
+  }
+  .who-we-are {
+    padding: 0.9375rem 0.5rem;
+  }
+  .who-we-are h2 {
+    font-size: clamp(1.125rem, 3.5vw, 1.375rem);
+  }
+  .who-we-are p {
+    font-size: clamp(0.6875rem, 1.8vw, 0.8125rem);
+  }
+  .gallery-row {
+    gap: 1.25rem;
+    max-width: 18.75rem;
+    padding: 0 0.5rem;
+  }
+  .gallery-item {
+    max-width: 17.5rem;
+  }
+  .gallery-img {
+    height: 9.375rem;
+  }
+  .gallery-caption {
+    font-size: 0.9rem;
+  }
+  .program-unggulan-section {
+    margin: 1.25rem 0 0.9375rem;
+    padding: 0 0.5rem;
+  }
+  .program-unggulan-title {
+    font-size: clamp(1.125rem, 3vw, 1.375rem);
+  }
+  .atlantis-plus-blue {
+    font-size: clamp(0.75rem, 2.5vw, 1.125rem);
+  }
+  .beranda-program-img-atlantis {
+    font-size: 1.5rem;
+  }
+  .program-card {
+    max-width: 15.625rem;
+  }
+  .beranda-image-school-section img {
+    max-height: 18.75rem;
+  }
+  .timeline-section {
+    padding: 1.875rem 0.625rem;
+  }
+  .timeline-title {
+    font-size: 1.8em;
+  }
+  .timeline-year {
+    font-size: 1.3em;
+  }
+  .timeline-description {
+    font-size: 0.85em;
+  }
+  .kegiatan-section {
+    padding: 1.25rem 0 0.9375rem;
+  }
+  .kegiatan-title {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    margin-bottom: 0.9375rem;
+  }
+  .kegiatan-card {
+    max-width: 17.5rem;
+  }
+  .kegiatan-card-img {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+  .kegiatan-card-judul {
+    font-size: clamp(0.75rem, 2.2vw, 0.875rem);
+  }
+  .kegiatan-card-desc {
+    font-size: clamp(0.6875rem, 1.8vw, 0.8125rem);
+  }
+  .news-section {
+    padding: 1.875rem 0;
+  }
+  .news-banner {
+    max-width: 18.75rem;
+    height: auto;
+  }
+  .news-card {
+    max-width: 17.5rem;
+    height: 9.50rem;
+  }
+  .highlighted {
+    height: 11.25rem;
+  }
+
+  .card-overlay h3 {
+    font-size: clamp(0.9375rem, 3vw, 1.25rem);
+  }
+
+  .card-overlay p {
+    font-size: clamp(0.625rem, 2vw, 0.75rem);
+
+  }
+}

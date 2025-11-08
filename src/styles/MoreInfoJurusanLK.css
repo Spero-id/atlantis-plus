@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.more-info-jurusan-lk {
+    font-family: 'Montserrat', 'Poppins', sans-serif;
+    color: #333;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 80px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content-lk {
+    flex: 1 0 auto;
+}
+
+.more-info-jurusan-lk-hero {
+    background-color: #1D1819;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 88vh;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    box-shadow: 0 8px 32px rgba(255, 203, 0, 0.10);
+}
+
+.more-info-jurusan-lk-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px 60px 20px;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.more-info-jurusan-lk-hero-title {
+    font-size: 42px;
+    margin-bottom: 10px;
+    background: #FFF4E0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.more-info-jurusan-lk-teks {
+    font-size: 40px;
+    background: #ffd000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.more-info-jurusan-lk-teks2 {
+    font-size: clamp(36px, 7vw, 70px);
+    margin-bottom: 10px;
+    background: #FFF4E0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.lk-wrapper {
+    padding: 0 100px;
+    margin-top: 50px;
+}
+
+.top-image-wrapper-lk {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    height: 419px;
+    background-color: #1D1819;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 0;
+}
+
+.top-image-wrapper-lk img {
+    width: 480px;
+    height: 314px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.info-section-lk {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    display: flex;
+}
+
+.info-text-lk {
+    width: 48%;
+    font-family: 'Poppins', sans-serif;
+    color: #4a4a4a;
+}
+
+.info-text-lk h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.info-text-lk p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.slider-container-lk {
+    width: 540px;
+    height: 384px;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.slider-container-lk img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: black;
+}
+
+.slick-prev {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.slick-next {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.slick-dots {
+    display: flex !important;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.pelajaran-section-lk {
+    margin-top: 50px;
+}
+
+.pelajaran-section-lk h3 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #4a4a4a;
+}
+
+.pelajaran-grid-lk {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: stretch;
+}
+
+.pelajaran-item-card-lk {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: none;
+}
+
+.ikon-pelajaran-lk {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.ikon-pelajaran-lk img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.teks-pelajaran-lk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.teks-pelajaran-lk h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+    color: #4a4a4a;
+}
+
+.teks-pelajaran-lk p {
+    font-size: 1em;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    color: #666;
+}
+
+.software-section-lk {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.software-title-lk {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: #4a4a4a;
+}
+
+.software-title-lk span {
+    font-size: 1em;
+    font-weight: normal;
+    display: block;
+    color: #888;
+}
+
+.software-icons-lk {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.software-icons-lk img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+/* ===== ACTIVITY SECTION ===== */
+.activity-section-lk {
+    padding: 60px 20px 80px;
+    font-family: 'Inter', sans-serif;
+    color: #1c1c1c;
+}
+
+.activity-section-lk .main-header-lk {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.activity-section-lk .main-header-lk h1 {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.activity-section-lk .main-header-lk p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    letter-spacing: 0.2px;
+    margin-bottom: 16px;
+}
+
+.main-circle-wrapper-lk {
+    background-color: #1c1718;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.main-circle-lk {
+    width: 332px;
+    height: 332px;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    margin: 0;
+}
+
+/* Layout dua kolom */
+.content-grid-lk {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 60px 80px;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+/* Card tiap activity */
+.activity-card-lk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.activity-card-lk h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    margin-top: 20px;
+}
+
+.activity-card-lk p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    max-width: 280px;
+    margin-bottom: 16px;
+    color: #333;
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* Gambar 2x2 - Ukuran Sesuai Figma */
+.image-grid-lk {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.image-box-lk {
+    width: 100%;
+    max-width: 240px;
+    aspect-ratio: 1.355 / 1;
+    background-color: #d3d3d3;
+    border-radius: 27px;
+    overflow: hidden;
+}
+
+.image-box-lk img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== MEDIA QUERIES ===== */
+/* Tablet landscape (1024px) ke bawah */
+@media (max-width: 1024px) {
+    .lk-wrapper {
+        padding: 0 60px;
+    }
+
+    .info-section-lk {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .info-text-lk,
+    .slider-container-lk {
+        width: 100%;
+    }
+
+    .top-image-wrapper-lk {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .top-image-wrapper-lk img {
+        width: 100%;
+        height: auto;
+    }
+
+    .pelajaran-grid-lk {
+        grid-template-columns: 1fr;
+    }
+
+    .image-grid-lk {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        justify-items: center;
+    }
+
+    .image-box-lk {
+        max-width: 300px;
+        aspect-ratio: 4 / 3;
+        height: auto;
+    }
+    
+    .main-circle-lk {
+        width: 260px;
+        height: 260px;
+    }
+}
+
+/* Tablet portrait (768px) ke bawah */
+@media (max-width: 768px) {
+    .lk-wrapper {
+        padding: 0 40px;
+    }
+
+    .more-info-jurusan-lk-hero-title {
+        font-size: 32px;
+    }
+
+    .more-info-jurusan-lk-teks {
+        font-size: 32px;
+    }
+
+    .slider-container-lk {
+        width: 100%;
+        height: auto;
+    }
+
+    .pelajaran-item-card-lk {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ikon-pelajaran-lk {
+        width: 120px;
+        height: 120px;
+    }
+
+    .activity-section-lk {
+        padding: 40px 16px 60px;
+    }
+
+    .content-grid-lk {
+        gap: 40px;
+    }
+
+    .image-grid-lk {
+        grid-template-columns: 1fr;
+    }
+
+    .image-box-lk {
+        max-width: 300px;
+        aspect-ratio: 4 / 3;
+        height: auto;
+    }
+
+    .activity-card-lk h3 {
+        font-size: 24px;
+    }
+
+    .activity-card-lk p {
+        font-size: 16px;
+    }
+
+    .main-circle-lk {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Mobile devices (480px ke bawah) */
+@media (max-width: 480px) {
+    .lk-wrapper {
+        padding: 0 20px;
+    }
+
+    .info-text-lk h2 {
+        font-size: 1.8em;
+    }
+
+    .info-text-lk p {
+        font-size: 1em;
+    }
+
+    .more-info-jurusan-lk-teks2 {
+        font-size: 28px;
+    }
+
+    .pelajaran-section-lk h3,
+    .software-title-lk {
+        font-size: 1.5em;
+    }
+
+    .image-grid-lk {
+        gap: 12px;
+    }
+
+    .image-box-lk {
+        aspect-ratio: 4 / 3;
+        height: auto;
+    }
+
+    .activity-card-lk h3 {
+        font-size: 20px;
+    }
+
+    .activity-card-lk p {
+        font-size: 14px;
+    }
+
+    .main-circle-lk {
+        width: 150px;
+        height: 150px;
+    }
+}

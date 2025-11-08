@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&display=swap');
+
+
+
+
+/* --- General Container --- */
+.EkstrakulikulerSMK-container {
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  color: #333;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 80px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Agar footer selalu di bawah, dorong konten utama ke atas */
+.main-content {
+  flex: 1 0 auto;
+}
+
+/* --- Hero Section --- */
+.EkstrakulikulerSMK-hero {
+  background-image: url('/herosection.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 88vh;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(255, 203, 0, 0.10);
+}
+
+.EkstrakulikulerSMK-hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px 60px 20px;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.EkstrakulikulerSMK-hero-title {
+  font-size: 42px;
+  margin-bottom: 10px;
+  background: #FFFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.EkstrakulikulerSMK-teks {
+  font-size: 65px;
+  background: #ffd000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.EkstrakulikulerSMK-teks2 {
+  font-size: clamp(36px, 7vw, 70px);
+  margin-bottom: 10px;
+  background: #FFFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;      
+  text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.EkstrakulikulerSMK-hero-subtitle {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+/* --- Ekskul Section Styling --- */
+.ekskulSMK-section {
+  width: 100%; /* biar full sampai kiri-kanan layar */
+  margin: 0; /* hapus auto biar gak ketengah */
+  padding: 60px 20px;
+  border-top-left-radius: 193px;
+  border-top-right-radius: 211px;
+  box-sizing: border-box;
+  position: relative;
+  top: -180px;
+  background-color: #FFF4E0;
+  z-index: 2;
+  text-align: center;
+}
+
+.ekskulSMK-title {
+  color: #d9534f;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.ekskulSMK-desc {
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Grid untuk menempatkan kartu */
+.ekskulSMK-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px; /* Jarak antar kartu */
+  margin-top: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Kontainer untuk setiap item ekskul */
+.ekskulSMK-item {
+  position: relative;
+  text-align: center;
+}
+
+/* Kontainer untuk gambar dan label */
+.ekskulSMK-image-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 66.66%; /* Rasio aspek 3:2 */
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ekskulSMK-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Container gabungan icon + flag */
+.ekskulSMK-label {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+}
+
+/* Icon lingkaran */
+.ekskulSMK-icon-circle {
+  width: 78px;
+  height: 78px;
+  background-color: #ffffff;
+  border-radius: 50%; /* Membuat lingkaran */
+  border: 1px solid #EC3237;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.ekskulSMK-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Wrapper agar pseudo-element bisa keluar tanpa kena clip-path */
+.ekskulSMK-flag-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.ekskulSMK-name-flag {
+  background-color: #ffffff;
+  padding: 15px 80px 8px 30px;
+  margin-left: -15px;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #d9534f;
+  letter-spacing: 0.5px;
+
+  /* bentuk bendera putih */
+  clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
+}
+
+/* bendera merah di bawah */
+.ekskulSMK-flag-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: -6px; /* bisa diatur */
+  left: 0;
+  margin-left: -15px;
+  width: 50%;
+  height: 5px;
+  background-color: #EC3237;
+  clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
+}
+
+
+
+/* Teks di dalam bendera */
+.ekskulSMK-name {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #d9534f; /* warna merah seperti contoh */
+  letter-spacing: 0.5px;
+}

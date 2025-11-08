@@ -1,0 +1,575 @@
+/* =====================
+    GALERI SMP HERO SECTION
+    ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+.galeriSMP-container {
+    font-family: 'Montserrat', 'Poppins', sans-serif;
+    color: #333;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 80px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure footer stays at the bottom */
+.main-content {
+    flex: 1 0 auto;
+}
+
+.galeriSMP-hero {
+    background-image: url('/herosection.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 88vh;
+    width: 85%;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(255, 203, 0, 0.10);
+}
+
+.galeriSMP-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 60px;
+    z-index: 1;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+
+.galeriSMP-hero-title {
+    font-size: 64px;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.galeriSMP-atlantis-plus-teks {
+    font-size: clamp(36px, 7vw, 70px);
+    background: #ffd000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.galeri-smp-teks {
+    font-size: clamp(36px, 7vw, 70px);
+    margin-bottom: 10px;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.galeriSMP-hero-subtitle {
+    font-size: 1.1em;
+    margin-bottom: 0;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 100;
+    text-align: left;
+    max-width: 700px;
+}
+
+/* =====================
+   OUR GALLERY SECTION
+   ===================== */
+.gallery-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.title {
+    color: #c0392b;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.description {
+    color: #333;
+    line-height: 1.6;
+    max-width: 800px;
+    text-align: left;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.image-row {
+    display: flex;
+    gap: 20px;
+}
+
+.image-container {
+    width: 250px;
+    height: 180px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* General Section Styles */
+.fasilitas-sekolah-section,
+.mps-ldks-section,
+.LatihanDasarKepemimpinanSiswa-section,
+.SanlatRamadhan-section,
+.AtlantisTalentDay-section,
+.KunjunganIndustri-section,
+.Ekstrakurikuler-section {
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Title Styles */
+.section-title-wrapper {
+    position: relative;
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+/* Section Title Styles */
+.section-title {
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #EC3237;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -35px; /* Adjusted to increase gap between title and underline */
+    left: 0;
+    width: 50%;
+    height: 30px;
+    background-color: #EC3237;
+    clip-path: polygon(0 0, 100% 0, 98% 100%, 0 100%);
+}
+
+/* General Grid and Row Styles */
+.fasilitas-sekolah-grid,
+.mps-ldks-grid,
+.LatihanDasarKepemimpinanSiswa-grid,
+.SanlatRamadhan-grid,
+.AtlantisTalentDay-grid,
+.KunjunganIndustri-grid,
+.Ekstrakurikuler-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.fasilitas-sekolah-row,
+.mps-ldks-row,
+.LatihanDasarKepemimpinanSiswa-row,
+.SanlatRamadhan-row,
+.AtlantisTalentDay-row,
+.KunjunganIndustri-row,
+.Ekstrakurikuler-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.fasilitas-sekolah-row2,
+.mps-ldks-row2,
+.LatihanDasarKepemimpinanSiswa-row2,
+.SanlatRamadhan-row2,
+.AtlantisTalentDay-row2,
+.KunjunganIndustri-row2,
+.Ekstrakurikuler-row2 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Card Styles */
+.fasilitas-sekolah-card,
+.mps-ldks-card,
+.LatihanDasarKepemimpinanSiswa-card,
+.SanlatRamadhan-card,
+.AtlantisTalentDay-card,
+.KunjunganIndustri-card,
+.Ekstrakurikuler-card {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fasilitas-sekolah-card2,
+.mps-ldks-card2,
+.LatihanDasarKepemimpinanSiswa-card2,
+.SanlatRamadhan-card2,
+.AtlantisTalentDay-card2,
+.KunjunganIndustri-card2,
+.Ekstrakurikuler-card2 {
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image Styles */
+.fasilitas-sekolah-image,
+.mps-ldks-image,
+.LatihanDasarKepemimpinanSiswa-image,
+.SanlatRamadhan-image,
+.AtlantisTalentDay-image,
+.KunjunganIndustri-image,
+.Ekstrakurikuler-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.fasilitas-sekolah-image2,
+.mps-ldks-image2,
+.LatihanDasarKepemimpinanSiswa-image2,
+.SanlatRamadhan-image2,
+.AtlantisTalentDay-image2,
+.KunjunganIndustri-image2,
+.Ekstrakurikuler-image2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Placeholder Styles */
+.fasilitas-sekolah-placeholder,
+.mps-ldks-placeholder,
+.LatihanDasarKepemimpinanSiswa-placeholder,
+.SanlatRamadhan-placeholder,
+.AtlantisTalentDay-placeholder,
+.KunjunganIndustri-placeholder,
+.Ekstrakurikuler-placeholder {
+    width: 100%;
+    height: 130px;
+    background-color: #f0f0f0;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (min-width: 1200px) {
+    .galeriSMP-hero {
+        min-height: 90vh;
+    }
+    .galeriSMP-hero-title {
+        font-size: 48px;
+    }
+    .galeriSMP-atlantis-plus-teks,
+    .galeri-smp-teks {
+        font-size: clamp(40px, 7vw, 75px);
+    }
+    .galeriSMP-hero-subtitle {
+        font-size: 1.2em;
+    }
+    .fasilitas-sekolah-row,
+    .mps-ldks-row,
+    .LatihanDasarKepemimpinanSiswa-row,
+    .SanlatRamadhan-row,
+    .AtlantisTalentDay-row,
+    .KunjunganIndustri-row,
+    .Ekstrakurikuler-row,
+    .fasilitas-sekolah-row2,
+    .mps-ldks-row2,
+    .LatihanDasarKepemimpinanSiswa-row2,
+    .SanlatRamadhan-row2,
+    .AtlantisTalentDay-row2,
+    .KunjunganIndustri-row2,
+    .Ekstrakurikuler-row2 {
+        gap: 50px;
+    }
+    .fasilitas-sekolah-card,
+    .mps-ldks-card,
+    .LatihanDasarKepemimpinanSiswa-card,
+    .SanlatRamadhan-card,
+    .AtlantisTalentDay-card,
+    .KunjunganIndustri-card,
+    .Ekstrakurikuler-card {
+        width: 350px;
+        height: 250px;
+    }
+    .fasilitas-sekolah-card2,
+    .mps-ldks-card2,
+    .LatihanDasarKepemimpinanSiswa-card2,
+    .SanlatRamadhan-card2,
+    .AtlantisTalentDay-card2,
+    .KunjunganIndustri-card2,
+    .Ekstrakurikuler-card2 {
+        width: 250px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .galeriSMP-container {
+        padding-top: 60px;
+    }
+    .galeriSMP-hero {
+        min-height: 70vh;
+        width: 90%;
+    }
+    .galeriSMP-hero-title {
+        font-size: 36px;
+    }
+    .galeriSMP-atlantis-plus-teks,
+    .galeri-smp-teks {
+        font-size: clamp(30px, 6vw, 60px);
+    }
+    .galeriSMP-hero-subtitle {
+        font-size: 1em;
+    }
+    .fasilitas-sekolah-row,
+    .mps-ldks-row,
+    .LatihanDasarKepemimpinanSiswa-row,
+    .SanlatRamadhan-row,
+    .AtlantisTalentDay-row,
+    .KunjunganIndustri-row,
+    .Ekstrakurikuler-row,
+    .fasilitas-sekolah-row2,
+    .mps-ldks-row2,
+    .LatihanDasarKepemimpinanSiswa-row2,
+    .SanlatRamadhan-row2,
+    .AtlantisTalentDay-row2,
+    .KunjunganIndustri-row2,
+    .Ekstrakurikuler-row2 {
+        gap: 20px;
+    }
+    .fasilitas-sekolah-card,
+    .mps-ldks-card,
+    .LatihanDasarKepemimpinanSiswa-card,
+    .SanlatRamadhan-card,
+    .AtlantisTalentDay-card,
+    .KunjunganIndustri-card,
+    .Ekstrakurikuler-card {
+        width: 250px;
+        height: 180px;
+    }
+    .fasilitas-sekolah-card2,
+    .mps-ldks-card2,
+    .LatihanDasarKepemimpinanSiswa-card2,
+    .SanlatRamadhan-card2,
+    .AtlantisTalentDay-card2,
+    .KunjunganIndustri-card2,
+    .Ekstrakurikuler-card2 {
+        width: 180px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .galeriSMP-container {
+        padding-top: 50px;
+    }
+    .galeriSMP-hero {
+        min-height: 60vh;
+        width: 95%;
+    }
+    .galeriSMP-hero-overlay {
+        padding-left: 40px;
+    }
+    .galeriSMP-hero-title {
+        font-size: 32px;
+    }
+    .galeriSMP-atlantis-plus-teks,
+    .galeri-smp-teks {
+        font-size: clamp(24px, 5vw, 45px);
+    }
+    .galeriSMP-hero-subtitle {
+        font-size: 0.9em;
+    }
+    .fasilitas-sekolah-row,
+    .mps-ldks-row,
+    .LatihanDasarKepemimpinanSiswa-row,
+    .SanlatRamadhan-row,
+    .AtlantisTalentDay-row,
+    .KunjunganIndustri-row,
+    .Ekstrakurikuler-row,
+    .fasilitas-sekolah-row2,
+    .mps-ldks-row2,
+    .LatihanDasarKepemimpinanSiswa-row2,
+    .SanlatRamadhan-row2,
+    .AtlantisTalentDay-row2,
+    .KunjunganIndustri-row2,
+    .Ekstrakurikuler-row2 {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .fasilitas-sekolah-card,
+    .mps-ldks-card,
+    .LatihanDasarKepemimpinanSiswa-card,
+    .SanlatRamadhan-card,
+    .AtlantisTalentDay-card,
+    .KunjunganIndustri-card,
+    .Ekstrakurikuler-card,
+    .fasilitas-sekolah-card2,
+    .mps-ldks-card2,
+    .LatihanDasarKepemimpinanSiswa-card2,
+    .SanlatRamadhan-card2,
+    .AtlantisTalentDay-card2,
+    .KunjunganIndustri-card2,
+    .Ekstrakurikuler-card2 {
+        width: 45%;
+        height: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .galeriSMP-container {
+        padding-top: 40px;
+    }
+    .galeriSMP-hero {
+        min-height: 50vh;
+        width: 98%;
+    }
+    .galeriSMP-hero-overlay {
+        padding-left: 20px;
+    }
+    .galeriSMP-hero-title {
+        font-size: 28px;
+    }
+    .galeriSMP-atlantis-plus-teks,
+    .galeri-smp-teks {
+        font-size: clamp(20px, 4vw, 38px);
+    }
+    .galeriSMP-hero-subtitle {
+        font-size: 0.8em;
+    }
+    .fasilitas-sekolah-row,
+    .mps-ldks-row,
+    .LatihanDasarKepemimpinanSiswa-row,
+    .SanlatRamadhan-row,
+    .AtlantisTalentDay-row,
+    .KunjunganIndustri-row,
+    .Ekstrakurikuler-row,
+    .fasilitas-sekolah-row2,
+    .mps-ldks-row2,
+    .LatihanDasarKepemimpinanSiswa-row2,
+    .SanlatRamadhan-row2,
+    .AtlantisTalentDay-row2,
+    .KunjunganIndustri-row2,
+    .Ekstrakurikuler-row2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .fasilitas-sekolah-card,
+    .mps-ldks-card,
+    .LatihanDasarKepemimpinanSiswa-card,
+    .SanlatRamadhan-card,
+    .AtlantisTalentDay-card,
+    .KunjunganIndustri-card,
+    .Ekstrakurikuler-card,
+    .fasilitas-sekolah-card2,
+    .mps-ldks-card2,
+    .LatihanDasarKepemimpinanSiswa-card2,
+    .SanlatRamadhan-card2,
+    .AtlantisTalentDay-card2,
+    .KunjunganIndustri-card2,
+    .Ekstrakurikuler-card2 {
+        width: 80%;
+        height: 200px;
+    }
+}
+
+@media (max-width: 400px) {
+    .galeriSMP-container {
+        padding-top: 30px;
+    }
+    .galeriSMP-hero {
+        min-height: 40vh;
+        width: 100%;
+    }
+    .galeriSMP-hero-overlay {
+        padding-left: 10px;
+    }
+    .galeriSMP-hero-title {
+        font-size: 24px;
+    }
+    .galeriSMP-atlantis-plus-teks,
+    .galeri-smp-teks {
+        font-size: clamp(18px, 4.5vw, 32px);
+    }
+    .galeriSMP-hero-subtitle {
+        font-size: 0.7em;
+    }
+    .fasilitas-sekolah-card,
+    .mps-ldks-card,
+    .LatihanDasarKepemimpinanSiswa-card,
+    .SanlatRamadhan-card,
+    .AtlantisTalentDay-card,
+    .KunjunganIndustri-card,
+    .Ekstrakurikuler-card,
+    .fasilitas-sekolah-card2,
+    .mps-ldks-card2,
+    .LatihanDasarKepemimpinanSiswa-card2,
+    .SanlatRamadhan-card2,
+    .AtlantisTalentDay-card2,
+    .KunjunganIndustri-card2,
+    .Ekstrakurikuler-card2 {
+        width: 90%;
+        height: 180px;
+    }
+}

@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&display=swap');
+
+
+
+
+/* --- General Container --- */
+.EkstrakulikulerSMP-container {
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  color: #333;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 80px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Agar footer selalu di bawah, dorong konten utama ke atas */
+.main-content {
+  flex: 1 0 auto;
+}
+
+/* --- Hero Section --- */
+.EkstrakulikulerSMP-hero {
+  background-image: url('/herosection.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 88vh;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(255, 203, 0, 0.10);
+}
+
+.EkstrakulikulerSMP-hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px 60px 20px;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.EkstrakulikulerSMP-hero-title {
+  font-size: 42px;
+  margin-bottom: 10px;
+  background: #FFFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.EkstrakulikulerSMP-teks {
+  font-size: 65px;
+  background: #ffd000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.EkstrakulikulerSMP-teks2 {
+  font-size: clamp(36px, 7vw, 70px);
+  margin-bottom: 10px;
+  background: #FFFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;    
+  text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.EkstrakulikulerSMP-hero-subtitle {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+
+
+.ekskul-section {
+  width: 100%; /* biar full sampai kiri-kanan layar */
+  margin: 0; /* hapus auto biar gak ketengah */
+  padding: 60px 20px;
+  border-top-left-radius: 193px;
+  border-top-right-radius: 211px;
+  box-sizing: border-box;
+  position: relative;
+  top: -180px;
+  background-color: #FFF4E0;
+  z-index: 2;
+  text-align: center;
+}
+
+.ekskul-title {
+  color: #d9534f;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.ekskul-desc {
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.ekskul-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.ekskul-item {
+  text-align: center;
+}
+
+.ekskul-img-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+/* background di belakang gambar */
+.ekskul-img-wrap img {
+  width: 420px;
+  height: 260px;
+  border-radius: 4px;
+  object-fit: cover;
+  background-color: #b0b0b0; /* ini background yang kelihatan */
+}
+
+.ekskul-circle {
+  position: absolute;
+  width: 103px;
+  height: 97px;
+  background-color: #7a7573;
+  border-radius: 50%;
+  bottom: -30px;
+  right: -30px;
+}
+
+.ekskul-item h3 {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #d9534f;
+  font-weight: bold;
+}

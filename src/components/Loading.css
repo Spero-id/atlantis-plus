@@ -1,0 +1,73 @@
+.loading-container {
+  position: fixed;        /* nempel ke viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;           /* penuh layar */
+  height: 100vh;          /* penuh layar */
+  background: #FFF4E0;       /* tutup semua konten di bawah */
+  z-index: 9999;          /* pastikan paling atas */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  user-select: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.teks-loading {
+  font-size: clamp(24px, 6vw, 40px);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  background: linear-gradient(270deg, #e53935, #ffc300, #e53935);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 8s ease infinite;
+  line-height: 1.1;
+  user-select: none;
+}
+
+.loading-percent {
+  font-size: clamp(50px, 15vw, 50px);
+  font-weight: 900;
+  background: linear-gradient(270deg, #e53935, #ffc300, #e53935);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.05em;
+
+  user-select: none;
+  min-width: 180px;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    text-shadow:
+      0 0 8px #ffc300,
+      0 0 20px #ffb300,
+      0 0 30px #ffb300;
+    color: #ffc300;
+  }
+  50% {
+    text-shadow:
+      0 0 15px #fffacd,
+      0 0 30px #fffacd,
+      0 0 50px #fffacd;
+    color: #fffacd;
+  }
+}
