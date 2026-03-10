@@ -2,11 +2,14 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
 import ScrollToTop from './context/ScrollToTop';
 
 import Beranda from './pages/Beranda';
 import Informasi from './pages/Informasi';
 import Pendaftaran from './pages/Pendaftaran';
+import PendaftaranSMP from './pages/PendaftaranSMP';
+import PendaftaranSMK from './pages/PendaftaranSMK';
 import Login from './pages/Login';
 import KurikulumSMP from './pages/KurikulumSMP';
 import KeunggulanSMP from './pages/KeunggulanSMP';
@@ -66,6 +69,8 @@ function AppWrapper() {
           <Route path="/informasi" element={<Informasi />} />
           <Route path="/struktursekolah" element={<StrukturSekolah />} />
           <Route path="/pendaftaran" element={<Pendaftaran />} />
+          <Route path="/ppdbsmp" element={<PendaftaranSMP />} />
+          <Route path="/ppdbsmk" element={<PendaftaranSMK />} />
           <Route path="/login" element={<Login />} />
           <Route path="/kurikulumsmp" element={<KurikulumSMP />} />
           <Route path="/keunggulansmp" element={<KeunggulanSMP />} />
@@ -95,6 +100,7 @@ function AppWrapper() {
         </Routes>
       </div>
       <Footer />
+      <WhatsAppButton phone="082387444002" message="Halo, saya ingin bertanya tentang pendaftaran." />
     </div>
   );
 }

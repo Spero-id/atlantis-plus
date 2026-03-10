@@ -96,7 +96,7 @@ const EkstrakurikulerData = [
   { image: "/EkstrakurikulerSMP6.jpg" },
   { image: "/EkstrakurikulerSMP7.jpg" },
   { image: "/EkstrakurikulerSMP8.jpg" },
-  { image: "EkstrakurikulerSMP9.jpg" },
+  { image: "/EkstrakurikulerSMP9.jpg" },
   { image: "/noimages.jpg" },
   { image: "/noimages.jpg" },
 ];
@@ -145,18 +145,18 @@ const GaleriSMP = () => {
       <div className="image-gallery">
         <div className="image-row">
           <div className="image-container">
-            <img src="path/to/image1.jpg" alt="Kegiatan bersama siswa" />
+            <img src="/AtlantisTalentDaySMP10.jpg" alt="Kegiatan bersama siswa" />
           </div>
           <div className="image-container">
-            <img src="path/to/image2.jpg" alt="Pertunjukan seni" />
+            <img src="/GaleriImageBottomSMP.jpg" alt="Pertunjukan seni" />
           </div>
         </div>
         <div className="image-row">
           <div className="image-container">
-            <img src="path/to/image3.jpg" alt="Makan bersama di sekolah" />
+            <img src="/galeri1.jpg" alt="Makan bersama di sekolah" />
           </div>
           <div className="image-container">
-            <img src="path/to/image4.jpg" alt="Acara sekolah dengan guru dan siswa" />
+            <img src="/InformasiPageImage4.jpg" alt="Acara sekolah dengan guru dan siswa" />
           </div>
         </div>
       </div>

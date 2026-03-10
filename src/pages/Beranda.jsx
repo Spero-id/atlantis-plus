@@ -119,7 +119,9 @@ const Beranda = () => {
           </h2>
           <div className="program-slider">
             <button className="slider-arrow left" onClick={handlePrevClick}>
-              &#9664;
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
             </button>
             <div className="program-cards">
               {currentPrograms.map((program, index) => (
@@ -133,7 +135,9 @@ const Beranda = () => {
               ))}
             </div>
             <button className="slider-arrow right" onClick={handleNextClick}>
-              &#9654;
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
             </button>
           </div>
         </div>
@@ -266,11 +270,11 @@ const Beranda = () => {
         </h2>
         <div className="news-content">
           <img
-            src="/newsAtlantisPlus.png"
+            src="/SMP DEPAN WEB.png"
             alt="PPDB Banner"
             className="news-banner"
           />
-          <div className="news-cards">
+          {/* <div className="news-cards">
             {newsData.map((item, index) => (
               <div
                 key={index}
@@ -283,7 +287,7 @@ const Beranda = () => {
                 </p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

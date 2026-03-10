@@ -27,6 +27,7 @@ const Informasi = () => {
 
   // Data gambar untuk sponsor slider
   const sponsorImages = [
+    "/SPERO2.png",
     "/SponsorAtlantis1.png",
     "/SponsorAtlantis2.png",
     "/SponsorAtlantis3.png",
@@ -135,6 +136,9 @@ const Informasi = () => {
                     src={imgSrc}
                     alt={`Main Visual ${index + 1}`}
                     className="atlantisPlus_slider-image"
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                    decoding="async"
+                    width="1200"
                   />
                 </div>
               ))}
@@ -145,7 +149,7 @@ const Informasi = () => {
         {/* Bottom Section */}
         <div className="atlantisPlus_bottom-section-container">
           <div className="atlantisPlus_left-image-grid">
-            {[
+            {[ 
               "/InformasiPage1.jpg",
               "/InformasiPage2.jpg",
               "/InformasiPage3.jpg",
@@ -157,6 +161,9 @@ const Informasi = () => {
                   src={src}
                   alt={`Image ${i + 1}`}
                   className="atlantisPlus_grid-img"
+                  loading="lazy"
+                  decoding="async"
+                  width="400"
                 />
               </div>
             ))}
@@ -243,6 +250,9 @@ const Informasi = () => {
                 src={imgSrc}
                 alt={`Sponsor ${index + 1}`}
                 className="atlantisPlus_sponsor-image"
+                loading="lazy"
+                decoding="async"
+                width="200"
               />
             </div>
           ))}

@@ -32,6 +32,7 @@ const Login = () => {
       {/* Right Section: Login Form */}
       <div className="login-right-panel">
         <div className="right-panel-wave"></div>
+    
         <div className="login-card-wrapper">
           <div className="login-logos">
             <img

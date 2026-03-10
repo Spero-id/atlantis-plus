@@ -23,19 +23,19 @@ const Pendaftaran = () => {
 
     const adminNumber = "6283817903824"; // Ganti dengan nomor WhatsApp Admin
     const message = `Halo, saya ingin mendaftar:\n\n
-Nama: ${form.nama}\n
-Jenis Kelamin: ${form.jenisKelamin}\n
-Email: ${form.email}\n
-Agama: ${form.agama}\n
-Jenjang Pendidikan: ${form.jenjang}\n
-Sekolah Asal: ${form.sekolahAsal}\n
-Orang Tua/Wali: ${form.orangTua}\n
-No. Telp Siswa: ${form.telpSiswa}\n
-No. Telp Ortu: ${form.telpOrtu}`;
+    Nama: ${form.nama}\n
+    Jenis Kelamin: ${form.jenisKelamin}\n
+    Email: ${form.email}\n
+    Agama: ${form.agama}\n
+    Jenjang Pendidikan: ${form.jenjang}\n
+    Sekolah Asal: ${form.sekolahAsal}\n
+    Orang Tua/Wali: ${form.orangTua}\n
+    No. Telp Siswa: ${form.telpSiswa}\n
+    No. Telp Ortu: ${form.telpOrtu}`;
 
     window.open(
       `https://wa.me/${adminNumber}?text=${encodeURIComponent(message)}`,
-      "_blank"
+      "_blank",
     );
   };
 
@@ -101,38 +101,7 @@ No. Telp Ortu: ${form.telpOrtu}`;
           </div>
         </div>
 
-        <div className="form-row">
-          <div>
-            <label>Agama</label>
-            <select
-              name="agama"
-              value={form.agama}
-              onChange={handleChange}
-              required
-            >
-              <option value="">-- Pilih Agama --</option>
-              <option value="Islam">Islam</option>
-              <option value="Kristen">Kristen</option>
-              <option value="Katolik">Katolik</option>
-              <option value="Hindu">Hindu</option>
-              <option value="Buddha">Buddha</option>
-              <option value="Konghucu">Konghucu</option>
-            </select>
-          </div>
-          <div>
-            <label>Jenjang Pendidikan yang Dituju</label>
-            <select
-              name="jenjang"
-              value={form.jenjang}
-              onChange={handleChange}
-              required
-            >
-              <option value="">-- Pilih Jenjang --</option>
-              <option value="SMP">SMP</option>
-              <option value="SMK">SMK</option>
-            </select>
-          </div>
-        </div>
+        
 
         <div className="form-row">
           <div>

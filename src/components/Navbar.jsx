@@ -121,18 +121,6 @@ const Navbar = () => {
           </NavLink>
         </li>
 
-        <li className="navbar-item">
-          <NavLink
-            to="/pendaftaran"
-            className={({ isActive }) =>
-              "navbar-link" + (isActive ? " active" : "")
-            }
-            onClick={handleNavLinkClick}
-          >
-            Pendaftaran
-          </NavLink>
-        </li>
-
         {/* SEKOLAH */}
         <li
           className={`navbar-item dropdown-submenu ${
@@ -149,7 +137,9 @@ const Navbar = () => {
             Sekolah <span className="arrow-down">&#9660;</span>
           </div>
 
-          <ul className={`dropdown-menu ${activeDropdown["sekolah"] ? "open" : ""}`}>
+          <ul
+            className={`dropdown-menu ${activeDropdown["sekolah"] ? "open" : ""}`}
+          >
             {/* SMP */}
             <li
               className={`dropdown-submenu ${
@@ -168,17 +158,105 @@ const Navbar = () => {
                   activeDropdown["sekolah-smp"] ? "open" : ""
                 }`}
               >
-                <li><Link to="/kurikulumsmp" className="submenu-item" onClick={handleNavLinkClick}>Kurikulum</Link></li>
-                <li><Link to="/keunggulansmp" className="submenu-item" onClick={handleNavLinkClick}>Keunggulan</Link></li>
-                <li><Link to="/prestasismp" className="submenu-item" onClick={handleNavLinkClick}>Prestasi</Link></li>
-                <li><Link to="/eksrasmp" className="submenu-item" onClick={handleNavLinkClick}>Ekstrakurikuler</Link></li>
-                <li><Link to="/olimpiadesmp" className="submenu-item" onClick={handleNavLinkClick}>Olimpiade</Link></li>
-                <li><Link to="/thebestentrepeneur" className="submenu-item" onClick={handleNavLinkClick}>The Best Entrepeneur</Link></li>
-                <li><Link to="/thebesttahfidz" className="submenu-item" onClick={handleNavLinkClick}>The Best Tahfidz</Link></li>
-                <li><Link to="/thebestenglish" className="submenu-item" onClick={handleNavLinkClick}>The Best English</Link></li>
-                <li><Link to="/thebestcharacter" className="submenu-item" onClick={handleNavLinkClick}>The Best Character</Link></li>
-                <li><Link to="/pancaksilat" className="submenu-item" onClick={handleNavLinkClick}>Pancak Silat</Link></li>
-                <li><Link to="/gurugurusmp" className="submenu-item" onClick={handleNavLinkClick}>Guru - Guru</Link></li>
+                <li>
+                  <Link
+                    to="/kurikulumsmp"
+                    className="submenu-item"
+                    onClick={handleNavLinkClick}
+                  >
+                    Kurikulum
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/keunggulansmp"
+                    className="submenu-item"
+                    onClick={handleNavLinkClick}
+                  >
+                    Keunggulan
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/prestasismp"
+                    className="submenu-item"
+                    onClick={handleNavLinkClick}
+                  >
+                    Prestasi
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/eksrasmp"
+                    className="submenu-item"
+                    onClick={handleNavLinkClick}
+                  >
+                    Ekstrakurikuler
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/olimpiadesmp"
+                    className="submenu-item"
+                    onClick={handleNavLinkClick}
+                  >
+                    Olimpiade
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/thebestentrepeneur"
+                    className="submenu-item"
+                    onClick={handleNavLinkClick}
+                  >
+                    The Best Entrepeneur
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/thebesttahfidz"
+                    className="submenu-item"
+                    onClick={handleNavLinkClick}
+                  >
+                    The Best Tahfidz
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/thebestenglish"
+                    className="submenu-item"
+                    onClick={handleNavLinkClick}
+                  >
+                    The Best English
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/thebestcharacter"
+                    className="submenu-item"
+                    onClick={handleNavLinkClick}
+                  >
+                    The Best Character
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/pancaksilat"
+                    className="submenu-item"
+                    onClick={handleNavLinkClick}
+                  >
+                    Pancak Silat
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/gurugurusmp"
+                    className="submenu-item"
+                    onClick={handleNavLinkClick}
+                  >
+                    Guru - Guru
+                  </Link>
+                </li>
               </ul>
             </li>
 
@@ -200,13 +278,69 @@ const Navbar = () => {
                   activeDropdown["sekolah-smk"] ? "open" : ""
                 }`}
               >
-                <li><Link to="/kurikulumsmk" className="submenu-item" onClick={handleNavLinkClick}>Kurikulum</Link></li>
-                <li><Link to="/jurusan" className="submenu-item" onClick={handleNavLinkClick}>Jurusan</Link></li>
-                <li><Link to="/keunggulansmk" className="submenu-item" onClick={handleNavLinkClick}>Keunggulan</Link></li>
-                <li><Link to="/prestasismk" className="submenu-item" onClick={handleNavLinkClick}>Prestasi</Link></li>
-                <li><Link to="/eksrasmk" className="submenu-item" onClick={handleNavLinkClick}>Ekstrakurikuler</Link></li>
-                <li><Link to="/olimpiadesmk" className="submenu-item" onClick={handleNavLinkClick}>Olimpiade</Link></li>
-                <li><Link to="/gurugurusmk" className="submenu-item" onClick={handleNavLinkClick}>Guru - Guru</Link></li>
+                <li>
+                  <Link
+                    to="/kurikulumsmk"
+                    className="submenu-item"
+                    onClick={handleNavLinkClick}
+                  >
+                    Kurikulum
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/jurusan"
+                    className="submenu-item"
+                    onClick={handleNavLinkClick}
+                  >
+                    Jurusan
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/keunggulansmk"
+                    className="submenu-item"
+                    onClick={handleNavLinkClick}
+                  >
+                    Keunggulan
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/prestasismk"
+                    className="submenu-item"
+                    onClick={handleNavLinkClick}
+                  >
+                    Prestasi
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/eksrasmk"
+                    className="submenu-item"
+                    onClick={handleNavLinkClick}
+                  >
+                    Ekstrakurikuler
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/olimpiadesmk"
+                    className="submenu-item"
+                    onClick={handleNavLinkClick}
+                  >
+                    Olimpiade
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/gurugurusmk"
+                    className="submenu-item"
+                    onClick={handleNavLinkClick}
+                  >
+                    Guru - Guru
+                  </Link>
+                </li>
               </ul>
             </li>
           </ul>
@@ -227,22 +361,49 @@ const Navbar = () => {
           >
             Galeri <span className="arrow-down">&#9660;</span>
           </div>
-          <ul className={`dropdown-menu ${activeDropdown["galeri"] ? "open" : ""}`}>
-            <li><Link to="/galerismp" className="submenu-item" onClick={handleNavLinkClick}>SMP</Link></li>
-            <li><Link to="/galerismk" className="submenu-item" onClick={handleNavLinkClick}>SMK</Link></li>
+          <ul
+            className={`dropdown-menu ${activeDropdown["galeri"] ? "open" : ""}`}
+          >
+            <li>
+              <Link
+                to="/galerismp"
+                className="submenu-item"
+                onClick={handleNavLinkClick}
+              >
+                SMP
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/galerismk"
+                className="submenu-item"
+                onClick={handleNavLinkClick}
+              >
+                SMK
+              </Link>
+            </li>
           </ul>
         </li>
-
-        <li className="navbar-item">
-          <NavLink
-            to="/login"
-            className="navbar-login-button"
-            onClick={handleNavLinkClick}
-          >
-            Login
-          </NavLink>
-        </li>
       </ul>
+
+      {/* PPDB Buttons (SMP & SMK) */}
+      <div className="navbar-actions">
+        <Link
+          to="/ppdbsmp"
+          className="ppdb-button ppdb-smp"
+          onClick={handleNavLinkClick}
+        >
+          PPDB SMP
+        </Link>
+
+        <Link
+          to="/ppdbsmk"
+          className="ppdb-button ppdb-smk"
+          onClick={handleNavLinkClick}
+        >
+          PPDB SMK
+        </Link>
+      </div>
     </nav>
   );
 };
