@@ -271,23 +271,14 @@ const Beranda = () => {
         <div className="news-content">
           <img
             src="/SMP DEPAN WEB.png"
-            alt="PPDB Banner"
+            alt="PPDB Banner SMP"
             className="news-banner"
           />
-          {/* <div className="news-cards">
-            {newsData.map((item, index) => (
-              <div
-                key={index}
-                className={`news-card ${item.highlight ? "highlighted" : ""}`}
-              >
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <p className="news-date">
-                  Event Upcoming {item.date ? `- ${item.date}` : ""}
-                </p>
-              </div>
-            ))}
-          </div> */}
+          <img
+            src="/SMK DEPAN WEB.png"
+            alt="PPDB Banner SMK"
+            className="news-banner"
+          />
         </div>
       </section>
     </div>

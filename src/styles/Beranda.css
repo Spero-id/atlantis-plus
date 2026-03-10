@@ -677,15 +677,21 @@ body {
 
 .news-content {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   gap: 2rem; /* 32px */
+  /* full width but padded on sides */
   max-width: 100%;
   margin: 0 auto;
   width: 100%;
+  padding: 0 2.5rem;
+  justify-content: center;
 }
 
 .news-banner {
   width: 100%;
+  flex: 1 1 0;
+  max-width: none;
   height: auto;
   margin-bottom: 0;
   box-shadow: 0 0.25rem 1.125rem rgba(255, 203, 0, 0.13); /* 4px 18px */
