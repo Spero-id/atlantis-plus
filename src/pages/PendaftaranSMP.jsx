@@ -30,20 +30,34 @@ const PendaftaranSMP = () => {
       nama_orang_tua: form.orangTua,
       no_hp_siswa: form.telpSiswa,
       no_hp_orang_tua: form.telpOrtu,
-      jurusan: null // SMP tidak perlu jurusan
+      jurusan: null, // SMP tidak perlu jurusan
     };
 
     try {
-      const response = await fetch("https://manajemen-sekolah.spero.id/api/pendaftaran", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          // Tambahkan Authorization jika API butuh token
+      const response = await fetch(
+        "https://manajemen-sekolah.spero.id/api/pendaftaran",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            // Tambahkan Authorization jika API butuh token
+          },
+          body: JSON.stringify(payload),
         },
-        body: JSON.stringify(payload),
-      });
-      const data = await response.json();
-      
+      );
+
+      const contentType = response.headers.get("content-type") || "";
+      const responseText = await response.text();
+      let data = null;
+
+      if (contentType.includes("application/json")) {
+        try {
+          data = JSON.parse(responseText);
+        } catch (parseError) {
+          console.warn("Response tidak valid JSON:", parseError);
+        }
+      }
+
       if (response.ok) {
         Swal.fire({
           icon: "success",
@@ -73,20 +87,29 @@ const PendaftaranSMP = () => {
       } else {
         let errorMessage = "Silakan cek kembali data Anda.";
         let errorTitle = "Gagal Mendaftar";
-        
+
         // Check untuk error email duplikat
-        if (data.errors && data.errors.email) {
-          errorMessage = "Email Anda sudah terdaftar di sistem. Silakan gunakan email lain.";
+        if (data && data.errors && data.errors.email) {
+          errorMessage =
+            "Email Anda sudah terdaftar di sistem. Silakan gunakan email lain.";
           errorTitle = "Email Sudah Terdaftar";
-        } else if (data.message) {
-          if (data.message.toLowerCase().includes("unique") || data.message.toLowerCase().includes("email")) {
-            errorMessage = "Email Anda sudah terdaftar di sistem. Silakan gunakan email lain.";
+        } else if (data && data.message) {
+          if (
+            data.message.toLowerCase().includes("unique") ||
+            data.message.toLowerCase().includes("email")
+          ) {
+            errorMessage =
+              "Email Anda sudah terdaftar di sistem. Silakan gunakan email lain.";
             errorTitle = "Email Sudah Terdaftar";
           } else {
             errorMessage = data.message;
           }
+        } else if (responseText) {
+          errorMessage = responseText;
         }
-        
+
+        console.error("API error:", response.status, response.statusText, responseText);
+
         Swal.fire({
           icon: "error",
           title: errorTitle,
