@@ -35,7 +35,7 @@ const PendaftaranSMK = () => {
     };
 
     try {
-      const response = await fetch("http://manajemen-sekolah.spero.id/api/pendaftaran", {
+      const response = await fetch("https://127.0.0.1:8000/api/pendaftaran", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

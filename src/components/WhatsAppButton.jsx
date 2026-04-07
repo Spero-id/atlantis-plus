@@ -1,7 +1,7 @@
 import React from 'react';
 import './WhatsAppButton.css';
 
-const WhatsAppButton = ({ phone = '082387444002', message = 'Halo, saya ingin bertanya tentang pendaftaran.' }) => {
+const WhatsAppButton = ({ phone = '082114880326', message = 'Halo, saya ingin bergabung sebagai siswa baru. Bisa dibantu info pendaftarannya? 😊' }) => {
   const normalizePhone = (p) => {
     if (!p) return '';
     const digits = p.replace(/\D/g, '');
