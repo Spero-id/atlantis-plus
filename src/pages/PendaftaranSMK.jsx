@@ -35,7 +35,7 @@ const PendaftaranSMK = () => {
     };
 
     try {
-      const response = await fetch("https://127.0.0.1:8000/api/pendaftaran", {
+      const response = await fetch("https://manajemen-sekolah.spero.id/api/pendaftaran", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -43,7 +43,18 @@ const PendaftaranSMK = () => {
         },
         body: JSON.stringify(payload),
       });
-      const data = await response.json();
+
+      const contentType = response.headers.get("content-type") || "";
+      const responseText = await response.text();
+      let data = null;
+
+      if (contentType.includes("application/json")) {
+        try {
+          data = JSON.parse(responseText);
+        } catch (parseError) {
+          console.warn("Response tidak valid JSON:", parseError);
+        }
+      }
       
       if (response.ok) {
         Swal.fire({
@@ -77,17 +88,21 @@ const PendaftaranSMK = () => {
         let errorTitle = "Gagal Mendaftar";
         
         // Check untuk error email duplikat
-        if (data.errors && data.errors.email) {
+        if (data && data.errors && data.errors.email) {
           errorMessage = "Email Anda sudah terdaftar di sistem. Silakan gunakan email lain.";
           errorTitle = "Email Sudah Terdaftar";
-        } else if (data.message) {
+        } else if (data && data.message) {
           if (data.message.toLowerCase().includes("unique") || data.message.toLowerCase().includes("email")) {
             errorMessage = "Email Anda sudah terdaftar di sistem. Silakan gunakan email lain.";
             errorTitle = "Email Sudah Terdaftar";
           } else {
             errorMessage = data.message;
           }
+        } else if (responseText) {
+          errorMessage = responseText;
         }
+        
+        console.error("API error:", response.status, response.statusText, responseText);
         
         Swal.fire({
           icon: "error",
@@ -110,8 +125,8 @@ const PendaftaranSMK = () => {
       console.error("Error:", error);
       Swal.fire({
         icon: "error",
-        title: "Email Sudah Terdaftar",
-        text: "Email Anda sudah terdaftar di sistem. Silakan gunakan email lain.",
+        title: "Kesalahan Koneksi",
+        text: "Terjadi kesalahan saat terhubung ke server. Silakan coba lagi.",
         confirmButtonText: "OK",
         allowOutsideClick: false,
         allowEscapeKey: false,
