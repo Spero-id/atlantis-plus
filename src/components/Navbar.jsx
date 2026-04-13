@@ -384,26 +384,28 @@ const Navbar = () => {
             </li>
           </ul>
         </li>
+
+        {/* PPDB Buttons (SMP & SMK) */}
+        <li className="navbar-item">
+          <Link
+            to="/ppdbsmp"
+            className="ppdb-button ppdb-smp"
+            onClick={handleNavLinkClick}
+          >
+            PPDB SMP
+          </Link>
+        </li>
+
+        <li className="navbar-item">
+          <Link
+            to="/ppdbsmk"
+            className="ppdb-button ppdb-smk"
+            onClick={handleNavLinkClick}
+          >
+            PPDB SMK
+          </Link>
+        </li>
       </ul>
-
-      {/* PPDB Buttons (SMP & SMK) */}
-      <div className="navbar-actions">
-        <Link
-          to="/ppdbsmp"
-          className="ppdb-button ppdb-smp"
-          onClick={handleNavLinkClick}
-        >
-          PPDB SMP
-        </Link>
-
-        <Link
-          to="/ppdbsmk"
-          className="ppdb-button ppdb-smk"
-          onClick={handleNavLinkClick}
-        >
-          PPDB SMK
-        </Link>
-      </div>
     </nav>
   );
 };

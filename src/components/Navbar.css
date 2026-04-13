@@ -120,40 +120,6 @@ li::marker {
   color: #ffffff;
 }
 
-/* PPDB Button Styling */
-.navbar-actions {
-  display: flex;
-  align-items: center;
-  gap: clamp(0.8rem, 2vw, 1.25rem);
-}
-
-.ppdb-dropdown {
-  position: relative;
-  margin-left: clamp(1rem, 2vw, 1.5rem);
-  margin-right: clamp(1rem, 2vw, 1.5rem);
-}
-
-.navbar-ppdb-button {
-  background-color: #ec3237;
-  border: 0.12rem solid #ffffff;
-  color: #ffffff;
-  padding: clamp(0.4rem, 1vw, 0.6rem) clamp(1rem, 3vw, 1.25rem);
-  border-radius: 2rem;
-  cursor: pointer;
-  font-size: clamp(0.85rem, 2vw, 1rem);
-  font-weight: 600;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-}
-
-.navbar-ppdb-button:hover {
-  background-color: #000000;
-  color: #ffffff;
-}
-
 /* Buttons for PPDB links (SMP / SMK) */
 .ppdb-button {
   background-color: #ec3237;
@@ -365,12 +331,6 @@ li::marker {
     padding: 0.625rem 0.9375rem; /* 10px 15px */
   }
 
-  .navbar-actions {
-    display: flex;
-    align-items: center;
-    gap: clamp(0.8rem, 2vw, 1.25rem);
-  }
-
   .navbar-ppdb-button {
     font-size: 0.95rem;
     padding: 0.5rem 0.75rem;
@@ -410,16 +370,22 @@ li::marker {
     padding: 1.25rem 0; /* 20px 0 */
     gap: 0.9375rem; /* 15px */
     transform: translateY(-100%);
-    transition: transform 0.4s ease-out;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out, visibility 0.4s ease-out;
     box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.1); /* 8px 20px */
     overflow-y: auto;
     justify-content: flex-start;
     display: flex;
     z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   .navbar-menu.open {
     transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .navbar-item {
@@ -461,18 +427,16 @@ li::marker {
     margin-right: auto;
   }
 
-  .navbar-actions {
-    position: fixed;
-    top: 4.25rem; /* 68px */
-    right: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.75rem 1.25rem;
-    background-color: rgba(255, 244, 224, 0.98);
-    gap: 0.9375rem;
-    z-index: 1001;
+  .ppdb-button {
+    display: block;
+    width: 90%;
+    padding: 0.75rem 0.9375rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .ppdb-dropdown {
@@ -667,12 +631,6 @@ li::marker {
     position: relative; /* wajib supaya z-index bekerja */
   }
 
-  .navbar-actions {
-    display: flex;
-    align-items: center;
-    gap: clamp(0.6rem, 1.5vw, 1rem);
-  }
-
   .ppdb-dropdown {
     margin-left: 0.8rem;
     margin-right: 0.8rem;
@@ -681,6 +639,18 @@ li::marker {
   .navbar-ppdb-button {
     font-size: 0.85rem;
     padding: 0.4rem 0.65rem;
+  }
+
+  .ppdb-button {
+    display: block;
+    width: 85%;
+    padding: 0.625rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   /* Perbaikan untuk layar lebih kecil */
@@ -739,17 +709,16 @@ li::marker {
     margin-top: 0.625rem; /* 10px */
   }
 
-  .navbar-actions {
-    position: fixed;
-    top: 3.75rem;
-    right: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.625rem 0.6rem;
-    background-color: rgba(255, 244, 224, 0.98);
-    gap: 0.625rem;
+  .ppdb-button {
+    display: block;
+    width: 85%;
+    padding: 0.625rem;
+    font-size: 1.1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .ppdb-dropdown {
@@ -850,20 +819,6 @@ li::marker {
     font-size: 1rem;
     padding: 0.5rem; /* 8px */
     margin-top: 0.5rem; /* 8px */
-  }
-
-  .navbar-actions {
-    position: fixed;
-    top: 3.125rem;
-    right: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
-    background-color: rgba(255, 244, 224, 0.98);
-    gap: 0.5rem;
-    z-index: 1001;
   }
 
   .ppdb-dropdown {
