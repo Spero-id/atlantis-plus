@@ -145,18 +145,18 @@ const GaleriSMP = () => {
       <div className="image-gallery">
         <div className="image-row">
           <div className="image-container">
-            <img src="/AtlantisTalentDaySMP10.jpg" alt="Kegiatan bersama siswa" />
+            <img src="/AtlantisTalentDaySMP10.jpg" alt="Kegiatan bersama siswa" loading="eager" />
           </div>
           <div className="image-container">
-            <img src="/GaleriImageBottomSMP.jpg" alt="Pertunjukan seni" />
+            <img src="/GaleriImageBottomSMP.jpg" alt="Pertunjukan seni" loading="eager" />
           </div>
         </div>
         <div className="image-row">
           <div className="image-container">
-            <img src="/galeri1.jpg" alt="Makan bersama di sekolah" />
+            <img src="/galeri1.jpg" alt="Makan bersama di sekolah" loading="lazy" />
           </div>
           <div className="image-container">
-            <img src="/InformasiPageImage4.jpg" alt="Acara sekolah dengan guru dan siswa" />
+            <img src="/InformasiPageImage4.jpg" alt="Acara sekolah dengan guru dan siswa" loading="lazy" />
           </div>
         </div>
       </div>
@@ -172,6 +172,7 @@ const GaleriSMP = () => {
                   src={item.image}
                   alt=""
                   className="fasilitas-sekolah-image"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -183,6 +184,7 @@ const GaleriSMP = () => {
                   src={item.image}
                   alt=""
                   className="fasilitas-sekolah-image2"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -196,14 +198,14 @@ const GaleriSMP = () => {
           <div className="mps-ldks-row">
             {mpsLDKSData.slice(0, 3).map((item, index) => (
               <div key={index} className="mps-ldks-card">
-                <img src={item.image} alt="" className="mps-ldks-image" />
+                <img src={item.image} alt="" className="mps-ldks-image" loading="lazy" />
               </div>
             ))}
           </div>
           <div className="mps-ldks-row2">
             {mpsLDKSData.slice(3, 7).map((item, index) => (
               <div key={index + 3} className="mps-ldks-card2">
-                <img src={item.image} alt="" className="mps-ldks-image2" />
+                <img src={item.image} alt="" className="mps-ldks-image2" loading="lazy" />
               </div>
             ))}
           </div>
@@ -221,6 +223,7 @@ const GaleriSMP = () => {
                     src={item.image}
                     alt=""
                     className="LatihanDasarKepemimpinanSiswa-image"
+                    loading="lazy"
                   />
                 </div>
               )
@@ -237,6 +240,7 @@ const GaleriSMP = () => {
                     src={item.image}
                     alt=""
                     className="LatihanDasarKepemimpinanSiswa-image2"
+                    loading="lazy"
                   />
                 </div>
               )
@@ -253,6 +257,7 @@ const GaleriSMP = () => {
                     src={item.image}
                     alt=""
                     className="LatihanDasarKepemimpinanSiswa-image2"
+                    loading="lazy"
                   />
                 </div>
               )
@@ -267,7 +272,7 @@ const GaleriSMP = () => {
           <div className="SanlatRamadhan-row">
             {SanlatRamadhanData.slice(0, 3).map((item, index) => (
               <div key={index} className="SanlatRamadhan-card">
-                <img src={item.image} alt="" className="SanlatRamadhan-image" />
+                <img src={item.image} alt="" className="SanlatRamadhan-image" loading="lazy" />
               </div>
             ))}
           </div>
@@ -278,6 +283,7 @@ const GaleriSMP = () => {
                   src={item.image}
                   alt=""
                   className="SanlatRamadhan-image2"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -289,6 +295,7 @@ const GaleriSMP = () => {
                   src={item.image}
                   alt=""
                   className="SanlatRamadhan-image2"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -306,6 +313,7 @@ const GaleriSMP = () => {
                   src={item.image}
                   alt=""
                   className="AtlantisTalentDay-image"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -317,6 +325,7 @@ const GaleriSMP = () => {
                   src={item.image}
                   alt=""
                   className="AtlantisTalentDay-image2"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -328,6 +337,7 @@ const GaleriSMP = () => {
                   src={item.image}
                   alt=""
                   className="AtlantisTalentDay-image2"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -345,6 +355,7 @@ const GaleriSMP = () => {
                   src={item.image}
                   alt=""
                   className="KunjunganIndustri-image"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -356,6 +367,7 @@ const GaleriSMP = () => {
                   src={item.image}
                   alt=""
                   className="KunjunganIndustri-image2"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -367,6 +379,7 @@ const GaleriSMP = () => {
                   src={item.image}
                   alt=""
                   className="KunjunganIndustri-image2"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -384,6 +397,7 @@ const GaleriSMP = () => {
                   src={item.image}
                   alt=""
                   className="Ekstrakurikuler-image"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -395,6 +409,7 @@ const GaleriSMP = () => {
                   src={item.image}
                   alt=""
                   className="Ekstrakurikuler-image2"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -406,6 +421,7 @@ const GaleriSMP = () => {
                   src={item.image}
                   alt=""
                   className="Ekstrakurikuler-image2"
+                  loading="lazy"
                 />
               </div>
             ))}

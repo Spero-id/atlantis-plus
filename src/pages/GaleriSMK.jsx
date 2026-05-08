@@ -146,14 +146,14 @@ const GaleriSMK = () => {
           <div className="image-SMK-row">
             {cardSMKcircleData.slice(0, 2).map((item, index) => (
               <div key={index} className="image-SMK-container">
-                <img src={item.image} alt="Kegiatan SMK" />
+                <img src={item.image} alt="Kegiatan SMK" loading="eager" />
               </div>
             ))}
           </div>
           <div className="image-SMK-row">
             {cardSMKcircleData.slice(2, 4).map((item, index) => (
               <div key={index + 2} className="image-SMK-container">
-                <img src={item.image} alt="Kegiatan SMK" />
+                <img src={item.image} alt="Kegiatan SMK" loading="lazy" />
               </div>
             ))}
           </div>
@@ -170,6 +170,7 @@ const GaleriSMK = () => {
                   src={item.image}
                   alt="Fasilitas Sekolah"
                   className="fasilitas-sekolah-SMK-image"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -181,6 +182,7 @@ const GaleriSMK = () => {
                   src={item.image}
                   alt="Fasilitas Sekolah"
                   className="fasilitas-sekolah-SMK-image2"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -194,14 +196,14 @@ const GaleriSMK = () => {
           <div className="mps-ldks-SMK-row">
             {mpsLDKSSMKData.slice(0, 3).map((item, index) => (
               <div key={index} className="mps-ldks-SMK-card">
-                <img src={item.image} alt="MPS LDKS" className="mps-ldks-SMK-image" />
+                <img src={item.image} alt="MPS LDKS" className="mps-ldks-SMK-image" loading="lazy" />
               </div>
             ))}
           </div>
           <div className="mps-ldks-SMK-row2">
             {mpsLDKSSMKData.slice(3, 7).map((item, index) => (
               <div key={index + 3} className="mps-ldks-SMK-card2">
-                <img src={item.image} alt="MPS LDKS" className="mps-ldks-SMK-image2" />
+                <img src={item.image} alt="MPS LDKS" className="mps-ldks-SMK-image2" loading="lazy" />
               </div>
             ))}
           </div>
@@ -218,6 +220,7 @@ const GaleriSMK = () => {
                   src={item.image}
                   alt="Latihan Kepemimpinan"
                   className="LatihanDasarKepemimpinanSiswa-SMK-image"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -229,6 +232,7 @@ const GaleriSMK = () => {
                   src={item.image}
                   alt="Latihan Kepemimpinan"
                   className="LatihanDasarKepemimpinanSiswa-SMK-image2"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -240,6 +244,7 @@ const GaleriSMK = () => {
                   src={item.image}
                   alt="Latihan Kepemimpinan"
                   className="LatihanDasarKepemimpinanSiswa-SMK-image2"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -253,21 +258,21 @@ const GaleriSMK = () => {
           <div className="SanlatRamadhan-SMK-row">
             {SanlatRamadhanSMKData.slice(0, 3).map((item, index) => (
               <div key={index} className="SanlatRamadhan-SMK-card">
-                <img src={item.image} alt="Sanlat Ramadhan" className="SanlatRamadhan-SMK-image" />
+                <img src={item.image} alt="Sanlat Ramadhan" className="SanlatRamadhan-SMK-image" loading="lazy" />
               </div>
             ))}
           </div>
           <div className="SanlatRamadhan-SMK-row2">
             {SanlatRamadhanSMKData.slice(3, 7).map((item, index) => (
               <div key={index + 3} className="SanlatRamadhan-SMK-card2">
-                <img src={item.image} alt="Sanlat Ramadhan" className="SanlatRamadhan-SMK-image2" />
+                <img src={item.image} alt="Sanlat Ramadhan" className="SanlatRamadhan-SMK-image2" loading="lazy" />
               </div>
             ))}
           </div>
           <div className="SanlatRamadhan-SMK-row2">
             {SanlatRamadhanSMKData.slice(7, 11).map((item, index) => (
               <div key={index + 7} className="SanlatRamadhan-SMK-card2">
-                <img src={item.image} alt="Sanlat Ramadhan" className="SanlatRamadhan-SMK-image2" />
+                <img src={item.image} alt="Sanlat Ramadhan" className="SanlatRamadhan-SMK-image2" loading="lazy" />
               </div>
             ))}
           </div>
@@ -280,21 +285,21 @@ const GaleriSMK = () => {
           <div className="AtlantisTalentDay-SMK-row">
             {AtlantisTalentDaySMKData.slice(0, 3).map((item, index) => (
               <div key={index} className="AtlantisTalentDay-SMK-card">
-                <img src={item.image} alt="Atlantis Talent Day" className="AtlantisTalentDay-SMK-image" />
+                <img src={item.image} alt="Atlantis Talent Day" className="AtlantisTalentDay-SMK-image" loading="lazy" />
               </div>
             ))}
           </div>
           <div className="AtlantisTalentDay-SMK-row2">
             {AtlantisTalentDaySMKData.slice(3, 7).map((item, index) => (
               <div key={index + 3} className="AtlantisTalentDay-SMK-card2">
-                <img src={item.image} alt="Atlantis Talent Day" className="AtlantisTalentDay-SMK-image2" />
+                <img src={item.image} alt="Atlantis Talent Day" className="AtlantisTalentDay-SMK-image2" loading="lazy" />
               </div>
             ))}
           </div>
           <div className="AtlantisTalentDay-SMK-row2">
             {AtlantisTalentDaySMKData.slice(7, 11).map((item, index) => (
               <div key={index + 7} className="AtlantisTalentDay-SMK-card2">
-                <img src={item.image} alt="Atlantis Talent Day" className="AtlantisTalentDay-SMK-image2" />
+                <img src={item.image} alt="Atlantis Talent Day" className="AtlantisTalentDay-SMK-image2" loading="lazy" />
               </div>
             ))}
           </div>
@@ -307,21 +312,21 @@ const GaleriSMK = () => {
           <div className="KunjunganIndustri-SMK-row">
             {KunjunganIndustriSMKData.slice(0, 3).map((item, index) => (
               <div key={index} className="KunjunganIndustri-SMK-card">
-                <img src={item.image} alt="Kunjungan Industri" className="KunjunganIndustri-SMK-image" />
+                <img src={item.image} alt="Kunjungan Industri" className="KunjunganIndustri-SMK-image" loading="lazy" />
               </div>
             ))}
           </div>
           <div className="KunjunganIndustri-SMK-row2">
             {KunjunganIndustriSMKData.slice(3, 7).map((item, index) => (
               <div key={index + 3} className="KunjunganIndustri-SMK-card2">
-                <img src={item.image} alt="Kunjungan Industri" className="KunjunganIndustri-SMK-image2" />
+                <img src={item.image} alt="Kunjungan Industri" className="KunjunganIndustri-SMK-image2" loading="lazy" />
               </div>
             ))}
           </div>
           <div className="KunjunganIndustri-SMK-row2">
             {KunjunganIndustriSMKData.slice(7, 11).map((item, index) => (
               <div key={index + 7} className="KunjunganIndustri-SMK-card2">
-                <img src={item.image} alt="Kunjungan Industri" className="KunjunganIndustri-SMK-image2" />
+                <img src={item.image} alt="Kunjungan Industri" className="KunjunganIndustri-SMK-image2" loading="lazy" />
               </div>
             ))}
           </div>
@@ -334,21 +339,21 @@ const GaleriSMK = () => {
           <div className="Ekstrakurikuler-SMK-row">
             {EkstrakurikulerSMKData.slice(0, 3).map((item, index) => (
               <div key={index} className="Ekstrakurikuler-SMK-card">
-                <img src={item.image} alt="Ekstrakurikuler" className="Ekstrakurikuler-SMK-image" />
+                <img src={item.image} alt="Ekstrakurikuler" className="Ekstrakurikuler-SMK-image" loading="lazy" />
               </div>
             ))}
           </div>
           <div className="Ekstrakurikuler-SMK-row2">
             {EkstrakurikulerSMKData.slice(3, 7).map((item, index) => (
               <div key={index + 3} className="Ekstrakurikuler-SMK-card2">
-                <img src={item.image} alt="Ekstrakurikuler" className="Ekstrakurikuler-SMK-image2" />
+                <img src={item.image} alt="Ekstrakurikuler" className="Ekstrakurikuler-SMK-image2" loading="lazy" />
               </div>
             ))}
           </div>
           <div className="Ekstrakurikuler-SMK-row2">
             {EkstrakurikulerSMKData.slice(7, 11).map((item, index) => (
               <div key={index + 7} className="Ekstrakurikuler-SMK-card2">
-                <img src={item.image} alt="Ekstrakurikuler" className="Ekstrakurikuler-SMK-image2" />
+                <img src={item.image} alt="Ekstrakurikuler" className="Ekstrakurikuler-SMK-image2" loading="lazy" />
               </div>
             ))}
           </div>

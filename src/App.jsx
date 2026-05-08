@@ -100,7 +100,7 @@ function AppWrapper() {
         </Routes>
       </div>
       <Footer />
-      <WhatsAppButton phone="082114880326" message="Halo, saya ingin bertanya tentang pendaftaran." />
+      <WhatsAppButton phone="087733565126" message="Halo, saya ingin bertanya tentang pendaftaran." />
     </div>
   );
 }

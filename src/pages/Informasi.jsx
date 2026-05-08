@@ -222,6 +222,7 @@ const Informasi = () => {
                   src={item.image}
                   alt={item.title}
                   className="atlantisPlus_fasilitas-image"
+                  loading="eager"
                 />
               ) : (
                 <div className="atlantisPlus_fasilitas-placeholder">
