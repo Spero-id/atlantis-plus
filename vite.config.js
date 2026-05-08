@@ -11,7 +11,7 @@ export default defineConfig({
     ViteImageOptimizer({
       webp: { quality: 80 },
       jpeg: { quality: 80 },
-      png: { quality: [0.6, 0.8] },
+      png: { quality: 80 },
       avif: { quality: 50 },
     }),
 
