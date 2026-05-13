@@ -121,26 +121,16 @@ const Footer = () => {
 
         <div className="footer-section">
           <h4>Contact Us</h4>
-          <p>087733565126</p>
-          <p>smpatlantisplus@gmail.com</p>
-          <p>smkatlantisplus@yahoo.com</p>
-          <p>
-            Jl. Bukit Sikumbang No.103<br />
-            Rangkapan Jaya Baru, Kec. Pancoran Mas,<br />
-            Kota Depok, Jawa Barat 16433
-          </p>
+          <p>📞 +62 87733565126</p>
+          <p>☎️ (021) 77973872 / 22779687</p>
+          <p>📩 admatlantisplus@gmail.com</p>
+          <p>📍 Jalan Bukit Sikumbang No. 103 Depok, Jawa Barat</p>
         </div>
 
         <div className="footer-section">
           <h4>Follow Us</h4>
-          {/* Mengganti <i> dengan React Icons */}
-          <p><FaInstagram /> @atlantisplus</p>
-          <p><FaYoutube /> atlantisplus</p>
-          <p><FaFacebook /> atlantisplus</p>
-          <p className="footer-desc">
-            Atlantis Technopreneur School | English Day | Character | Creative | Digital School | Tahfidz Al-Qur’an<br />
-            Program Keahlian: DKV | LK | BC | TKT | MPLB
-          </p>
+          <p><FaInstagram /> @smpatlantiplus</p>
+          <p><FaInstagram /> @smkatlantisplus</p>
         </div>
       </div>
     </footer>
