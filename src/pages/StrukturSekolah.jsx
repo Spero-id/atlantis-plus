@@ -46,21 +46,18 @@ const StrukturSekolah = () => {
             Struktur Sekolah <br /> <span className="StrukturSekolah-teks">ATLANTIS PLUS</span>{" "}
             <span className="StrukturSekolah-teks2"></span>
           </h1>
-          <p className="StrukturSekolah-hero-subtitle">Creative and Entrepreneur School</p>
+          <p className="StrukturSekolah-hero-subtitle">Creative and Technopreneur School</p>
         </div>
       </section>
 
       <section className="about-StrukturSekolah-Atlantis-plus">
         <div className="about-us-StrukturSekolah-container">
           <div className="logo-StrukturSekolah-wrapper">
-            <img src="/smplogonav.png" alt="Logo SMP Atlantis" className="logo" />
+            <img src="/LOGO BARU.png" alt="Logo Atlantis Plus" className="logo" />
           </div>
           <div className="text-StrukturSekolah-content">
             <h1 className="text-StrukturSekolah-content-h1">Struktur Sekolah</h1>
             <p className="text-StrukturSekolah-content-p">Atlantis Entrepreneur School</p>
-          </div>
-          <div className="logo-StrukturSekolah-wrapper">
-            <img src="/smklogonav.png" alt="Logo SMK Atlantis" className="logo" />
           </div>
         </div>
       </section>

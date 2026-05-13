@@ -60,7 +60,7 @@ const EkstrakurikulerSMP = () => {
             <span className="EkstrakulikulerSMK-teks2"></span>
           </h1>
           <p className="EkstrakulikulerSMK-hero-subtitle">
-            Creative and Entrepreneur School
+            Creative and Technopreneur School
           </p>
         </div>
       </section>

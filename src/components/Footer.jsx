@@ -40,8 +40,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-left">
-        <img src="/smklogonav.png" alt="SMK Atlantis Plus" />
-        <img src="/smplogonav.png" alt="SMP Atlantis Plus" />
+        <img src="/LOGO BARU.png" alt="Atlantis Plus" />
       </div>
 
       <div className="footer-right">

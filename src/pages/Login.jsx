@@ -36,13 +36,8 @@ const Login = () => {
         <div className="login-card-wrapper">
           <div className="login-logos">
             <img
-              src="/smplogonav.png"
-              alt="SMP Atlantis Logo"
-              className="login-logo"
-            />
-            <img
-              src="/smklogonav.png"
-              alt="SMK Atlantis Logo"
+              src="/LOGO BARU.png"
+              alt="Atlantis Plus Logo"
               className="login-logo"
             />
           </div>

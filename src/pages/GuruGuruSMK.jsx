@@ -365,7 +365,7 @@ const GuruGuruSMK = () => {
             Guru <br /> <span className="GuruSMK-teks">SMK ATLANTIS PLUS</span>{" "}
             <span className="GuruSMK-teks2"></span>
           </h1>
-          <p className="GuruSMK-hero-subtitle">Creative and Entrepreneur School</p>
+          <p className="GuruSMK-hero-subtitle">Creative and Technopreneur School</p>
         </div>
       </section>
 

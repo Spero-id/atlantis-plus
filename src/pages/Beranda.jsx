@@ -69,7 +69,7 @@ const Beranda = () => {
       <section className="hero">
         <div className="hero-overlay">
           <h1><span className="highlight">ATLANTIS</span> <span className="yellow">PLUS</span></h1>
-          <p className="subtitle">Creative and Entrepreneur School</p>
+          <p className="subtitle">Creative and Technopreneur School</p>
           <div className="school-buttons">
             <button className="school-btn">
               <img src="/smplogonav.png" alt="SMP" />
@@ -84,11 +84,15 @@ const Beranda = () => {
       </section>
 
       <section className="who-we-are">
-        <h2>Who we are</h2>
+        <h2>Tentang Kami</h2>
         <p>
-          Kami adalah Atlantis Entrepreneur School yang dikelola oleh Yayasan Kebangkitan Peradaban Nusantara.
-          Kami merupakan bagian dari keluarga besar atlantis yang berfokus pada pendidikan sekolah menengah pertama
-          juga sekolah menengah kejuruan.
+          Atlantis Technopreneur School merupakan lembaga pendidikan yang berada di bawah naungan Yayasan Kebangkitan Peradaban Nusantara, hadir sebagai bagian dari keluarga besar Atlantis dalam membangun generasi pembelajar yang berkarakter, inovatif, dan berdaya saing global.
+        </p>
+        <p>
+          Melalui jenjang Sekolah Menengah Pertama dan Sekolah Menengah Kejuruan, kami berkomitmen menghadirkan pendidikan yang memadukan akademik, karakter, kepemimpinan, teknologi, serta jiwa entrepreneur dalam lingkungan belajar yang positif, kreatif, dan inspiratif.
+        </p>
+        <p>
+          Atlantis Technopreneur School percaya bahwa setiap peserta didik memiliki potensi untuk tumbuh menjadi pribadi unggul yang siap menghadapi tantangan masa depan serta mampu memberikan kontribusi terbaik bagi masyarakat, bangsa, dan peradaban.
         </p>
       </section>
 

@@ -82,8 +82,8 @@ const Navbar = () => {
   return (
     <nav className="navbar-atlantis" ref={navbarRef}>
       <div className="navbar-left">
-        <img src="/smplogonav.png" alt="Logo SMP" className="navbar-logo" />
-        <img src="/smklogonav.png" alt="Logo SMK" className="navbar-logo" />
+        <img src="/LOGO BARU.png" alt="Logo Atlantis Plus" className="navbar-logo" />
+        <span className="navbar-brand-name">Atlantis Plus</span>
       </div>
 
       <button

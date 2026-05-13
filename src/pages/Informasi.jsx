@@ -76,7 +76,7 @@ const Informasi = () => {
             <span className="atlantisPlus_informasi-teks">ATLANTIS PLUS</span>
           </h1>
           <p className="atlantisPlus_informasi-hero-subtitle">
-            Creative and Entrepreneur School
+            Creative and Technopreneur School
           </p>
         </div>
       </section>
@@ -86,8 +86,8 @@ const Informasi = () => {
         <div className="atlantisPlus_about-us-container">
           <div className="atlantisPlus_logo-wrapper">
             <img
-              src="/smplogonav.png"
-              alt="Logo SMP Atlantis"
+              src="/LOGO BARU.png"
+              alt="Logo Atlantis Plus"
               className="atlantisPlus_logo"
             />
           </div>
@@ -96,13 +96,6 @@ const Informasi = () => {
             <p className="atlantisPlus_text-content-p">
               Atlantis Entrepreneur School
             </p>
-          </div>
-          <div className="atlantisPlus_logo-wrapper">
-            <img
-              src="/smklogonav.png"
-              alt="Logo SMK Atlantis"
-              className="atlantisPlus_logo"
-            />
           </div>
         </div>
       </section>

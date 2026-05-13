@@ -149,7 +149,7 @@ const GuruGuruSMP = () => {
             Guru <br /> <span className="GuruSMP-teks">SMP ATLANTIS PLUS</span>{" "}
             <span className="GuruSMP-teks2"></span>
           </h1>
-          <p className="GuruSMP-hero-subtitle">Creative and Entrepreneur School</p>
+          <p className="GuruSMP-hero-subtitle">Creative and Technopreneur School</p>
         </div>
       </section>
 
