@@ -1,5 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Beranda.css';
+
+const PHOTOS_PER_PAGE = 6;
+
+const galleryData = {
+  SMP: [
+    { src: "/baru-5.jpeg",  title: "Kunjungan Industri",   caption: "Kunjungan ke Industri besar SMP Atlantis Plus ke PT. Amerta Indah Otsuka (Pocari Sweat) dalam rangka menjalankan program Entrepreneurship." },
+    { src: "/baru-9.jpeg",  title: "Kunjungan Industri",   caption: "Kunjungan ke Industri besar SMP Atlantis Plus ke Nutrifood Serpong dalam rangka menjalankan program Entrepreneurship." },
+    { src: "/baru-12.jpeg", title: "Atlantis Talent Day",  caption: "Acara yang diadakan pada bulan Desember di SMP Atlantis Plus, menampilkan pertunjukan siswa termasuk tari, musik, dan teater, yang berfungsi sebagai puncak pertemuan kelas mereka dengan alumni." },
+    { src: "/baru-4.jpg",   title: "Outing Class",         caption: "SMP Atlantis Plus goes to Yogyakarta - Belajar tidak hanya di dalam kelas, tetapi juga dari setiap perjalanan dan pengalaman. \"Traveling is part of learning, and learning becomes meaningful through experience.\"" },
+    { src: "/baru-11.jpeg", title: "Keagamaan",            caption: "Melalui kegiatan rutin sholat dhuha, tadarus Al-Qur'an, dan hafalan, siswa-siswi SMP Atlantis Plus dibiasakan untuk menanamkan nilai disiplin, ketenangan hati, serta kecintaan terhadap Al-Qur'an sejak dini." },
+    { src: "/baru-2.JPG",   title: "Kokurikuler",          caption: "Belajar menjadi lebih bermakna ketika pengetahuan dipadukan dengan pengalaman nyata untuk mengembangkan kreativitas, kerja sama, kepemimpinan, serta kemampuan berpikir kritis melalui berbagai aktivitas yang menyenangkan dan inspiratif." },
+  ],
+  SMK: [
+    { src: "/baru-8.jpeg",  title: "Kunjungan Industri",      caption: "Kunjungan ke Industri SMK Atlantis Plus ke Agate International di Bandung dalam rangka mendalami industri kreatif dan pengembangan game langsung dari salah satu pionir terbesar di Indonesia." },
+    { src: "/baru-7.jpeg",  title: "Kunjungan Industri",      caption: "Kunjungan Industri SMK Atlantis Plus ke Jabodetabek, mulai dari industri besar, kampus dan lainnya." },
+    { src: "/baru-10.jpeg", title: "Pagelaran Seni Budaya",   caption: "Melalui Pagelaran Seni Budaya, siswa-siswi SMK Atlantis Plus menampilkan beragam pertunjukan seni sebagai bentuk ekspresi, pelestarian budaya, serta pengembangan bakat dan kreativitas." },
+    { src: "/baru-1.JPG",   title: "Atlantis Exhibition",     caption: "Karya, kreativitas, dan inovasi siswa-siswi SMK Atlantis Plus hadir dalam satu panggung inspiratif. Pameran karya keberanian yang berkolaborasi dengan industri bidang teknologi, bisnis, kesehatan, multimedia." },
+    { src: "/baru-6.jpeg",  title: "ANTV",                    caption: "Salah satu tempat magang/prakerin siswa-siswi SMK Atlantis Plus, dan masih banyak lagi yang lainnya." },
+    { src: "/baru-13.jpeg", title: "Kolaborasi",              caption: "Siswa-siswi SMK Atlantis Plus berkesempatan mengikuti kegiatan inspiratif bersama Atourin dalam program Games Nusantara. Melalui kegiatan ini, peserta didik diajak mengenal kekayaan budaya Indonesia dengan cara yang kreatif, interaktif, dan menyenangkan. Tidak hanya bermain, tetapi juga belajar tentang budaya, kerja sama, strategi, serta semangat kebhinekaan." },
+  ],
+};
 
 const newsData = [
   {
@@ -22,47 +43,28 @@ const newsData = [
   },
 ];
 
-const programData = [
-  {
-    image: "/Outdoor.jpg",
-    title: "Pembelajaran Diluar Sekolah",
-    description: "Kunjungan luar sekolah SMP Atlantis Plus ke Atamerica dalam rangka menjalankan program English.",
-  },
-  {
-    image: "/Industrional.jpg",
-    title: "Kunjungan Industri",
-    description: "Kunjungan ke Industri besar dan menengah SMP Atlantis Plus & SMK Atlantis Plus dalam rangka menjalankan program Entrepreneurship.",
-  },
-  {
-    image: "/galeri1.jpg",
-    title: "School Trip",
-    description: "Deskripsi untuk gambar ketiga."
-  },
-  {
-    image: "/galeri2.jpg",
-    title: "School Experience",
-    description: "Deskripsi untuk gambar keempat."
-  },
-  {
-    image: "/galeri3.jpg",
-    title: "School Visit",
-    description: "Deskripsi untuk gambar kelima."
-  }
-];
-
 const Beranda = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [activeTab, setActiveTab] = useState('SMP');
+  const [currentPage, setCurrentPage] = useState(0);
+  const [modalPhoto, setModalPhoto] = useState(null);
 
-  const handleNextClick = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % (programData.length / 2));
+  const photos = galleryData[activeTab];
+  const totalPages = Math.ceil(photos.length / PHOTOS_PER_PAGE);
+  const currentPhotos = photos.slice(currentPage * PHOTOS_PER_PAGE, (currentPage + 1) * PHOTOS_PER_PAGE);
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    setCurrentPage(0);
   };
 
-  const handlePrevClick = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + (programData.length / 2)) % (programData.length / 2));
-  };
+  const openModal = (photo) => setModalPhoto(photo);
+  const closeModal = () => setModalPhoto(null);
 
-  const startIndex = currentSlide * 2;
-  const currentPrograms = programData.slice(startIndex, startIndex + 2);
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') closeModal(); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
 
   return (
     <div className="beranda-container">
@@ -96,54 +98,59 @@ const Beranda = () => {
         </p>
       </section>
 
-      <section className="beranda-gallery">
-        <div className="gallery-row">
-          <div className="gallery-item">
-            <img src="/galeri1.jpg" alt="Kegiatan 1" className="gallery-img" />
-            <div className="gallery-caption">School Trip</div>
-          </div>
-          <div className="gallery-item">
-            <img src="/galeri2.jpg" alt="Kegiatan 2" className="gallery-img" />
-            <div className="gallery-caption">School Experience</div>
-          </div>
-          <div className="gallery-item">
-            <img src="/galeri3.jpg" alt="Kegiatan 3" className="gallery-img" />
-            <div className="gallery-caption">School Visit</div>
+      <section className="beranda-gallery-new">
+        <div className="beranda-gallery-header">
+          <h2 className="beranda-gallery-title">
+            <span className="red-text">Gallery</span> Atlantis Plus
+          </h2>
+          <div className="beranda-gallery-tabs">
+            {['SMP', 'SMK'].map(tab => (
+              <button
+                key={tab}
+                className={`beranda-gallery-tab ${activeTab === tab ? 'active' : ''}`}
+                onClick={() => handleTabChange(tab)}
+              >
+                {tab}
+              </button>
+            ))}
           </div>
         </div>
-      </section>
 
-      <section className="program-section">
-        <div className="bg-left"></div>
-        <div className="bg-right"></div>
-        <div className="program-container">
-          <h2>
-            <span className="red-text">Program</span> <br />
-            Atlantis Plus
-          </h2>
-          <div className="program-slider">
-            <button className="slider-arrow left" onClick={handlePrevClick}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="15 18 9 12 15 6"></polyline>
-              </svg>
-            </button>
-            <div className="program-cards">
-              {currentPrograms.map((program, index) => (
-                <div key={index} className="program-card">
-                  <img src={program.image} alt={program.title} />
-                  <div className="card-overlay">
-                    <h3>{program.title}</h3>
-                    <p>{program.description}</p>
-                  </div>
-                </div>
-              ))}
+        <div className="beranda-gallery-grid">
+          {currentPhotos.map((photo, i) => (
+            <div key={i} className="beranda-gallery-card" onClick={() => openModal(photo)}>
+              <img src={photo.src} alt={photo.caption} loading="lazy" />
+              <div className="beranda-gallery-card-overlay">
+                <span>🔍 Lihat Foto</span>
+              </div>
             </div>
-            <button className="slider-arrow right" onClick={handleNextClick}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </button>
+          ))}
+        </div>
+
+        <div className="beranda-gallery-nav">
+          <button
+            className="beranda-gallery-arrow"
+            onClick={() => setCurrentPage(p => Math.max(p - 1, 0))}
+            disabled={currentPage === 0}
+          >
+            &#8592;
+          </button>
+          <div className="beranda-gallery-dots">
+            {Array.from({ length: totalPages }).map((_, i) => (
+              <button
+                key={i}
+                className={`beranda-gallery-dot ${currentPage === i ? 'active' : ''}`}
+                onClick={() => setCurrentPage(i)}
+              />
+            ))}
           </div>
+          <button
+            className="beranda-gallery-arrow"
+            onClick={() => setCurrentPage(p => Math.min(p + 1, totalPages - 1))}
+            disabled={currentPage === totalPages - 1}
+          >
+            &#8594;
+          </button>
         </div>
       </section>
 
@@ -206,6 +213,19 @@ const Beranda = () => {
           />
         </div>
       </section>
+
+      {modalPhoto && (
+        <div className="gallery-modal-backdrop" onClick={closeModal}>
+          <div className="gallery-modal-box" onClick={(e) => e.stopPropagation()}>
+            <button className="gallery-modal-close" onClick={closeModal}>&#10005;</button>
+            <img src={modalPhoto.src} alt={modalPhoto.title} className="gallery-modal-img" />
+            <div className="gallery-modal-caption">
+              <h3 className="gallery-modal-title">{modalPhoto.title}</h3>
+              <p className="gallery-modal-desc">{modalPhoto.caption}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
