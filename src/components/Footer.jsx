@@ -1,137 +1,92 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Footer.css'; // Pastikan Anda memiliki file CSS ini
-
-// Import ikon dari react-icons
-import { FaInstagram, FaYoutube, FaFacebook } from 'react-icons/fa'; // Menggunakan ikon Font Awesome dari react-icons
+import { FaInstagram, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { MdPhone } from 'react-icons/md';
+import '../styles/Footer.css';
 
 const Footer = () => {
-  const [activeDropdown, setActiveDropdown] = useState({}); // State untuk mengelola dropdown yang aktif
-
-  // Fungsi untuk toggle dropdown/submenu spesifik di footer
-  const handleToggleDropdown = (key, event) => {
-    if (event) {
-      event.preventDefault(); // Mencegah navigasi Link
-      event.stopPropagation(); // Mencegah event bubble
-    }
-
-    setActiveDropdown(prev => {
-      // Jika key yang sama diklik lagi, tutup
-      if (prev[key]) {
-        return { ...prev, [key]: false };
-      } else {
-        // Logika untuk menutup dropdown/submenu lain saat yang baru dibuka
-        const newState = {};
-        // Tutup semua dropdown lain, kecuali yang baru akan dibuka
-        Object.keys(prev).forEach(k => {
-          newState[k] = false;
-        });
-        newState[key] = true; // Buka dropdown yang baru diklik
-        return newState;
-      }
-    });
-  };
-
-  // Fungsi untuk menutup semua dropdown saat link sub-menu diklik
-  const handleNavLinkClick = () => {
-    setActiveDropdown({});
-  };
-
   return (
-    <footer className="footer">
-      <div className="footer-left">
-        <img src="/LOGO BARU.png" alt="Atlantis Plus" />
+    <footer className="footer-new">
+      <div className="footer-new-inner">
+
+        {/* KIRI: Logo + Nama + Alamat */}
+        <div className="footer-col footer-col-brand">
+          <img src="/LOGO BARU.png" alt="Atlantis Plus" className="footer-logo" />
+          <div className="footer-brand-info">
+            <p className="footer-school-name">Atlantis Technopreneur School</p>
+            <p className="footer-school-sub">SMP & SMK Atlantis Plus</p>
+            <p className="footer-address">
+              <FaMapMarkerAlt className="footer-icon-inline" />
+              Jalan Bukit Sikumbang No. 103, Depok, Jawa Barat
+            </p>
+          </div>
+        </div>
+
+        {/* TENGAH: Kontak + Sosmed (bawah) */}
+        <div className="footer-col footer-col-contact">
+          <p className="footer-contact-item">
+            <span className="footer-icon-circle"><FaPhone /></span>
+            +62 87733565126
+          </p>
+          <p className="footer-contact-item">
+            <span className="footer-icon-circle"><MdPhone /></span>
+            (021) 77973872 / 22779687
+          </p>
+          <p className="footer-contact-item">
+            <span className="footer-icon-circle"><FaEnvelope /></span>
+            admatlantisplus@gmail.com
+          </p>
+
+          {/* Ikon IG di bawah kontak */}
+          <div className="footer-socmed-wrapper">
+            <p className="footer-socmed-label-title">Follow Us</p>
+            <div className="footer-socmed">
+              <div className="footer-socmed-item">
+                <a
+                  href="https://www.instagram.com/smpatlantiplus"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-socmed-btn"
+                  title="Instagram SMP"
+                >
+                  <FaInstagram />
+                </a>
+                <span className="footer-socmed-handle">@smpatlantiplus</span>
+              </div>
+              <div className="footer-socmed-item">
+                <a
+                  href="https://www.instagram.com/smkatlantisplus"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-socmed-btn"
+                  title="Instagram SMK"
+                >
+                  <FaInstagram />
+                </a>
+                <span className="footer-socmed-handle">@smkatlantisplus</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* KANAN: Link navigasi */}
+        <div className="footer-col footer-col-links">
+          <h4 className="footer-links-title">Halaman</h4>
+          <ul className="footer-links-list">
+            <li><Link to="/">Beranda</Link></li>
+            <li><Link to="/informasi">Informasi</Link></li>
+            <li><Link to="/pendaftaran">Pendaftaran</Link></li>
+            <li><Link to="/jurusan">Jurusan</Link></li>
+            <li><Link to="/galerismp">Galeri SMP</Link></li>
+            <li><Link to="/galerismk">Galeri SMK</Link></li>
+          </ul>
+        </div>
+
       </div>
 
-      <div className="footer-right">
-        <div className="footer-section">
-          <h4>Link Terkait</h4>
-          <ul>
-            <li><Link to="/" onClick={handleNavLinkClick}>Beranda</Link></li>
-            <li><Link to="/pendaftaran" onClick={handleNavLinkClick}>Pendaftaran</Link></li>
-            <li><Link to="/informasi" onClick={handleNavLinkClick}>Informasi</Link></li>
-            {/* Tambahkan link sekolah jika ada halaman spesifik */}
-            {/* <li><Link to="/sekolah" onClick={handleNavLinkClick}>Sekolah</Link></li> */}
-          </ul>
-        </div>
-
-        <div className="footer-section">
-          <h4>Tentang</h4>
-          <ul>
-            {/* Kurikulum Dropdown */}
-            <li className={`footer-dropdown-item ${activeDropdown['kurikulum'] ? 'open' : ''}`}>
-              <div
-                className="footer-dropdown-toggle"
-                onClick={(e) => handleToggleDropdown('kurikulum', e)}
-              >
-                Kurikulum <span className="footer-arrow-down">&#9660;</span>
-              </div>
-              <ul className={`footer-dropdown-menu ${activeDropdown['kurikulum'] ? 'open' : ''}`}>
-                <li><Link to="/kurikulumsmp" onClick={handleNavLinkClick}>SMP</Link></li>
-                <li><Link to="/kurikulumsmk" onClick={handleNavLinkClick}>SMK</Link></li>
-              </ul>
-            </li>
-
-            {/* Keunggulan Dropdown */}
-            <li className={`footer-dropdown-item ${activeDropdown['keunggulan'] ? 'open' : ''}`}>
-              <div
-                className="footer-dropdown-toggle"
-                onClick={(e) => handleToggleDropdown('keunggulan', e)}
-              >
-                Keunggulan <span className="footer-arrow-down">&#9660;</span>
-              </div>
-              <ul className={`footer-dropdown-menu ${activeDropdown['keunggulan'] ? 'open' : ''}`}>
-                <li><Link to="/keunggulansmp" onClick={handleNavLinkClick}>SMP</Link></li>
-                <li><Link to="/keunggulansmk" onClick={handleNavLinkClick}>SMK</Link></li>
-              </ul>
-            </li>
-
-            {/* Jurusan - Langsung Link */}
-            <li><Link to="/jurusan" onClick={handleNavLinkClick}>Jurusan</Link></li>
-
-            {/* Prestasi Dropdown */}
-            <li className={`footer-dropdown-item ${activeDropdown['prestasi'] ? 'open' : ''}`}>
-              <div
-                className="footer-dropdown-toggle"
-                onClick={(e) => handleToggleDropdown('prestasi', e)}
-              >
-                Prestasi <span className="footer-arrow-down">&#9660;</span>
-              </div>
-              <ul className={`footer-dropdown-menu ${activeDropdown['prestasi'] ? 'open' : ''}`}>
-                <li><Link to="/prestasismp" onClick={handleNavLinkClick}>SMP</Link></li>
-                <li><Link to="/prestasismk" onClick={handleNavLinkClick}>SMK</Link></li>
-              </ul>
-            </li>
-
-            {/* Galeri Dropdown */}
-            <li className={`footer-dropdown-item ${activeDropdown['galeri'] ? 'open' : ''}`}>
-              <div
-                className="footer-dropdown-toggle"
-                onClick={(e) => handleToggleDropdown('galeri', e)}
-              >
-                Galeri <span className="footer-arrow-down">&#9660;</span>
-              </div>
-              <ul className={`footer-dropdown-menu ${activeDropdown['galeri'] ? 'open' : ''}`}>
-                <li><Link to="/galerismp" onClick={handleNavLinkClick}>SMP</Link></li> {/* Perbaiki typo path jika ada, dari galer/smp menjadi galeri/smp */}
-                <li><Link to="/galerismk" onClick={handleNavLinkClick}>SMK</Link></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-        <div className="footer-section">
-          <h4>Contact Us</h4>
-          <p>📞 +62 87733565126</p>
-          <p>☎️ (021) 77973872 / 22779687</p>
-          <p>📩 admatlantisplus@gmail.com</p>
-          <p>📍 Jalan Bukit Sikumbang No. 103 Depok, Jawa Barat</p>
-        </div>
-
-        <div className="footer-section">
-          <h4>Follow Us</h4>
-          <p><FaInstagram /> @smpatlantiplus</p>
-          <p><FaInstagram /> @smkatlantisplus</p>
-        </div>
+      {/* COPYRIGHT */}
+      <div className="footer-copyright">
+        © Atlantis Technopreneur School {new Date().getFullYear()} — SMP & SMK Atlantis Plus
       </div>
     </footer>
   );

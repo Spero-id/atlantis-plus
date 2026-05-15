@@ -162,57 +162,147 @@ const Beranda = () => {
 
 
       <section className="kegiatan-section">
-        <div className="bg-left-kegiatan"></div>
-        <div className="bg-right-kegiatan"></div>
         <h2 className="kegiatan-title">Our Activity</h2>
         <div className="kegiatan-cards">
+
+          {/* SHOLAT DHUHA */}
           <div className="kegiatan-card">
-            <div className="kegiatan-card-img" style={{ backgroundImage: "url('/SholatImage.png')" }}></div>
+            <div className="kegiatan-card-icon" style={{ background: "linear-gradient(135deg, #f0c040 0%, #e8832a 100%)" }}>
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                {/* Matahari */}
+                <circle cx="50" cy="32" r="13" fill="#fff176"/>
+                {/* Sinar matahari */}
+                {[0,45,90,135,180,225,270,315].map((deg, i) => (
+                  <line key={i}
+                    x1={50 + 17 * Math.cos(deg * Math.PI/180)}
+                    y1={32 + 17 * Math.sin(deg * Math.PI/180)}
+                    x2={50 + 23 * Math.cos(deg * Math.PI/180)}
+                    y2={32 + 23 * Math.sin(deg * Math.PI/180)}
+                    stroke="#fff176" strokeWidth="2.5" strokeLinecap="round"/>
+                ))}
+                {/* Masjid - kubah */}
+                <ellipse cx="50" cy="57" rx="18" ry="12" fill="#ffffff"/>
+                {/* Badan masjid */}
+                <rect x="32" y="57" width="36" height="22" rx="2" fill="#ffffff"/>
+                {/* Pintu */}
+                <rect x="44" y="65" width="12" height="14" rx="6" fill="#e8832a"/>
+                {/* Menara kiri */}
+                <rect x="26" y="52" width="7" height="27" rx="2" fill="#ffe082"/>
+                <ellipse cx="29.5" cy="52" rx="4" ry="5" fill="#ffe082"/>
+                {/* Menara kanan */}
+                <rect x="67" y="52" width="7" height="27" rx="2" fill="#ffe082"/>
+                <ellipse cx="70.5" cy="52" rx="4" ry="5" fill="#ffe082"/>
+                {/* Bintang bulan */}
+                <text x="44" y="56" fontSize="10" fill="#e8832a">☽</text>
+              </svg>
+            </div>
             <div className="kegiatan-card-judul">SHOLAT DHUHA</div>
-            <div className="kegiatan-card-desc">Kegiatan Sholat Dhuha rutin diadakan setiap pagi 
-              hari tepatnya saat pertama kali siswa dan siswi masuk sekolah dalam rangka membentuk religius</div>
+            <div className="kegiatan-card-desc">Kegiatan sholat dhuha rutin dilaksanakan setiap pagi sebelum proses pembelajaran dalam rangka membentuk pembiasaan religius.</div>
           </div>
+
+          {/* TADARUS */}
           <div className="kegiatan-card">
-            <div className="kegiatan-card-img" style={{ backgroundImage: "url('/TadarusImage.png')" }}></div>
+            <div className="kegiatan-card-icon" style={{ background: "linear-gradient(135deg, #43c6ac 0%, #1976d2 100%)" }}>
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                {/* Buku Al-Quran terbuka */}
+                <path d="M50 22 Q35 25 22 30 L22 75 Q35 70 50 68 Q65 70 78 75 L78 30 Q65 25 50 22Z" fill="#ffffff"/>
+                <path d="M50 22 L50 68" stroke="#1976d2" strokeWidth="2"/>
+                {/* Halaman kiri */}
+                <path d="M48 28 Q36 30 26 34 L26 70 Q36 66 48 64Z" fill="#e3f2fd"/>
+                {/* Halaman kanan */}
+                <path d="M52 28 Q64 30 74 34 L74 70 Q64 66 52 64Z" fill="#e3f2fd"/>
+                {/* Tulisan kiri */}
+                <line x1="30" y1="40" x2="46" y2="38" stroke="#1976d2" strokeWidth="2" strokeLinecap="round"/>
+                <line x1="30" y1="46" x2="46" y2="44" stroke="#1976d2" strokeWidth="2" strokeLinecap="round"/>
+                <line x1="30" y1="52" x2="46" y2="50" stroke="#1976d2" strokeWidth="2" strokeLinecap="round"/>
+                <line x1="30" y1="58" x2="40" y2="57" stroke="#1976d2" strokeWidth="2" strokeLinecap="round"/>
+                {/* Tulisan kanan */}
+                <line x1="54" y1="40" x2="70" y2="38" stroke="#43c6ac" strokeWidth="2" strokeLinecap="round"/>
+                <line x1="54" y1="46" x2="70" y2="44" stroke="#43c6ac" strokeWidth="2" strokeLinecap="round"/>
+                <line x1="54" y1="52" x2="70" y2="50" stroke="#43c6ac" strokeWidth="2" strokeLinecap="round"/>
+                <line x1="54" y1="58" x2="64" y2="57" stroke="#43c6ac" strokeWidth="2" strokeLinecap="round"/>
+                {/* Bintang bulan */}
+                <circle cx="50" cy="15" r="5" fill="#ffe082"/>
+                <circle cx="54" cy="13" r="3.5" fill="#43c6ac"/>
+                <polygon points="58,10 59,14 63,14 60,16 61,20 58,18 55,20 56,16 53,14 57,14" fill="#ffe082" transform="scale(0.55) translate(47, 5)"/>
+              </svg>
+            </div>
             <div className="kegiatan-card-judul">TADARUS</div>
-            <div className="kegiatan-card-desc">Membaca Al-Qur'an Juz 30 hingga Juz 29 setelah 
-              melaksanakan Sholat Dhuha juga dijam samping hari untuk yang masuk siang</div>
+            <div className="kegiatan-card-desc">Membaca Al-Qur'an setelah pelaksanaan sholat dhuha menjadi salah satu ikhtiar membangun kebiasaan baik dan menanamkan nilai-nilai spiritual dalam kehidupan sehari-hari.</div>
           </div>
+
+          {/* PRAKTEK BELAJAR */}
           <div className="kegiatan-card">
-            <div className="kegiatan-card-img" style={{ backgroundImage: "url('/PraktekBelajarIcon.png')" }}></div>
-            <div className="kegiatan-card-judul">PRAKTEK BELAJAR</div>
-            <div className="kegiatan-card-desc">Atlantis Entrepreneur School menerapkan sistem 30% 
-              Belajar 70% Praktek dimana siswa dan siswi lebih lebih ditekankan melakukan pembelajaran sambil praktiek</div>
+            <div className="kegiatan-card-icon" style={{ background: "linear-gradient(135deg, #f953c6 0%, #ec3237 50%, #f97316 100%)" }}>
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                {/* Laptop body */}
+                <rect x="18" y="30" width="64" height="40" rx="4" fill="#ffffff"/>
+                <rect x="22" y="34" width="56" height="32" rx="2" fill="#1a237e"/>
+                {/* Layar: kode */}
+                <line x1="27" y1="42" x2="42" y2="42" stroke="#69f0ae" strokeWidth="2" strokeLinecap="round"/>
+                <line x1="27" y1="48" x2="50" y2="48" stroke="#40c4ff" strokeWidth="2" strokeLinecap="round"/>
+                <line x1="27" y1="54" x2="38" y2="54" stroke="#ff80ab" strokeWidth="2" strokeLinecap="round"/>
+                <line x1="27" y1="60" x2="45" y2="60" stroke="#69f0ae" strokeWidth="2" strokeLinecap="round"/>
+                {/* Grafik/chart di layar */}
+                <rect x="55" y="56" width="6" height="8" rx="1" fill="#f97316"/>
+                <rect x="63" y="50" width="6" height="14" rx="1" fill="#ec3237"/>
+                <rect x="71" y="44" width="5" height="20" rx="1" fill="#f953c6"/>
+                {/* Kursor */}
+                <polygon points="48,42 52,50 50,49 49,54 47,49 45,50" fill="#ffffff"/>
+                {/* Base laptop */}
+                <rect x="12" y="70" width="76" height="5" rx="2.5" fill="#e0e0e0"/>
+                <rect x="35" y="70" width="30" height="3" rx="1.5" fill="#bdbdbd"/>
+                {/* Bintang ilmu */}
+                <circle cx="79" cy="28" r="8" fill="#ffe082"/>
+                <text x="75" y="32" fontSize="10" fill="#f97316" fontWeight="bold">✦</text>
+              </svg>
+            </div>
+            <div className="kegiatan-card-judul">KONSEP BELAJAR</div>
+            <div className="kegiatan-card-desc">Atlantis Technopreneur School menerapkan sistem pembelajaran 30% Teori; 70% Praktik Penerapan dalam mencapai tujuan pembelajaran.</div>
           </div>
+
+          {/* KUNJUNGAN */}
           <div className="kegiatan-card">
-            <div className="kegiatan-card-img" style={{ backgroundImage: "url('/KunjunganBusIcon.png')" }}></div>
+            <div className="kegiatan-card-icon" style={{ background: "linear-gradient(135deg, #a18cd1 0%, #6c63ff 50%, #3b82f6 100%)" }}>
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                {/* Jalan */}
+                <rect x="10" y="72" width="80" height="10" rx="3" fill="#90a4ae"/>
+                <line x1="25" y1="77" x2="35" y2="77" stroke="#ffffff" strokeWidth="2" strokeDasharray="4,3"/>
+                <line x1="45" y1="77" x2="55" y2="77" stroke="#ffffff" strokeWidth="2" strokeDasharray="4,3"/>
+                <line x1="65" y1="77" x2="75" y2="77" stroke="#ffffff" strokeWidth="2" strokeDasharray="4,3"/>
+                {/* Bus badan */}
+                <rect x="15" y="40" width="70" height="33" rx="6" fill="#ffffff"/>
+                {/* Atap bus */}
+                <rect x="18" y="33" width="64" height="12" rx="5" fill="#ffe082"/>
+                {/* Jendela kiri */}
+                <rect x="22" y="45" width="14" height="12" rx="3" fill="#81d4fa"/>
+                <rect x="40" y="45" width="14" height="12" rx="3" fill="#81d4fa"/>
+                <rect x="58" y="45" width="14" height="12" rx="3" fill="#81d4fa"/>
+                {/* Pintu */}
+                <rect x="67" y="57" width="13" height="16" rx="2" fill="#b0bec5"/>
+                {/* Ban */}
+                <circle cx="27" cy="75" r="6" fill="#37474f"/>
+                <circle cx="27" cy="75" r="3" fill="#90a4ae"/>
+                <circle cx="73" cy="75" r="6" fill="#37474f"/>
+                <circle cx="73" cy="75" r="3" fill="#90a4ae"/>
+                {/* Lampu depan */}
+                <rect x="76" y="48" width="8" height="5" rx="2" fill="#ffe082"/>
+                {/* Tulisan bus */}
+                <rect x="22" y="35" width="35" height="7" rx="2" fill="#6c63ff"/>
+                <text x="24" y="41" fontSize="5.5" fill="#ffffff" fontWeight="bold">ATLANTIS PLUS</text>
+                {/* Awan */}
+                <ellipse cx="25" cy="25" rx="12" ry="7" fill="rgba(255,255,255,0.5)"/>
+                <ellipse cx="35" cy="22" rx="10" ry="7" fill="rgba(255,255,255,0.5)"/>
+                <ellipse cx="44" cy="25" rx="9" ry="6" fill="rgba(255,255,255,0.5)"/>
+              </svg>
+            </div>
             <div className="kegiatan-card-judul">KUNJUNGAN</div>
-            <div className="kegiatan-card-desc">Atlantis Entrepreneur School juga memiliki Program Kunjungan 
-              ke berbagai industri dalam rangka memperlihatkan siswa dalam melaksanakan kegiatan diluar sekolah</div>
+            <div className="kegiatan-card-desc">Atlantis Technopreneur School juga memiliki program kunjungan industri/pusat edukasi lainnya dalam rangka memberikan pengalaman langsung untuk memperluas wawasan, membentuk karakter, serta meningkatkan keterampilan siswa secara interaktif.</div>
           </div>
+
         </div>
       </section>
 
-      <section className="news-section">
-        <div className="bg-left-news"></div>
-        <div className="bg-right-news"></div>
-        <h2 className="news-title">
-          <span className="red-text">News</span><br />
-          <span className="blue-text">Atlantis Plus</span>
-        </h2>
-        <div className="news-content">
-          <img
-            src="/SMP DEPAN WEB.png"
-            alt="PPDB Banner SMP"
-            className="news-banner"
-          />
-          <img
-            src="/SMK DEPAN WEB.png"
-            alt="PPDB Banner SMK"
-            className="news-banner"
-          />
-        </div>
-      </section>
 
       {modalPhoto && (
         <div className="gallery-modal-backdrop" onClick={closeModal}>

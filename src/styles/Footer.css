@@ -1,211 +1,240 @@
-/* Pastikan Anda memiliki styling footer yang sudah ada */
-
-.footer {
-  display: flex;
-  flex-wrap: wrap;
+/* =============================================
+   FOOTER — tema Atlantis Plus
+   ============================================= */
+.footer-new {
+  background: #1e1e1e;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
   width: 100%;
-  box-shadow: 0 -0.25rem 0 #000; /* 4px → rem */
+  border-top: 4px solid #ec3237;
 }
 
-.footer-left {
-  background-color:#FFF9EF;
-  flex: 0 0 auto;
+.footer-new-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 2rem;
+  flex-wrap: wrap;
+}
+
+/* ---- Kolom Brand (kiri) ---- */
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-col-brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1.4;
+}
+
+.footer-logo {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.footer-brand-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.footer-school-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.footer-school-sub {
+  font-size: 0.82rem;
+  color: #f4c842;
+  margin: 0;
+  font-weight: 600;
+}
+
+.footer-address {
+  font-size: 0.82rem;
+  color: #cccccc;
+  margin: 0.5rem 0 0;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.footer-icon-inline {
+  margin-top: 3px;
+  flex-shrink: 0;
+  color: #ec3237;
+}
+
+/* ---- Kolom Kontak (tengah) ---- */
+.footer-col-contact {
+  flex: 1.3;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.88rem;
+  margin: 0 0 0.75rem;
+  color: #dddddd;
+}
+
+.footer-icon-circle {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(0.4rem, 0.6vw + 0.3rem, 0.8rem) clamp(0.6rem, 1vw + 0.5rem, 1rem);
-  box-shadow: 0 -0.25rem 0 #000;
-}
-
-.footer-left img {
-  width: clamp(4rem, 6vw, 6.25rem); /* 100px = 6.25rem */
-  margin: 0 clamp(0.3rem, 1vw, 0.6rem);
-}
-
-.footer-right {
-  background-color:#323232;
-  color: white;
-  flex: 3;
-  padding: clamp(1rem, 2vw, 1.9rem);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: clamp(10rem, 30vw, 12.5rem); /* 200px */
-  margin-bottom: clamp(1rem, 2vw, 1.3rem);
-}
-
-.footer-section h4 {
-  margin-bottom: clamp(0.4rem, 1vw, 0.6rem);
-  font-size: clamp(1rem, 1.5vw, 1.1rem);
-  color: #f4c842;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section li {
-  margin-bottom: clamp(0.3rem, 0.8vw, 0.4rem);
-}
-
-.footer-section li a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-section li a:hover {
-  color: #f4c842;
-}
-
-.footer-section p {
-  margin: clamp(0.3rem, 0.6vw, 0.4rem) 0;
-  line-height: 1.5;
-}
-
-.footer-desc {
-  margin-top: clamp(0.5rem, 1vw, 0.7rem);
-  font-size: clamp(0.8rem, 1vw, 0.9rem);
-  color: #ccc;
-}
-
-/* ======================================================== */
-/* ICONS */
-/* ======================================================== */
-.footer-section p svg {
-  margin-right: clamp(0.3rem, 0.8vw, 0.5rem);
-  vertical-align: middle;
-  font-size: 1.1em;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #ec3237;
+  font-size: 0.85rem;
+  flex-shrink: 0;
   color: #ffffff;
 }
 
-/* ======================================================== */
-/* FOOTER DROPDOWN MENU */
-/* ======================================================== */
-
-.footer-dropdown-item {
-  position: relative;
-  list-style: none;
-  margin-bottom: clamp(0.3rem, 0.6vw, 0.4rem);
+/* ---- Sosmed (bawah kontak) ---- */
+.footer-socmed-wrapper {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 1rem;
 }
 
-.footer-dropdown-toggle {
+.footer-socmed-label-title {
+  font-size: 0.78rem;
+  color: #f4c842;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.75rem;
+}
+
+.footer-socmed {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.footer-socmed-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-socmed-btn {
   display: flex;
   align-items: center;
-  cursor: pointer;
-  padding: clamp(0.1rem, 0.4vw, 0.2rem) 0;
-  color: inherit;
-  transition: color 0.3s ease;
-  font-size: 1em;
-  line-height: 1.5;
-  margin-right: clamp(0.8rem, 3vw, 1.25rem);
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 3px 10px rgba(220,39,67,0.4);
 }
 
-.footer-dropdown-toggle:hover {
+.footer-socmed-btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 18px rgba(220,39,67,0.6);
+}
+
+.footer-socmed-handle {
+  font-size: 0.75rem;
+  color: #bbbbbb;
+  white-space: nowrap;
+}
+
+/* ---- Kolom Link (kanan) ---- */
+.footer-col-links {
+  flex: 0.8;
+}
+
+.footer-links-title {
+  font-size: 0.95rem;
+  font-weight: 700;
   color: #f4c842;
+  margin: 0 0 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
-.footer-arrow-down {
-  margin-left: auto;
-  transition: transform 0.3s ease;
-  font-size: 0.8em;
-  padding-left: clamp(0.2rem, 0.5vw, 0.3rem);
-}
-
-.footer-dropdown-item.open .footer-arrow-down {
-  transform: rotate(-90deg);
-}
-
-.footer-dropdown-menu {
+.footer-links-list {
   list-style: none;
   padding: 0;
-  margin: clamp(0.3rem, 1vw, 0.5rem) 0 0 clamp(0.6rem, 2vw, 0.9rem);
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  will-change: max-height;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem 1.2rem;
 }
 
-.footer-dropdown-menu.open {
-  max-height: 12.5rem; /* 200px */
-}
-
-.footer-dropdown-menu li {
-  margin-bottom: clamp(0.2rem, 0.6vw, 0.3rem);
-}
-
-.footer-dropdown-menu li a {
-  font-size: clamp(0.85rem, 1vw, 0.95rem);
-  color: #ccc;
+.footer-links-list li a {
+  color: #cccccc;
   text-decoration: none;
-  transition: color 0.3s ease;
-  display: block;
-  padding: clamp(0.1rem, 0.4vw, 0.2rem) 0;
+  font-size: 0.88rem;
+  transition: color 0.2s ease;
 }
 
-.footer-dropdown-menu li a:hover {
-  color: #f4c842;
+.footer-links-list li a:hover {
+  color: #ec3237;
 }
 
-/* MEDIA QUERIES */
+/* ---- Copyright ---- */
+.footer-copyright {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #888888;
+  padding: 1rem 2rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ---- Responsive ---- */
 @media (max-width: 768px) {
-  .footer {
+  .footer-new-inner {
     flex-direction: column;
+    padding: 2rem 1.5rem 1.5rem;
+    gap: 1.8rem;
   }
 
-  .footer-left {
-    width: 100%;
-    justify-content: center;
-    padding: clamp(0.8rem, 2vw, 1rem) 0;
-    box-shadow: 0 0.25rem 0 #000;
+  .footer-col-brand {
+    flex-direction: row;
+    align-items: flex-start;
   }
 
-  .footer-left img {
-    width: clamp(3.5rem, 8vw, 5rem);
-    margin: 0 clamp(0.3rem, 1vw, 0.6rem);
-  }
-
-  .footer-right {
-    flex-direction: column;
-    padding: clamp(1rem, 3vw, 1.3rem);
-  }
-
-  .footer-section {
+  .footer-col {
     min-width: unset;
     width: 100%;
-    margin-bottom: clamp(1rem, 3vw, 1.6rem);
   }
 
-  .footer-section h4 {
-    font-size: clamp(0.9rem, 2vw, 1rem);
-  }
-
-  .footer-desc {
-    font-size: clamp(0.75rem, 1.5vw, 0.85rem);
+  .footer-socmed-wrapper {
+    padding-top: 1rem;
+    margin-top: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .footer-left img {
-    width: clamp(3rem, 10vw, 4rem);
-    margin: 0 clamp(0.2rem, 1vw, 0.3rem);
+  .footer-logo {
+    width: 55px;
+    height: 55px;
   }
 
-  .footer-right {
-    padding: clamp(0.8rem, 3vw, 1rem);
-  }
-
-  .footer-section h4 {
-    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
-  }
-
-  .footer-section li,
-  .footer-section p {
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
+  .footer-school-name {
+    font-size: 0.9rem;
   }
 }
