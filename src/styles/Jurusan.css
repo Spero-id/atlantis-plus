@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400&display=swap');
@@ -121,14 +121,14 @@ body {
   box-sizing: border-box;
   position: relative;
   top: -220px;
-  background-color: #FFF4E0;
+  background-color: #ffffff;
   z-index: 2;
 }
 
 .jurusan-sekolah-title {
   font-size: clamp(20px, 4vw, 25px);
   font-weight: 400;
-  color: #EC3237;
+  color: #1565c0;
   margin-bottom: 30px;
   font-family: 'Lexend Exa', sans-serif;
 }
@@ -187,7 +187,7 @@ body {
 .jurusan-section h2 {
   font-size: clamp(20px, 4vw, 25px);
   font-weight: 400;
-  color: #EC3237;
+  color: #1565c0;
   margin-bottom: 30px;
   font-family: 'Lexend Exa', sans-serif;
 }
@@ -248,7 +248,7 @@ body {
   font-style: normal;
   font-size: 20px;
   line-height: 21px;
-  letter-spacing: 5%; /* tidak valid → pakai em */
+  letter-spacing: 5%; /* tidak valid â†’ pakai em */
   letter-spacing: 0.05em;
   text-align: center;
   cursor: pointer;
@@ -274,5 +274,7 @@ body {
   line-height: 1.6;
   color: #555;
 }
+
+
 
 

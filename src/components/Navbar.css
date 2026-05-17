@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+﻿@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 
 .navbar-atlantis {
   font-family: "Montserrat", sans-serif;
@@ -6,7 +6,7 @@
   justify-content: flex-start;
   align-items: center;
   padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem);
-  background-color: #fff9eeb2;
+  background-color: #ffffffee;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   position: fixed;
@@ -17,7 +17,7 @@
   z-index: 1000;
   box-sizing: border-box;
   border-bottom: 0.4rem solid;
-  border-image: linear-gradient(to right, #ec3237) 1;
+  border-image: linear-gradient(to right, #1565c0) 1;
   box-shadow: none;
 }
 
@@ -35,7 +35,7 @@
 .navbar-brand-name {
   font-size: clamp(0.95rem, 2vw, 1.2rem);
   font-weight: 700;
-  color: #ec3237;
+  color: #1565c0;
   white-space: nowrap;
   letter-spacing: 0.02em;
 }
@@ -56,7 +56,7 @@
 }
 
 .navbar-link {
-  color: #b60606;
+  color: #1565c0;
   text-decoration: none;
   font-size: clamp(0.85rem, 2vw, 1rem);
   padding: 0.3rem 0.6rem;
@@ -111,7 +111,7 @@ li::marker {
 
 /* Login button */
 .navbar-login-button {
-  background-color: #ec3237;
+  background-color: #1565c0;
   border: 0.12rem solid #ffffff;
   color: #ffffff;
   padding: clamp(0.4rem, 1vw, 0.6rem) clamp(1rem, 3vw, 1.25rem);
@@ -130,7 +130,7 @@ li::marker {
 
 /* Buttons for PPDB links (SMP / SMK) */
 .ppdb-button {
-  background-color: #ec3237;
+  background-color: #1565c0;
   border: 0.12rem solid #ffffff;
   color: #ffffff;
   padding: clamp(0.4rem, 1vw, 0.6rem) clamp(1rem, 3vw, 1.25rem);
@@ -181,8 +181,8 @@ li::marker {
   top: calc(100% + 0.8rem);
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(255, 244, 224, 0.95);
-  border: 0.12rem solid #b60606;
+  background-color: rgba(255, 255, 255, 0.97);
+  border: 0.12rem solid #1565c0;
   border-radius: 0.6rem;
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.07);
   min-width: clamp(11rem, 20vw, 12.5rem);
@@ -207,7 +207,7 @@ li::marker {
 }
 
 .dropdown-item {
-  color: #b60606;
+  color: #1565c0;
   background: transparent;
   padding: 0.6rem 1rem;
   font-size: clamp(0.8rem, 1.5vw, 0.95rem);
@@ -222,7 +222,7 @@ li::marker {
 }
 
 .dropdown-item:hover {
-  color: #e53935;
+  color: #1976d2;
 }
 
 /* Submenu */
@@ -230,16 +230,16 @@ li::marker {
   position: absolute;
   left: 100%;
   top: 0;
-  background-color: rgba(255, 244, 224, 0.95);
-  border: 0.12rem solid #b60606;
+  background-color: rgba(255, 255, 255, 0.97);
+  border: 0.12rem solid #1565c0;
   border-radius: 0.6rem;
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.07);
   min-width: clamp(11rem, 20vw, 12.5rem);
   z-index: 1002;
-  padding: 0.8rem 0.8em;      /* ⬅ lebih lega atas-bawah */
+  padding: 0.8rem 0.8em;      /* â¬… lebih lega atas-bawah */
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;            /* ⬅ jarak antar link */
+  gap: 0.4rem;            /* â¬… jarak antar link */
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -256,8 +256,8 @@ li::marker {
 }
 
 .submenu-item {
-  color: #b60606;
-  padding: clamp(0.75rem, 1.5vw, 1rem) 1.2rem; /* ⬅ tambah padding vertikal */
+  color: #1565c0;
+  padding: clamp(0.75rem, 1.5vw, 1rem) 1.2rem; /* â¬… tambah padding vertikal */
   font-size: clamp(0.8rem, 1.5vw, 0.95rem);
   transition: background-color 0.2s ease, color 0.2s ease;
   text-decoration: none;
@@ -266,7 +266,7 @@ li::marker {
 
 
 .submenu-item:hover {
-  color: #e53935;
+  color: #1976d2;
 }
 
 .hamburger {
@@ -285,7 +285,7 @@ li::marker {
 .hamburger .bar {
   width: 1.75rem;
   height: 0.2rem;
-  background-color: #b60606;
+  background-color: #1565c0;
   border-radius: 0.12rem;
   transition: all 0.3s ease-in-out;
 }
@@ -307,7 +307,7 @@ li::marker {
     ========================= */
 @media (max-width: 1200px) {
   .navbar-menu {
-    gap: 2.5rem; /* 40px → 2.5rem */
+    gap: 2.5rem; /* 40px â†’ 2.5rem */
   }
 }
 
@@ -355,7 +355,7 @@ li::marker {
     border-bottom: 0.3125rem solid; /* 5px */
     border-image: linear-gradient(
         to right,
-       #ec3237
+       #1565c0
       )
       1;
     box-shadow: none;
@@ -374,7 +374,7 @@ li::marker {
     height: calc(100vh - 5.75rem);
     flex-direction: column;
     align-items: center;
-    background-color: rgba(255, 244, 224, 0.98);
+    background-color: rgba(255, 255, 255, 0.98);
     padding: 1.25rem 0; /* 20px 0 */
     gap: 0.9375rem; /* 15px */
     transform: translateY(-100%);
@@ -409,17 +409,17 @@ li::marker {
     width: 100%;
     box-sizing: border-box;
     border-radius: 0.5rem; /* 8px */
-    color: #b60606;
+    color: #1565c0;
   }
 
   .navbar-link:hover {
-    background-color: #ffe6b0;
-    color: #e53935;
+    background-color: #e3f0ff;
+    color: #1976d2;
   }
 
   .navbar-link.active {
-    background-color: #ffe6b0;
-    color: #b60606;
+    background-color: #e3f0ff;
+    color: #1565c0;
   }
 
   .navbar-login-button {
@@ -684,7 +684,7 @@ li::marker {
     border-bottom: 0.3125rem solid; /* 5px */
     border-image: linear-gradient(
         to right,
-       #ec3237
+       #1565c0
       )
       1;
     box-shadow: none;

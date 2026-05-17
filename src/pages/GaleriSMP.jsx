@@ -1,433 +1,195 @@
-import React from "react";
-import "../styles/GaleriSMP.css"; // Pastikan path ini benar
+import React, { useState, useEffect, useCallback } from "react";
+import "../styles/GaleriSMP.css";
 
-const cardSMPcircleData = [
-  { image: "/noimages.jpg" },
-  { image: "/noimages.jpg" },
-  { image: "/noimages.jpg" },
-  { image: "/noimages.jpg" },
-  { image: "/noimages.jpg" },
-  { image: "/noimages.jpg" },
-  { image: "/noimages.jpg" },
+const sections = [
+  {
+    id: "fasilitas",
+    title: "Fasilitas Sekolah",
+    images: [
+      "/FasilitasSMP1.jpg", "/FasilitasSMP2.jpg", "/FasilitasSMP3.jpg",
+      "/FasilitasSMP4.jpg", "/FasilitasSMP5.jpg", "/FasilitasSMP6.jpg",
+      "/FasilitasSMP7.jpg",
+    ],
+  },
+  {
+    id: "mpls",
+    title: "Masa Perkenalan Lingkungan Sekolah",
+    images: [
+      "/LingkunganSekolahSMP1.jpg", "/LingkunganSekolahSMP2.jpg", "/LingkunganSekolahSMP3.jpg",
+      "/LingkunganSekolahSMP4.jpg", "/LingkunganSekolahSMP5.jpg", "/LingkunganSekolahSMP6.jpg",
+      "/LingkunganSekolahSMP7.jpg",
+    ],
+  },
+  {
+    id: "ldks",
+    title: "Latihan Dasar Kepemimpinan Siswa",
+    images: [
+      "/KepemimpinanSiswaSMP1.jpg", "/KepemimpinanSiswaSMP2.jpg", "/KepemimpinanSiswaSMP3.jpg",
+      "/KepemimpinanSiswaSMP4.jpg", "/KepemimpinanSiswaSMP5.jpg", "/KepemimpinanSiswaSMP6.jpg",
+    ],
+  },
+  {
+    id: "sanlat",
+    title: "Sanlat Ramadhan",
+    images: [
+      "/SanlatRamadhanSMP1.jpg", "/SanlatRamadhanSMP2.jpg", "/SanlatRamadhanSMP3.jpg",
+      "/SanlatRamadhanSMP4.jpg", "/SanlatRamadhanSMP5.jpg", "/SanlatRamadhanSMP6.jpg",
+      "/SanlatRamadhanSMP7.jpg", "/SanlatRamadhanSMP8.jpg", "/SanlatRamadhanSMP9.jpg",
+      "/SanlatRamadhanSMP10.jpg", "/SanlatRamadhanSMP11.jpg",
+    ],
+  },
+  {
+    id: "atd",
+    title: "Atlantis Talent Day",
+    images: [
+      "/AtlantisTalentDaySMP1.jpg", "/AtlantisTalentDaySMP2.jpg", "/AtlantisTalentDaySMP3.jpg",
+      "/AtlantisTalentDaySMP4.png", "/AtlantisTalentDaySMP5.jpg", "/AtlantisTalentDaySMP6.jpg",
+      "/AtlantisTalentDaySMP7.png", "/AtlantisTalentDaySMP8.png", "/AtlantisTalentDaySMP9.png",
+      "/AtlantisTalentDaySMP10.jpg", "/AtlantisTalentDaySMP11.png",
+    ],
+  },
+  {
+    id: "kunjungan",
+    title: "Kunjungan Industri",
+    images: [
+      "/KunjunganIndustriSMP1.jpg", "/KunjunganIndustriSMP2.jpg", "/KunjunganIndustriSMP3.jpg",
+      "/KunjunganIndustriSMP4.jpg", "/KunjunganIndustriSMP5.jpg", "/KunjunganIndustriSMP6.jpg",
+      "/KunjunganIndustriSMP7.jpg", "/KunjunganIndustriSMP8.jpg", "/KunjunganIndustriSMP9.jpg",
+      "/KunjunganIndustriSMP10.jpg", "/KunjunganIndustriSMP11.jpg",
+    ],
+  },
+  {
+    id: "ekskul",
+    title: "Ekstrakurikuler",
+    images: [
+      "/EkstrakurikulerSMP1.jpg", "/EkstrakurikulerSMP2.jpg", "/EkstrakurikulerSMP3.jpg",
+      "/EkstrakurikulerSMP4.jpg", "/EkstrakurikulerSMP5.jpg", "/EkstrakurikulerSMP6.jpg",
+      "/EkstrakurikulerSMP7.jpg", "/EkstrakurikulerSMP8.jpg", "/EkstrakurikulerSMP9.jpg",
+    ],
+  },
 ];
-
-const fasilitasSekolahData = [
-  { image: "/FasilitasSMP1.jpg" },
-  { image: "/FasilitasSMP2.jpg" },
-  { image: "/FasilitasSMP3.jpg" },
-  { image: "/FasilitasSMP4.jpg" },
-  { image: "/FasilitasSMP5.jpg" },
-  { image: "/FasilitasSMP6.jpg" },
-  { image: "/FasilitasSMP7.jpg" },
-];
-
-const mpsLDKSData = [
-  { image: "/LingkunganSekolahSMP1.jpg" },
-  { image: "/LingkunganSekolahSMP2.jpg" },
-  { image: "/LingkunganSekolahSMP3.jpg" },
-  { image: "/LingkunganSekolahSMP4.jpg" },
-  { image: "/LingkunganSekolahSMP5.jpg" },
-  { image: "/LingkunganSekolahSMP6.jpg" },
-  { image: "/LingkunganSekolahSMP7.jpg" },
-];
-
-const LatihanDasarKepemimpinanSiswaData = [
-  { image: "/KepemimpinanSiswaSMP1.jpg" },
-  { image: "/KepemimpinanSiswaSMP2.jpg" },
-  { image: "/KepemimpinanSiswaSMP3.jpg" },
-  { image: "/KepemimpinanSiswaSMP4.jpg" },
-  { image: "/KepemimpinanSiswaSMP5.jpg" },
-  { image: "/KepemimpinanSiswaSMP6.jpg" },
-  { image: "/noimages.jpg" },
-  { image: "/noimages.jpg" },
-  { image: "/noimages.jpg" },
-  { image: "/noimages.jpg" },
-  { image: "/noimages.jpg" },
-];
-
-const SanlatRamadhanData = [
-  { image: "/SanlatRamadhanSMP1.jpg" },
-  { image: "/SanlatRamadhanSMP2.jpg" },
-  { image: "/SanlatRamadhanSMP3.jpg" },
-  { image: "/SanlatRamadhanSMP4.jpg" },
-  { image: "/SanlatRamadhanSMP5.jpg" },
-  { image: "/SanlatRamadhanSMP6.jpg" },
-  { image: "/SanlatRamadhanSMP7.jpg" },
-  { image: "/SanlatRamadhanSMP8.jpg" },
-  { image: "/SanlatRamadhanSMP9.jpg" },
-  { image: "/SanlatRamadhanSMP10.jpg" },
-  { image: "/SanlatRamadhanSMP11.jpg" },
-];
-
-const AtlantisTalentDayData = [
-  { image: "/AtlantisTalentDaySMP1.jpg" },
-  { image: "/AtlantisTalentDaySMP2.jpg" },
-  { image: "/AtlantisTalentDaySMP3.jpg" },
-  { image: "/AtlantisTalentDaySMP4.png" },
-  { image: "/AtlantisTalentDaySMP5.jpg" },
-  { image: "/AtlantisTalentDaySMP6.jpg" },
-  { image: "/AtlantisTalentDaySMP7.png" },
-  { image: "/AtlantisTalentDaySMP8.png" },
-  { image: "/AtlantisTalentDaySMP9.png" },
-  { image: "/AtlantisTalentDaySMP10.jpg" },
-  { image: "/AtlantisTalentDaySMP11.png" },
-];
-
-const KunjunganIndustriData = [
-  { image: "/KunjunganIndustriSMP1.jpg" },
-  { image: "/KunjunganIndustriSMP2.jpg" },
-  { image: "/KunjunganIndustriSMP3.jpg" },
-  { image: "/KunjunganIndustriSMP4.jpg" },
-  { image: "/KunjunganIndustriSMP5.jpg" },
-  { image: "/KunjunganIndustriSMP6.jpg" },
-  { image: "/KunjunganIndustriSMP7.jpg" },
-  { image: "/KunjunganIndustriSMP8.jpg" },
-  { image: "/KunjunganIndustriSMP9.jpg" },
-  { image: "/KunjunganIndustriSMP10.jpg" },
-  { image: "/KunjunganIndustriSMP11.jpg" },
-];
-
-const EkstrakurikulerData = [
-  { image: "/EkstrakurikulerSMP1.jpg" },
-  { image: "/EkstrakurikulerSMP2.jpg" },
-  { image: "/EkstrakurikulerSMP3.jpg" },
-  { image: "/EkstrakurikulerSMP4.jpg" },
-  { image: "/EkstrakurikulerSMP5.jpg" },
-  { image: "/EkstrakurikulerSMP6.jpg" },
-  { image: "/EkstrakurikulerSMP7.jpg" },
-  { image: "/EkstrakurikulerSMP8.jpg" },
-  { image: "/EkstrakurikulerSMP9.jpg" },
-  { image: "/noimages.jpg" },
-  { image: "/noimages.jpg" },
-];
-
-const SectionTitle = ({ title }) => (
-  <div className="section-title-wrapper">
-    <h2 className="section-title">{title}</h2>
-    <div className="red-flag"></div>
-  </div>
-);
 
 const GaleriSMP = () => {
+  const [modal, setModal] = useState(null); // { src, sectionTitle, index, images }
+
+  const openModal = useCallback((src, sectionTitle, index, images) => {
+    setModal({ src, sectionTitle, index, images });
+  }, []);
+
+  const closeModal = useCallback(() => setModal(null), []);
+
+  const navigate = useCallback((dir) => {
+    if (!modal) return;
+    const next = modal.index + dir;
+    if (next < 0 || next >= modal.images.length) return;
+    setModal({ ...modal, src: modal.images[next], index: next });
+  }, [modal]);
+
+  useEffect(() => {
+    const handler = (e) => {
+      if (e.key === "Escape") closeModal();
+      if (e.key === "ArrowRight") navigate(1);
+      if (e.key === "ArrowLeft") navigate(-1);
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [closeModal, navigate]);
+
+  useEffect(() => {
+    document.body.style.overflow = modal ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [modal]);
+
   return (
-    <div className="galeriSMP-container">
-      <section className="galeriSMP-hero">
-        <div className="galeriSMP-hero-overlay">
-          <h1 className="galeriSMP-hero-title">
-            GALERI <br /> <span className="galeri-smp-teks">SMP</span>{" "}
-            <span className="galeriSMP-atlantis-plus-teks">ATLANTIS PLUS</span>
+    <div className="gsmp-container">
+
+      {/* HERO */}
+      <section className="gsmp-hero">
+        <div className="gsmp-hero-overlay">
+          <h1 className="gsmp-hero-title">
+            GALERI<br />
+            <span className="gsmp-hero-smp">SMP</span>{" "}
+            <span className="gsmp-hero-ap">ATLANTIS PLUS</span>
           </h1>
-          <p className="galeriSMP-hero-subtitle">
-            Kegiatan juga dokumentasi kegiatan yang ada SMP ATLANTIS PLUS
-            menunjukan setiap momen dan waktu yang berharga juga tidak akan
-            pernah terlupakan sampai kapanpun, kegiatan kegiatan SMP ATLANTIS
-            PLUS sangat padat, mengadakan Event event yang ada baik nasional
-            maupun yang diadakan langsung oleh sekolah
+          <p className="gsmp-hero-sub">
+            Setiap momen berharga yang dilalui bersama — kegiatan, prestasi, dan kenangan tak terlupakan SMP Atlantis Plus.
           </p>
         </div>
       </section>
 
-      <section className="gallery-section">
-      <div className="text-content">
-        <h2 className="title">OUR GALLERY</h2>
-        <p className="description">
-          Kegiatan serta dokumentasi kegiatan yang ada di SMK ATLANTIS PLUS menjadi bukti nyata dari setiap momen
-          berharga yang dilalui bersama. Setiap foto, video, dan catatan kegiatan bukan sekadar dokumentasi, melainkan
-          juga kenangan yang akan selalu dikenang sepanjang waktu. Setiap momen yang tertangkap menyimpan cerita,
-          semangat, kerja sama, dan perjuangan yang tidak akan pernah terlupakan sampai kapan pun. Kegiatan di SMK
-          ATLANTIS PLUS sangatlah padat dan beragam, mulai dari kegiatan akademik, ekstrakurikuler, hingga berbagai event
-          besar yang diadakan secara rutin. Sekolah tidak hanya mengadakan kegiatan internal, tetapi juga aktif dalam
-          menyelenggarakan maupun mengikuti berbagai event tingkat nasional, sehingga siswa dapat mengembangkan
-          potensi, kreativitas, serta pengalaman yang lebih luas.
-        </p>
-      </div>
-
-      <div className="image-gallery">
-        <div className="image-row">
-          <div className="image-container">
-            <img src="/AtlantisTalentDaySMP10.jpg" alt="Kegiatan bersama siswa" loading="eager" />
+      {/* INTRO */}
+      <section className="gsmp-intro">
+        <div className="gsmp-intro-inner">
+          <h2 className="gsmp-intro-title">OUR GALLERY</h2>
+          <p className="gsmp-intro-desc">
+            Dokumentasi kegiatan SMP Atlantis Plus menjadi bukti nyata dari setiap momen berharga yang dilalui bersama.
+            Setiap foto bukan sekadar dokumentasi, melainkan kenangan yang akan selalu dikenang.
+            Kegiatan di SMP Atlantis Plus sangat padat dan beragam — mulai dari kegiatan akademik, ekstrakurikuler,
+            hingga berbagai event nasional yang mengembangkan potensi dan kreativitas siswa.
+          </p>
+        </div>
+        <div className="gsmp-intro-grid">
+          <div className="gsmp-intro-img-wrap gsmp-intro-img-tall">
+            <img src="/AtlantisTalentDaySMP10.jpg" alt="Kegiatan SMP" loading="eager" />
           </div>
-          <div className="image-container">
+          <div className="gsmp-intro-img-wrap">
             <img src="/GaleriImageBottomSMP.jpg" alt="Pertunjukan seni" loading="eager" />
           </div>
-        </div>
-        <div className="image-row">
-          <div className="image-container">
-            <img src="/galeri1.jpg" alt="Makan bersama di sekolah" loading="lazy" />
-          </div>
-          <div className="image-container">
-            <img src="/InformasiPageImage4.jpg" alt="Acara sekolah dengan guru dan siswa" loading="lazy" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-      <section className="fasilitas-sekolah-section">
-        <SectionTitle title="Fasilitas Sekolah" />
-        <div className="fasilitas-sekolah-grid">
-          <div className="fasilitas-sekolah-row">
-            {fasilitasSekolahData.slice(0, 3).map((item, index) => (
-              <div key={index} className="fasilitas-sekolah-card">
-                <img
-                  src={item.image}
-                  alt=""
-                  className="fasilitas-sekolah-image"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="fasilitas-sekolah-row2">
-            {fasilitasSekolahData.slice(3, 7).map((item, index) => (
-              <div key={index + 3} className="fasilitas-sekolah-card2">
-                <img
-                  src={item.image}
-                  alt=""
-                  className="fasilitas-sekolah-image2"
-                  loading="lazy"
-                />
-              </div>
-            ))}
+          <div className="gsmp-intro-img-wrap">
+            <img src="/galeri1.jpg" alt="Kegiatan bersama" loading="lazy" />
           </div>
         </div>
       </section>
 
-      <section className="mps-ldks-section">
-        <SectionTitle title="Masa Perkenalan Lingkungan Sekolah" />
-        <div className="mps-ldks-grid">
-          <div className="mps-ldks-row">
-            {mpsLDKSData.slice(0, 3).map((item, index) => (
-              <div key={index} className="mps-ldks-card">
-                <img src={item.image} alt="" className="mps-ldks-image" loading="lazy" />
-              </div>
-            ))}
-          </div>
-          <div className="mps-ldks-row2">
-            {mpsLDKSData.slice(3, 7).map((item, index) => (
-              <div key={index + 3} className="mps-ldks-card2">
-                <img src={item.image} alt="" className="mps-ldks-image2" loading="lazy" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="LatihanDasarKepemimpinanSiswa-section">
-        <SectionTitle title="Latihan Dasar Kepemimpinan Siswa" />
-        <div className="LatihanDasarKepemimpinanSiswa-grid">
-          <div className="LatihanDasarKepemimpinanSiswa-row">
-            {LatihanDasarKepemimpinanSiswaData.slice(0, 3).map(
-              (item, index) => (
-                <div key={index} className="LatihanDasarKepemimpinanSiswa-card">
-                  <img
-                    src={item.image}
-                    alt=""
-                    className="LatihanDasarKepemimpinanSiswa-image"
-                    loading="lazy"
-                  />
-                </div>
-              )
-            )}
-          </div>
-          <div className="LatihanDasarKepemimpinanSiswa-row2">
-            {LatihanDasarKepemimpinanSiswaData.slice(3, 7).map(
-              (item, index) => (
+      {/* DYNAMIC SECTIONS */}
+      {sections.map((sec, si) => (
+        <section key={sec.id} className={`gsmp-section ${si % 2 === 1 ? "gsmp-section-alt" : ""}`}>
+          <div className="gsmp-section-inner">
+            <div className="gsmp-section-head">
+              <h2 className="gsmp-section-title">{sec.title}</h2>
+              <div className="gsmp-section-line" />
+            </div>
+            <div className="gsmp-grid">
+              {sec.images.map((src, idx) => (
                 <div
-                  key={index + 3}
-                  className="LatihanDasarKepemimpinanSiswa-card2"
+                  key={idx}
+                  className="gsmp-card"
+                  onClick={() => openModal(src, sec.title, idx, sec.images)}
                 >
-                  <img
-                    src={item.image}
-                    alt=""
-                    className="LatihanDasarKepemimpinanSiswa-image2"
-                    loading="lazy"
-                  />
+                  <img src={src} alt={`${sec.title} ${idx + 1}`} loading="lazy" className="gsmp-card-img" />
+                  <div className="gsmp-card-overlay">
+                    <span className="gsmp-zoom-icon">🔍</span>
+                  </div>
                 </div>
-              )
-            )}
+              ))}
+            </div>
           </div>
-          <div className="LatihanDasarKepemimpinanSiswa-row2">
-            {LatihanDasarKepemimpinanSiswaData.slice(7, 11).map(
-              (item, index) => (
-                <div
-                  key={index + 7}
-                  className="LatihanDasarKepemimpinanSiswa-card2"
-                >
-                  <img
-                    src={item.image}
-                    alt=""
-                    className="LatihanDasarKepemimpinanSiswa-image2"
-                    loading="lazy"
-                  />
-                </div>
-              )
-            )}
-          </div>
-        </div>
-      </section>
+        </section>
+      ))}
 
-      <section className="SanlatRamadhan-section">
-        <SectionTitle title="Sanlat Ramadhan" />
-        <div className="SanlatRamadhan-grid">
-          <div className="SanlatRamadhan-row">
-            {SanlatRamadhanData.slice(0, 3).map((item, index) => (
-              <div key={index} className="SanlatRamadhan-card">
-                <img src={item.image} alt="" className="SanlatRamadhan-image" loading="lazy" />
-              </div>
-            ))}
-          </div>
-          <div className="SanlatRamadhan-row2">
-            {SanlatRamadhanData.slice(3, 7).map((item, index) => (
-              <div key={index + 3} className="SanlatRamadhan-card2">
-                <img
-                  src={item.image}
-                  alt=""
-                  className="SanlatRamadhan-image2"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="SanlatRamadhan-row2">
-            {SanlatRamadhanData.slice(7, 11).map((item, index) => (
-              <div key={index + 7} className="SanlatRamadhan-card2">
-                <img
-                  src={item.image}
-                  alt=""
-                  className="SanlatRamadhan-image2"
-                  loading="lazy"
-                />
-              </div>
-            ))}
+      {/* MODAL */}
+      {modal && (
+        <div className="gsmp-modal-backdrop" onClick={closeModal}>
+          <div className="gsmp-modal-box" onClick={(e) => e.stopPropagation()}>
+            <button className="gsmp-modal-close" onClick={closeModal}>✕</button>
+            <button
+              className="gsmp-modal-nav gsmp-modal-prev"
+              onClick={() => navigate(-1)}
+              disabled={modal.index === 0}
+            >‹</button>
+            <img src={modal.src} alt="galeri" className="gsmp-modal-img" />
+            <button
+              className="gsmp-modal-nav gsmp-modal-next"
+              onClick={() => navigate(1)}
+              disabled={modal.index === modal.images.length - 1}
+            >›</button>
+            <div className="gsmp-modal-footer">
+              <p className="gsmp-modal-section">{modal.sectionTitle}</p>
+              <p className="gsmp-modal-counter">{modal.index + 1} / {modal.images.length}</p>
+            </div>
           </div>
         </div>
-      </section>
-
-      <section className="AtlantisTalentDay-section">
-        <SectionTitle title="Atlantis Talent Day" />
-        <div className="AtlantisTalentDay-grid">
-          <div className="AtlantisTalentDay-row">
-            {AtlantisTalentDayData.slice(0, 3).map((item, index) => (
-              <div key={index} className="AtlantisTalentDay-card">
-                <img
-                  src={item.image}
-                  alt=""
-                  className="AtlantisTalentDay-image"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="AtlantisTalentDay-row2">
-            {AtlantisTalentDayData.slice(3, 7).map((item, index) => (
-              <div key={index + 3} className="AtlantisTalentDay-card2">
-                <img
-                  src={item.image}
-                  alt=""
-                  className="AtlantisTalentDay-image2"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="AtlantisTalentDay-row2">
-            {AtlantisTalentDayData.slice(7, 11).map((item, index) => (
-              <div key={index + 7} className="AtlantisTalentDay-card2">
-                <img
-                  src={item.image}
-                  alt=""
-                  className="AtlantisTalentDay-image2"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="KunjunganIndustri-section">
-        <SectionTitle title="Kunjungan Industri" />
-        <div className="KunjunganIndustri-grid">
-          <div className="KunjunganIndustri-row">
-            {KunjunganIndustriData.slice(0, 3).map((item, index) => (
-              <div key={index} className="KunjunganIndustri-card">
-                <img
-                  src={item.image}
-                  alt=""
-                  className="KunjunganIndustri-image"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="KunjunganIndustri-row2">
-            {KunjunganIndustriData.slice(3, 7).map((item, index) => (
-              <div key={index + 3} className="KunjunganIndustri-card2">
-                <img
-                  src={item.image}
-                  alt=""
-                  className="KunjunganIndustri-image2"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="KunjunganIndustri-row2">
-            {KunjunganIndustriData.slice(7, 11).map((item, index) => (
-              <div key={index + 7} className="KunjunganIndustri-card2">
-                <img
-                  src={item.image}
-                  alt=""
-                  className="KunjunganIndustri-image2"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="Ekstrakurikuler-section">
-        <SectionTitle title="Ekstrakurikuler" />
-        <div className="Ekstrakurikuler-grid">
-          <div className="Ekstrakurikuler-row">
-            {EkstrakurikulerData.slice(0, 3).map((item, index) => (
-              <div key={index} className="Ekstrakurikuler-card">
-                <img
-                  src={item.image}
-                  alt=""
-                  className="Ekstrakurikuler-image"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="Ekstrakurikuler-row2">
-            {EkstrakurikulerData.slice(3, 7).map((item, index) => (
-              <div key={index + 3} className="Ekstrakurikuler-card2">
-                <img
-                  src={item.image}
-                  alt=""
-                  className="Ekstrakurikuler-image2"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="Ekstrakurikuler-row2">
-            {EkstrakurikulerData.slice(7, 11).map((item, index) => (
-              <div key={index + 7} className="Ekstrakurikuler-card2">
-                <img
-                  src={item.image}
-                  alt=""
-                  className="Ekstrakurikuler-image2"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      )}
     </div>
   );
 };

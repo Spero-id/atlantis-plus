@@ -1,4 +1,4 @@
-.loading-container {
+﻿.loading-container {
   position: fixed;        /* nempel ke viewport */
   top: 0;
   left: 0;
@@ -21,7 +21,7 @@
   font-size: clamp(24px, 6vw, 40px);
   font-weight: 900;
   letter-spacing: 0.1em;
-  background: linear-gradient(270deg, #e53935, #ffc300, #e53935);
+  background: linear-gradient(270deg, #1565c0, #42a5f5, #1565c0);
   background-size: 600% 600%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -33,7 +33,7 @@
 .loading-percent {
   font-size: clamp(50px, 15vw, 50px);
   font-weight: 900;
-  background: linear-gradient(270deg, #e53935, #ffc300, #e53935);
+  background: linear-gradient(270deg, #1565c0, #42a5f5, #1565c0);
   background-size: 600% 600%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -71,3 +71,4 @@
     color: #fffacd;
   }
 }
+

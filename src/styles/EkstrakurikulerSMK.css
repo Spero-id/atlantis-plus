@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&display=swap');
@@ -108,7 +108,7 @@
   box-sizing: border-box;
   position: relative;
   top: -180px;
-  background-color: #FFF4E0;
+  background-color: #ffffff;
   z-index: 2;
   text-align: center;
 }
@@ -180,7 +180,7 @@
   height: 78px;
   background-color: #ffffff;
   border-radius: 50%; /* Membuat lingkaran */
-  border: 1px solid #EC3237;
+  border: 1px solid #1565c0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,7 +223,7 @@
   margin-left: -15px;
   width: 50%;
   height: 5px;
-  background-color: #EC3237;
+  background-color: #1565c0;
   clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
 }
 
@@ -237,3 +237,4 @@
   color: #d9534f; /* warna merah seperti contoh */
   letter-spacing: 0.5px;
 }
+

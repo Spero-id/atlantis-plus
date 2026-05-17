@@ -117,8 +117,8 @@ const Navbar = () => {
             }
             onClick={handleNavLinkClick}
           >
-            Informasi
-          </NavLink>
+            Profil
+</NavLink>
         </li>
 
         {/* SEKOLAH */}

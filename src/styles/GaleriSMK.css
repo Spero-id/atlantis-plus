@@ -1,4 +1,4 @@
-/* =====================
+﻿/* =====================
     GALERI SMK HERO SECTION
     ===================== */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
@@ -184,7 +184,7 @@
     font-size: 25px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: #EC3237;
+    color: #1565c0;
     position: relative;
 }
 
@@ -195,7 +195,7 @@
     left: 0;
     width: 50%;
     height: 30px;
-    background-color: #EC3237;
+    background-color: #1565c0;
     clip-path: polygon(0 0, 100% 0, 98% 100%, 0 100%);
 }
 

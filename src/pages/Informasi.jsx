@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Slider from "react-slick"; // Import React Slick
 import "../styles/Informasi.css";
 import "slick-carousel/slick/slick.css";
@@ -72,7 +72,7 @@ const Informasi = () => {
       <section className="atlantisPlus_informasi-hero">
         <div className="atlantisPlus_informasi-hero-overlay">
           <h1 className="atlantisPlus_informasi-hero-title">
-            Informasi <br />
+            PROFIL <br />
             <span className="atlantisPlus_informasi-teks">ATLANTIS PLUS</span>
           </h1>
           <p className="atlantisPlus_informasi-hero-subtitle">
@@ -81,26 +81,43 @@ const Informasi = () => {
         </div>
       </section>
 
-      {/* ===== ABOUT US ===== */}
-      <section className="atlantisPlus_about-informasi-Atlantis-plus">
-        <div className="atlantisPlus_about-us-container">
-          <div className="atlantisPlus_logo-wrapper">
-            <img
-              src="/LOGO BARU.png"
-              alt="Logo Atlantis Plus"
-              className="atlantisPlus_logo"
-            />
+      {/* ===== SEJARAH KAMI ===== */}
+      <section className="sejarah-section">
+        <div className="sejarah-header">
+          <img src="/LOGO BARU.png" alt="Logo Atlantis Plus" className="sejarah-logo" />
+          <h2 className="sejarah-title">Sejarah Kami</h2>
+          <p className="sejarah-subtitle">Perjalanan Atlantis Plus membangun pendidikan berkarakter</p>
+        </div>
+        <div className="sejarah-cards">
+          <div className="sejarah-card">
+            <div className="sejarah-card-icon">🏫</div>
+            <h3 className="sejarah-card-year">2017</h3>
+            <h4 className="sejarah-card-title">Berdirinya Yayasan</h4>
+            <p className="sejarah-card-desc">Yayasan Kebangkitan Peradaban Nusantara didirikan dengan visi membangun generasi kreatif, mandiri, dan berdaya saing global.</p>
           </div>
-          <div className="atlantisPlus_text-content">
-            <h1 className="atlantisPlus_text-content-h1">Tentang Kami</h1>
-            <p className="atlantisPlus_text-content-p">
-              Atlantis Entrepreneur School
-            </p>
+          <div className="sejarah-card">
+            <div className="sejarah-card-icon">🎓</div>
+            <h3 className="sejarah-card-year">2020</h3>
+            <h4 className="sejarah-card-title">Operasional SMK</h4>
+            <p className="sejarah-card-desc">SMK Atlantis Plus resmi beroperasi pada 3 Agustus 2020 dengan pendekatan pembelajaran inovatif berbasis kewirausahaan dan teknologi.</p>
+          </div>
+          <div className="sejarah-card">
+            <div className="sejarah-card-icon">📚</div>
+            <h3 className="sejarah-card-year">2022</h3>
+            <h4 className="sejarah-card-title">Lahirnya SMP Atlantis Plus</h4>
+            <p className="sejarah-card-desc">SMP Atlantis Plus hadir sebagai jenjang pendidikan menengah pertama yang mengedepankan karakter, kreativitas, dan semangat technopreneur sejak dini.</p>
+          </div>
+          <div className="sejarah-card">
+            <div className="sejarah-card-icon">🚀</div>
+            <h3 className="sejarah-card-year">Kini</h3>
+            <h4 className="sejarah-card-title">Atlantis Technopreneur School</h4>
+            <p className="sejarah-card-desc">Atlantis Plus terus berkembang mencetak generasi pra-wirausaha yang siap bersaing, inovatif, dan unggul dalam karakter serta profesionalisme.</p>
           </div>
         </div>
       </section>
 
       {/* ===== CONTENT 1 ===== */}
+      <div className="atlantisPlus_content1-wrapper">
       <section className="atlantisPlus_atlantis-informasi-content1">
         {/* Top Section */}
         <div className="atlantisPlus_top-section-container">
@@ -111,13 +128,7 @@ const Informasi = () => {
             </h2>
             <div className="atlantisPlus_red-underline"></div>
             <p className="atlantisPlus_description-text">
-              Atlantis Entrepreneur School adalah lembaga pendidikan yang
-              berdiri di bawah naungan Yayasan Kebangkitan Peradaban Nusantara,
-              sebuah yayasan yang memiliki visi besar untuk membangun generasi
-              penerus bangsa yang cerdas, mandiri, dan berdaya saing global
-              dengan tetap berakar pada nilai-nilai luhur kebudayaan Nusantara.
-              Melalui pendekatan pendidikan yang inovatif dan berorientasi pada
-              pengembangan karakter serta kewirausahaan.
+              Yayasan Kebangkitan Peradaban Nusantara merupakan lembaga yang konsen dalam pengembangan pendidikan kreatif, belajar dari berbagai kelemahan konsep dan praktek pendidikan di Indonesia yang semakin hari semakin tidak sistematis, bahkan cenderung melahirkan SDM yang kaku dan jauh dari nilai kreatif dan inovatif, bahkan cenderung menjadi pekerja yang stagnan dan monoton, untuk itu Yayasan Kebangkitan Peradaban Nusantara ingin membuat konsep pendidikan yang berbeda serta berorientasi terhadap pembangunan karakter, sehingga dengan demikian akan melahirkan SDM yang tangguh, mandiri dan profesional.
             </p>
           </div>
 
@@ -164,9 +175,10 @@ const Informasi = () => {
 
           <div className="atlantisPlus_right-text-blocks">
             {[
-              "Didirikan atas inisiasi Yayasan Kebangkitan Peradaban Nusantara yang menyadari lemahnya kurikulum tradisional di Indonesia, Atlantis Plus bertujuan menciptakan model sekolah yang menghargai kreativitas, inovasi, dan karakter kuat. Sejak operasional SMK pada 3 Agustus 2020, proses belajar kami mengedepankan kematangan dan fleksibilitas akademik.",
-              "Atlantis Entrepreneur School terdiri dari dua jenjang pendidikan unggulan; SMP Atlantis Plus dan SMK Atlantis Plus, berada di bawah naungan Yayasan Kebangkitan Peradaban Nusantara. Kami hadir sebagai jawaban atas kebutuhan pendidikan yang kreatif, karakter, dan berwawasan kewirausahaan sekaligus mempersiapkan siswa memiliki integritas, kemandirian, dan profesionalisme sejak dini.",
-              "Dengan visi ke depan yang jelas dan misi implementatif, Atlantis Entrepreneur School berkomitmen mencetak generasi muda pra-wirausaha yang siap bersaing, inovatif, serta unggul dalam karakter dan profesionalisme. Selamat datang dan mari bersama membangun peradaban melalui pendidikan yang transformatif.",
+              "Dalam rangka memberikan kontribusi nyata dalam dunia pendidikan di Indonesia yang memiliki dedikasi sosial untuk memajukan dunia Wirausaha Indonesia khususnya kelompok usia muda, Yayasan Kebangkitan Peradaban Nusantara mendirikan dua sekolah unggulan sekaligus, yaitu SMP Atlantis Plus dan SMK Atlantis Plus dengan nama Atlantis Technopreneur School.",
+              "Dua sekolah ini diharapkan mampu memberikan warna baru dan kontribusi nyata sebagai wujud sumbangsih dalam mengisi pembangunan di Indonesia. Atlantis Technopreneur School adalah sebuah program pendidikan formal yang diselenggarakan untuk melahirkan wirausahawan muda di bawah bimbingan langsung fasilitator dan para mentor praktisi bisnis yang berpengalaman.",
+              "Program pendidikan ini menggunakan metode Experiential Learning dimana 70% proses belajar melalui praktek dan 30% adalah teori. Metode ini menjadi efektif karena secara langsung siswa-siswi terlibat dalam aktifitas bisnis serta paham How to Start Bisnis, How to Systemized Bisnis dan How to Grow Bisnis, sehingga apabila lulus nanti siswa-siswi sangat siap menjadi pengusaha muda yang tangguh dan mandiri.",
+              "Yayasan melalui perusahaan yang dikelola oleh penggeraknya telah memberikan kontribusi nyata untuk menopang pendidikan. Dengan dana Corporate Social Responsibility (CSR) dari PT. Atlantis Kreatifindo membantu anak-anak yang kurang mampu untuk melanjutkan pendidikan. Unit Advertaising dan Production House juga menjadi sarana untuk anak-anak mempraktekkan ilmu yang mereka pelajari.",
             ].map((text, i) => (
               <p key={i} className="atlantisPlus_text-block">
                 {text}
@@ -175,6 +187,7 @@ const Informasi = () => {
           </div>
         </div>
       </section>
+      </div>
 
       {/* ===== VISI MISI ===== */}
       <section className="atlantisPlus_atlantis-content2-visi">
@@ -205,34 +218,34 @@ const Informasi = () => {
       </section>
 
       {/* ===== FASILITAS ===== */}
-      <section className="atlantisPlus_fasilitas-section">
-        <h2>Fasilitas Kami</h2>
-        <div className="atlantisPlus_fasilitas-grid">
+      <section className="fasilitas-section">
+        <div className="fasilitas-header">
+          <p className="fasilitas-label">Sarana &amp; Prasarana</p>
+          <h2 className="fasilitas-title">Fasilitas Kami</h2>
+          <p className="fasilitas-desc">
+            Atlantis Plus didukung fasilitas modern yang dirancang untuk menunjang pembelajaran aktif, kreatif, dan berkarakter demi pengembangan potensi siswa secara optimal.
+          </p>
+        </div>
+        <div className="fasilitas-grid">
           {fasilitasData.map((item, index) => (
-            <div key={index} className="atlantisPlus_fasilitas-card">
-              {item.image ? (
+            <div key={index} className="fasilitas-card">
+              <div className="fasilitas-img-wrap">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="atlantisPlus_fasilitas-image"
+                  className="fasilitas-img"
                   loading="eager"
                 />
-              ) : (
-                <div className="atlantisPlus_fasilitas-placeholder">
-                  Image not available
+                <div className="fasilitas-overlay">
+                  <span className="fasilitas-overlay-text">{item.title}</span>
                 </div>
-              )}
-              <h3>{item.title}</h3>
+              </div>
+              <div className="fasilitas-card-body">
+                <h3 className="fasilitas-card-title">{item.title}</h3>
+              </div>
             </div>
           ))}
         </div>
-        <p className="atlantisPlus_fasilitas-description">
-          Atlantis Entrepreneur School didukung oleh fasilitas modern yang
-          dirancang untuk menunjang pembelajaran aktif, kreatif, dan
-          berkarakter. Fasilitas ini mendukung pengembangan potensi siswa secara
-          optimal dalam suasana belajar yang nyaman dan berakar pada nilai-nilai
-          budaya Nusantara.
-        </p>
       </section>
 
       {/* ===== SPONSOR ===== */}

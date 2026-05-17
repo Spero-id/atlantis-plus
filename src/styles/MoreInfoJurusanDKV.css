@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700&display=swap');
 
 :root {
-  --primary-red: #EC3237;
+  --primary-red: #1565c0;
   --white: #ffffff;
   --cream: #FFF4E0;
   --dark-bg: #1D1819;
@@ -80,7 +80,7 @@
 .more-info-jurusan-dkv-hero-title {
   font-size: 42px;
   margin-bottom: 10px;
-  background: #EC3237;
+  background: #1565c0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -525,3 +525,4 @@
     padding: var(--spacing-sm);
   }
 }
+

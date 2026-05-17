@@ -111,6 +111,100 @@ html, body {
 }
 
 /* --- About Us Section --- */
+/* ===== SEJARAH KAMI ===== */
+.sejarah-section {
+  padding: 60px 20px;
+  background: #f5f8ff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sejarah-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.sejarah-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.sejarah-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #1565c0;
+  margin: 0 0 0.4rem;
+}
+
+.sejarah-subtitle {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+}
+
+.sejarah-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sejarah-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(21, 101, 192, 0.1);
+  border-top: 4px solid #1565c0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sejarah-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(21, 101, 192, 0.18);
+}
+
+.sejarah-card-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.sejarah-card-year {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1565c0;
+  margin: 0 0 0.4rem;
+}
+
+.sejarah-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 0.75rem;
+}
+
+.sejarah-card-desc {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .sejarah-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .sejarah-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== OLD ABOUT SECTION (kept for reference) ===== */
 .atlantisPlus_about-informasi-Atlantis-plus {
   padding: 40px 20px;
   display: flex;
@@ -163,6 +257,11 @@ html, body {
 }
 
 /* --- Content 1 Section (Creative, Cheerful) --- */
+.atlantisPlus_content1-wrapper {
+  background: #ffffff;
+  width: 100%;
+}
+
 .atlantisPlus_atlantis-informasi-content1 {
   padding: 40px 20px;
   max-width: 1200px;
@@ -197,13 +296,13 @@ html, body {
 
 
 .atlantisPlus_colored-title {
-  color: #EC3237;
+  color: #1565c0;
 }
 
 .atlantisPlus_red-underline {
   width: 33%;
   height: 4px;
-  background-color: #EC3237;
+  background-color: #1565c0;
   margin: 15px 0 25px;
 }
 
@@ -344,10 +443,10 @@ html, body {
 
 /* --- Section Background --- */
 .atlantisPlus_atlantis-content2-visi {
-  background-color: #A21317;
+  background-color: #1565c0;
   padding: 60px 20px;
   font-family: 'Inter', sans-serif;
-  color: #fff;  
+  color: #fff;
 }
 
 /* --- Visi Misi Container --- */
@@ -401,6 +500,128 @@ html, body {
 }
 
 /* --- Fasilitas Section --- */
+/* ===== FASILITAS KAMI (redesign) ===== */
+.fasilitas-section {
+  padding: 70px 20px;
+  background: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.fasilitas-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3rem;
+}
+
+.fasilitas-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #1565c0;
+  margin: 0 0 0.5rem;
+}
+
+.fasilitas-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: #111;
+  margin: 0 0 1rem;
+}
+
+.fasilitas-desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.fasilitas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.fasilitas-card {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fasilitas-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(21,101,192,0.15);
+}
+
+.fasilitas-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.fasilitas-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.fasilitas-card:hover .fasilitas-img {
+  transform: scale(1.07);
+}
+
+.fasilitas-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(21,101,192,0.75) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+}
+
+.fasilitas-card:hover .fasilitas-overlay {
+  opacity: 1;
+}
+
+.fasilitas-overlay-text {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.fasilitas-card-body {
+  padding: 1rem 1.2rem;
+  border-top: 3px solid #1565c0;
+}
+
+.fasilitas-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .fasilitas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .fasilitas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== OLD FASILITAS (legacy) ===== */
 .atlantisPlus_fasilitas-section {
   padding: 40px 20px;
   text-align: center;
@@ -411,7 +632,7 @@ html, body {
 .atlantisPlus_fasilitas-section h2 {
   font-size: clamp(20px, 4vw, 25px);
   font-weight: 400;
-  color: #EC3237;
+  color: #1565c0;
   margin-bottom: 30px;
   font-family: 'Lexend Exa', sans-serif;
 }

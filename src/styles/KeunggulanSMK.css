@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap");
+﻿@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap");
 
 /* KeunggulanSMK.css */
@@ -32,7 +32,7 @@
   justify-content: center;
   align-items: flex-end; /* Tetap flex-end untuk meniru Prestasi yang teksnya di bawah */
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(255, 203, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(21, 101, 192, 0.1);
 }
 
 .keunggulanSMK-hero-overlay {
@@ -55,14 +55,14 @@
 .keunggulanSMK-hero-title {
   font-size: 42px; /* Ukuran bisa disesuaikan, atau pakai clamp seperti Prestasi */
   font-weight: 800;
-  color: #fff4e0;
+  color: #ffffff;
   margin-bottom: 0.2em;
   line-height: 1.1;
   letter-spacing: 1px;
 }
 
 .keunggulanSMK-container-teks {
-  color: #fff4e0;
+  color: #ffffff;
   font-size: 65px;
 }
 
@@ -80,7 +80,7 @@
   box-sizing: border-box;
   position: relative;
   top: -180px;
-  background-color: #FFF4E0;
+  background-color: #ffffff;
   z-index: 2;
 }
 
@@ -98,7 +98,7 @@
 .keunggulanSMK-materi-title {
   font-size: 20px;
   font-weight: bold;
-  color: #ec3237;
+  color: #1565c0;
   margin-bottom: 20px;
   font-family: "Montserrat", sans-serif;
 }
@@ -144,7 +144,7 @@
 .cardSMK-title {
   font-size: 1.4em;
   font-weight: 800;
-  color: #ec3237;
+  color: #1565c0;
   margin-bottom: 8px;
 }
 
@@ -173,7 +173,7 @@
   height: 219px;
   background: linear-gradient(
     180deg,
-    #a21317 10.78%,
+    #1565c0 10.78%,
     rgba(44, 1, 1, 0.05) 100%
   );
   position: relative;
@@ -252,7 +252,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #ec3237;
+  color: #1565c0;
   margin-bottom: 40px;
   letter-spacing: 2px;
 }
@@ -312,7 +312,7 @@
 .praktek-title {
   font-size: 20px;
   font-weight: 800;
-  color: #ec3237;
+  color: #1565c0;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 2px;
   margin: 0;
@@ -369,7 +369,7 @@
 .icon-title {
   font-size: 18px;
   font-weight: 700;
-  color: #ec3237;
+  color: #1565c0;
   margin: 0 0 10px 0;
   text-transform: uppercase;
   font-family: "Albert Sans", sans-serif;
@@ -562,3 +562,5 @@
     padding: 30px 10px;
   }
 }
+
+

@@ -1,4 +1,4 @@
-/* =====================
+﻿/* =====================
    GLOBAL STYLING
    ===================== */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
@@ -46,7 +46,7 @@ html, body {
   border-bottom-left-radius: 3.125rem;
   border-bottom-right-radius: 3.125rem;
   overflow: hidden;
-  box-shadow: 0 0.5rem 2rem rgba(255, 203, 0, 0.1);
+  box-shadow: 0 0.5rem 2rem rgba(21, 101, 192, 0.1);
 }
 
 .curriculumSMP-112-copy-hero-overlay {
@@ -72,7 +72,7 @@ html, body {
 .curriculumSMP-112-copy-hero-title {
   font-size: 2.625rem;
   margin-bottom: 0.625rem;
-  background: #fff4e0;
+  background: #f0f6ff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -94,7 +94,7 @@ html, body {
 .curriculumSMP-112-copy-smp-teks {
   font-size: clamp(2.25rem, 7vw, 4.375rem);
   margin-bottom: 0.625rem;
-  background: #fff4e0;
+  background: #f0f6ff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -117,7 +117,7 @@ html, body {
    RESPONSIVE HERO SECTION
    ============================ */
 
-/* Tablet Landscape & Laptop Kecil (≤1200px) */
+/* Tablet Landscape & Laptop Kecil (â‰¤1200px) */
 @media screen and (max-width: 1200px) {
   .curriculumSMP-112-copy-hero {
     min-height: 80vh;
@@ -137,7 +137,7 @@ html, body {
   }
 }
 
-/* Tablet Potrait (≤992px) */
+/* Tablet Potrait (â‰¤992px) */
 @media screen and (max-width: 992px) {
 .curriculumSMP-112-copy-hero {
     min-height: 70vh;
@@ -168,7 +168,7 @@ html, body {
   }
 }
 
-/* Mobile Landscape (≤768px) */
+/* Mobile Landscape (â‰¤768px) */
 @media screen and (max-width: 768px) {
 .curriculumSMP-112-copy-hero {
     min-height: 60vh;
@@ -195,7 +195,7 @@ html, body {
   }
 }
 
-/* Mobile Potrait Kecil (≤576px) */
+/* Mobile Potrait Kecil (â‰¤576px) */
 @media screen and (max-width: 576px) {
   .curriculumSMP-112-copy-hero {
     min-height: 50vh;
@@ -226,7 +226,7 @@ html, body {
   }
 }
 
-/* Extra Kecil (≤400px) */
+/* Extra Kecil (â‰¤400px) */
 @media screen and (max-width: 400px) {
   .curriculumSMP-112-copy-hero {
     min-height: 45vh;
@@ -277,7 +277,7 @@ html, body {
 }
 
 .info-kurikulum-smk-box {
-  background-color: #e53935;
+  background-color: #1565c0;
   color: #fff;
   padding: 0.625rem 1.25rem;
   border-radius: 0.3125rem;
@@ -430,8 +430,8 @@ html, body {
 .pillar-box {
   flex: 1 1 33.33%;
   max-width: 21.5625rem;
-  padding: 2.1875rem 1.875rem;
-  border-radius: 0;
+  padding: 2.25rem 2rem;
+  border-radius: 1.25rem;
   color: white;
   display: flex;
   flex-direction: column;
@@ -439,31 +439,31 @@ html, body {
   text-align: left;
   position: relative;
   overflow: hidden;
-  height: 17rem;
+  min-height: 17rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.18);
 }
 
 .pillar-box:hover {
-  transform: translateY(-0.5rem);
-  box-shadow: 0 0.75rem 1.5625rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
 }
 
 .pillar-box.islamic {
   background-color: #1d1819;
-  border-top-left-radius: 1.1875rem;
-  border-bottom-left-radius: 1.1875rem;
+  border-top: 4px solid rgba(255,255,255,0.15);
 }
 
 .pillar-box.entrepreneurship {
-  background-color: #a21317;
+  background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%);
+  border-top: 4px solid rgba(255,255,255,0.3);
 }
 
 .pillar-box.technology {
   background-color: #1d1819;
   color: #ffffff;
-  border-top-right-radius: 1.1875rem;
-  border-bottom-right-radius: 1.1875rem;
+  border-top: 4px solid rgba(255,255,255,0.15);
 }
 
 .pillar-title {
@@ -483,7 +483,7 @@ html, body {
   padding-right: 1.25rem;
   text-align: left;
   font-family: "Albert Sans", sans-serif;
-  color: #fff4e0;
+  color: #ffffff;
 }
 
 .pillar-icon-smp {
@@ -561,8 +561,9 @@ html, body {
   }
 
   .pillar-box.islamic,
-  .pillar-box.technology {
-    border-radius: 0.75rem;
+  .pillar-box.technology,
+  .pillar-box.entrepreneurship {
+    border-radius: 1.25rem;
   }
 }
 
@@ -586,7 +587,7 @@ html, body {
 
 /* --- Islamic Section --- */
 .islamic-content-section-new {
-  background-color: #a21317;
+  background-color: #1565c0;
   padding: 6.25rem 0;
   position: relative;
   color: white;
@@ -750,21 +751,28 @@ html, body {
 }
 
 .islamic-card {
-  background-color: #620000;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
   overflow: hidden;
-  border: 0.625rem solid transparent;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 15rem;
-  height: 19.75rem;
-  box-shadow: -0.3125rem 0.375rem 0.725rem 0px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   margin: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.islamic-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
 }
 
 .islamic-card-image-wrapper {
   width: 100%;
-  height: 8.625rem;
+  height: 9rem;
   overflow: hidden;
 }
 
@@ -773,7 +781,11 @@ html, body {
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 0.9375rem;
+  transition: transform 0.35s ease;
+}
+
+.islamic-card:hover .islamic-card-image-wrapper img {
+  transform: scale(1.06);
 }
 
 .islamic-card-content {
@@ -782,18 +794,19 @@ html, body {
 }
 
 .islamic-card-title {
-  font-size: clamp(0.9em, 1.5vw, 1em);
-  font-weight: bold;
+  font-size: 0.85rem;
+  font-weight: 800;
   margin: 0.625rem 0 0.3125rem 0;
   text-transform: uppercase;
-  color: white;
+  color: #ffffff;
+  letter-spacing: 0.04em;
 }
 
 .islamic-card-description {
-  font-size: clamp(0.8em, 1.3vw, 0.9em);
-  line-height: 1.4;
+  font-size: 0.78rem;
+  line-height: 1.5;
   margin: 0;
-  color: #ccc;
+  color: rgba(255,255,255,0.75);
 }
 
 /* =========================
@@ -890,7 +903,7 @@ html, body {
   }
 }
 
-/* NEW: khusus 769px – 1119px */
+/* NEW: khusus 769px â€“ 1119px */
 @media (min-width: 48.0625rem) and (max-width: 69.9375rem) {
   .islamic-main-layout {
     flex-direction: column;
@@ -1168,7 +1181,7 @@ html, body {
   display: flex;
   align-items: flex-start;
   gap: 15px;
-  width: 500px;
+  width: 100%;
 }
 
 .list-icon-wrapper {
@@ -1305,11 +1318,11 @@ html, body {
 
 /* --- Teknologi Section --- */
 .teknologi-section {
-  background-color: #a01b1b;
+  background-color: #1d1819;
   color: white;
   padding: 0;
   font-family: Arial, sans-serif;
-  min-height: min(800px, 50rem); /* ganti height fix → min-height biar fleksibel */
+  min-height: min(800px, 50rem); /* ganti height fix â†’ min-height biar fleksibel */
 }
 
 .teknologi-container {
@@ -1368,7 +1381,7 @@ html, body {
   margin-top: 0;
 }
 
-/* ✅ Perubahan utama: jadikan flex row */
+/* âœ… Perubahan utama: jadikan flex row */
 .info-item {
   display: flex;
   align-items: flex-start;
@@ -1403,7 +1416,7 @@ html, body {
    RESPONSIVE - TEKNOLOGI
    ========================= */
 
-/* Tablet (≤1024px) */
+/* Tablet (â‰¤1024px) */
 @media (max-width: 64rem) {
   .teknologi-header h2 {
     font-size: clamp(2rem, 6vw, 2.8125rem);
@@ -1423,7 +1436,7 @@ html, body {
   }
 }
 
-/* Mobile (≤768px) */
+/* Mobile (â‰¤768px) */
 @media (max-width: 48rem) {
   .teknologi-content {
     flex-direction: column;
@@ -1456,7 +1469,7 @@ html, body {
   }
 }
 
-/* Mobile kecil (≤480px) */
+/* Mobile kecil (â‰¤480px) */
 @media (max-width: 30rem) {
   .teknologi-header h2 {
     font-size: clamp(1.5rem, 6vw, 2rem);
@@ -1561,4 +1574,6 @@ html, body {
   object-fit: cover;
   border-radius: 22px;
 }
+
+
 

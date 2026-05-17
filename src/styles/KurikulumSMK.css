@@ -1,4 +1,4 @@
-/* =====================
+﻿/* =====================
    GLOBAL STYLING
    ===================== */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
@@ -37,7 +37,7 @@
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(255, 203, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(21, 101, 192, 0.1);
 }
 
 .kurikulum-hero-overlay {
@@ -63,7 +63,7 @@
 .kurikulum-hero-title {
   font-size: 42px;
   margin-bottom: 10px;
-  background: #fff4e0;
+  background: #f0f6ff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -85,7 +85,7 @@
 .smp-teks {
   font-size: clamp(36px, 7vw, 70px);
   margin-bottom: 10px;
-  background: #fff4e0;
+  background: #f0f6ff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -108,7 +108,7 @@
    RESPONSIVE HERO SECTION
    ============================ */
 
-/* Tablet Landscape & Laptop Kecil (≤1200px) */
+/* Tablet Landscape & Laptop Kecil (â‰¤1200px) */
 @media screen and (max-width: 1200px) {
   .kurikulum-smk-hero {
     min-height: 80vh;
@@ -128,7 +128,7 @@
   }
 }
 
-/* Tablet Potrait (≤992px) */
+/* Tablet Potrait (â‰¤992px) */
 @media screen and (max-width: 992px) {
   .kurikulum-smk-hero {
     min-height: 70vh;
@@ -159,7 +159,7 @@
   }
 }
 
-/* Mobile Landscape (≤768px) */
+/* Mobile Landscape (â‰¤768px) */
 @media screen and (max-width: 768px) {
   .kurikulum-smk-hero {
     min-height: 60vh;
@@ -186,7 +186,7 @@
   }
 }
 
-/* Mobile Potrait Kecil (≤576px) */
+/* Mobile Potrait Kecil (â‰¤576px) */
 @media screen and (max-width: 576px) {
   .kurikulum-smk-hero {
     min-height: 50vh;
@@ -217,7 +217,7 @@
   }
 }
 
-/* Extra Kecil (≤400px) */
+/* Extra Kecil (â‰¤400px) */
 @media screen and (max-width: 400px) {
   .kurikulum-smk-hero {
     min-height: 45vh;
@@ -268,7 +268,7 @@
 }
 
 .info-kurikulum-smk-box {
-  background-color: #e53935;
+  background-color: #1565c0;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
@@ -458,7 +458,7 @@
 }
 
 .pillar-box.praktek-lapangan {
-  background-color: #a21317;
+  background-color: #1565c0;
   border-radius: 0;
 }
 
@@ -488,7 +488,7 @@
   padding-right: 20px;
   text-align: left;
   font-family: "Albert Sans", sans-serif;
-  color: #fff4e0;
+  color: #ffffff;
 }
 
 .pillar-icon {
@@ -567,7 +567,7 @@
   }
 }
 
-/* Extra small (≤480px) */
+/* Extra small (â‰¤480px) */
 @media screen and (max-width: 480px) {
   .pillar-title {
     font-size: 18px;
@@ -605,7 +605,7 @@
   font-weight: 400;
   text-align: center;
   margin-bottom: 50px;
-  color: #fff4e0;
+  color: #ffffff;
   font-family: "Paytone One", sans-serif;
 }
 
@@ -615,7 +615,7 @@
   text-align: center;
   margin-top: 70px;
   margin-bottom: 20px;
-  color: #fff4e0;
+  color: #ffffff;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -687,7 +687,7 @@
   font-size: clamp(12px, 2vw, 14px);
   font-weight: 400;
   text-align: center;
-  color: #fff4e0;
+  color: #ffffff;
   font-family: "Albert Sans", sans-serif;
   line-height: 1.4;
   max-width: 136px;
@@ -705,14 +705,14 @@
   font-weight: 400;
   text-align: justify;
   font-family: "Albert Sans", sans-serif;
-  color: #fff4e0;
+  color: #ffffff;
 }
 
 /* =========================================
    RESPONSIVE PROGRAM KEAHLIAN
    ========================================= */
 
-/* Tablet (≤1024px) */
+/* Tablet (â‰¤1024px) */
 @media (max-width: 1024px) {
   .program-keahlian-header h1 {
     font-size: clamp(22px, 4vw, 40px);
@@ -739,7 +739,7 @@
   }
 }
 
-/* Mobile (≤768px) */
+/* Mobile (â‰¤768px) */
 @media (max-width: 768px) {
   .program-keahlian-section {
     padding: 30px 15px;
@@ -804,7 +804,7 @@
   }
 }
 
-/* Extra small devices (≤480px) */
+/* Extra small devices (â‰¤480px) */
 @media (max-width: 480px) {
   .program-keahlian-header h1 {
     font-size: 20px;
@@ -877,7 +877,7 @@
   line-height: 1.6;
   margin-bottom: 40px;
   max-width: 650px;
-  color: #fff4e0;
+  color: #ffffff;
   font-weight: 400;
   font-family: "Albert Sans", sans-serif;
 }
@@ -902,7 +902,7 @@
   font-style: normal; /* 'Black' di Figma = font-weight, bukan font-style */
   line-height: 100%; /* sesuai figma */
   letter-spacing: 0.03em; /* 3% = 0.03em */
-  color: #fff4e0;
+  color: #ffffff;
   margin-bottom: 8px;
   max-width: 500px;
 }
@@ -1159,7 +1159,7 @@
    RESPONSIVE KEWIRAUSAHAAN
    =========================== */
 
-/* 1053px sampai 769px → gambar di atas, card di bawah */
+/* 1053px sampai 769px â†’ gambar di atas, card di bawah */
 @media (max-width: 1053px) and (min-width: 769px) {
   .kewirausahaan-content {
     flex-direction: column; /* ubah ke susun vertikal */
@@ -1200,7 +1200,7 @@
   }
 }
 
-/* Tablet kecil & HP (≤768px) → tetap stack */
+/* Tablet kecil & HP (â‰¤768px) â†’ tetap stack */
 @media (max-width: 768px) {
   .kewirausahaan-content {
     flex-direction: column;
@@ -1452,3 +1452,5 @@
     border-radius: 12px;
   }
 }
+
+

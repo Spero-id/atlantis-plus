@@ -1,32 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
 
 /* =====================
-    GLOBAL RESET & CONTAINER
-    ===================== */
-html,
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  box-sizing: border-box;
-}
-
+   CONTAINER
+   ===================== */
 .kg-smp-container {
-  font-family: "Montserrat", "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #333;
   min-height: 100vh;
   width: 100%;
   padding-top: 80px;
   box-sizing: border-box;
+  background: #ffffff;
 }
 
-.main-content {
-  flex: 1 0 auto;
-}
-
-/* =========================
-    HERO SECTION
-    ========================= */
+/* =====================
+   HERO
+   ===================== */
 .kg-smp-hero {
   background-image: url("/herosection.jpg");
   background-size: cover;
@@ -35,44 +24,35 @@ body {
   min-height: 88vh;
   width: 100%;
   position: relative;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(255, 203, 0, 0.1);
 }
 
 .kg-smp-overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.45);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 40px 20px 60px;
-  z-index: 1;
-  box-sizing: border-box;
+  padding: 40px 20px;
 }
 
 .kg-smp-hero-title {
-  font-size: clamp(32px, 6vw, 42px);
+  font-size: clamp(28px, 5vw, 42px);
   font-weight: 800;
-  color: #fff4e0;
-  margin-bottom: 0.2em;
-  line-height: 1.1;
+  color: #ffffff;
+  line-height: 1.2;
   letter-spacing: 1px;
+  margin: 0;
 }
 
 .kg-smp-teks1 {
-  color: #fff4e0;
+  color: #ffffff;
   font-size: clamp(40px, 8vw, 65px);
 }
 
@@ -81,817 +61,416 @@ body {
   font-size: clamp(40px, 8vw, 65px);
 }
 
-/* =========================
-    INFO SECTION
-    ========================= */
+/* =====================
+   INFO WRAPPER
+   ===================== */
 .keunggulanSMP-info-section {
   width: 100%;
-  margin: 0;
+  background: #ffffff;
+  padding: 20px 0 60px;
+  box-sizing: border-box;
+}
+
+/* =====================
+   SECTION COMMON
+   ===================== */
+.kg-section {
+  max-width: 1100px;
+  margin: 0 auto;
   padding: 60px 20px;
-  border-top-left-radius: 193px;
-  border-top-right-radius: 211px;
-  box-sizing: border-box;
-  position: relative;
-  top: -180px;
-  background-color: #FFF4E0;
-  z-index: 2;
 }
 
-/* =========================
-    KEUNGGULAN CONTENT
-    ========================= */
-.keunggulan-content-wrapper {
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.keunggulan-materi-title {
-  font-size: clamp(18px, 4vw, 20px);
-  font-weight: bold;
-  color: #ec3237;
-  margin-bottom: 20px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.keunggulan-materi-intro {
-  font-size: clamp(14px, 2.5vw, 16px);
-  line-height: 1.6;
-  color: #555;
-  margin-bottom: 40px;
-  text-align: center;
-  font-weight: 600;
-  max-width: 800px;
-}
-
-/* =========================
-    KEUNGGULAN CARDS
-    ========================= */
-.keunggulan-cards-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  width: 100%;
-  max-width: 900px;
-  margin-top: 100px;
-}
-
-.keunggulan-card {
-  background: none;
-  padding: 25px;
-  width: 500px;
+.kg-section-alt {
+  background: #f5f8ff;
   max-width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  align-items: flex-start;
-  text-align: left;
-  border-top: 5px solid transparent;
-  color: #333;
-  justify-content: space-between;
+  padding: 60px 20px;
 }
 
-.card-text-content {
-  display: flex;
-  flex-direction: column;
-  padding-right: 20px;
+.kg-section-alt > * {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.card-title-smp,
-.card-title {
-  font-size: clamp(18px, 3vw, 22px);
+.kg-section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.kg-section-label {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #1565c0;
+  background: #e3f0ff;
+  padding: 0.3rem 1rem;
+  border-radius: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.kg-section-title {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
   font-weight: 800;
-  color: #ec3237;
-  margin-bottom: 10px;
+  color: #111;
+  margin: 0 0 1rem;
 }
 
-.card-description {
-  font-size: clamp(12px, 2vw, 14px);
-  line-height: 1.5;
-  color: #000000;
-  text-align: left;
+.kg-section-subtitle {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.card-icon-wrapper {
-  position: relative;
-  flex-shrink: 0;
-  width: 150px;
-  height: 188px;
+/* =====================
+   ENTREPRENEUR CARDS
+   ===================== */
+.kg-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
 }
 
-.card-icon-background {
-  width: 100%;
-  height: 100%;
-  background-color: #b22b1b;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.kg-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(21, 101, 192, 0.08);
+  border-top: 4px solid #1565c0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.card-icon {
-  position: absolute;
-  top: -80px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 137px;
-  height: 137px;
+.kg-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(21, 101, 192, 0.16);
+}
+
+.kg-card-icon-wrap {
+  width: 80px;
+  height: 80px;
+  background: #e3f0ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+
+.kg-card-icon {
+  width: 48px;
+  height: 48px;
   object-fit: contain;
 }
 
-/* =========================
-    KEUNGGULAN BOTTOM SECTION
-    ========================= */
-.keunggulan-bottom-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  width: 100%;
-  margin-top: 40px;
-}
-
-.keunggulan-image-and-output {
-  width: 100%;
-  max-width: 950px;
-  aspect-ratio: 16/7;
-  position: relative;
-  border-top-right-radius: 60px;
-  border-bottom-right-radius: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.keunggulan-main-illustration {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-top-right-radius: 60px;
-  border-bottom-right-radius: 60px;
-  z-index: 5;
-}
-
-.output-label {
-  position: relative;
-  margin-left: -8%;
-  width: 15%;
-  height: 100%;
-  background-color: #a21317;
-  color: #fff;
-  border-top-right-radius: 50px !important;
-  border-bottom-right-radius: 50px !important;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.keunggulan-pembekalan {
-  width: 90%;
-  max-width: 950px;
-  min-height: 80px;
-  background-color: #a21317;
-  display: flex;
-  color: #fff;
-  font-size: clamp(14px, 2vw, 16px);
-  text-align: justify;
-  align-items: center;
-  border-top-right-radius: 35px;
-  border-bottom-right-radius: 35px;
-  padding: 10px 20px;
-  margin-top: -30px;
-}
-
-.keunggulan-pembekalan p {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 500px;
-  text-align: center;
-}
-
-/* =========================
-    ENGLISH DAY SECTION
-    ========================= */
-.english-day-container {
-  padding: 40px 20px;
-  font-family: "Albert Sans", Arial, sans-serif;
-}
-
-.english-day-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.english-day-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.english-day-title {
-  font-family: "Montserrat", Arial, sans-serif;
+.kg-card-title {
+  font-size: 1.1rem;
   font-weight: 800;
-  font-size: clamp(18px, 4vw, 20px);
-  line-height: 100%;
-  letter-spacing: 0.05em;
-  color: #ef4444;
-  margin-bottom: 30px;
+  color: #1565c0;
+  margin: 0 0 0.75rem;
 }
 
-.english-day-description {
-  font-family: "Albert Sans", Arial, sans-serif;
-  font-weight: 500;
-  font-size: clamp(14px, 2.5vw, 16px);
-  line-height: 100%;
-  letter-spacing: 0.03em;
-  color: #374151;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.english-day-cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 60px;
-  justify-items: center;
-}
-
-.english-day-card {
-  width: 100%;
-  max-width: 326px;
-  height: 378px;
-  background-color: white;
-  border-radius: 15px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  border: 1px solid #f3f4f6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.english-day-card-image {
-  width: 205px;
-  height: 205px;
-  margin: 0 auto 20px auto;
-  border-radius: 12px;
-  object-fit: cover;
-}
-
-.english-day-card-title {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-weight: 600;
-  font-size: clamp(18px, 3vw, 20px);
-  line-height: 100%;
-  letter-spacing: 0.06em;
-  margin-bottom: 15px;
-}
-
-.basic-title,
-.middle-title,
-.high-title {
-  color: #ef4444;
-}
-
-.english-day-card-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.english-day-card-text {
-  font-family: "Albert Sans", Arial, sans-serif;
-  font-weight: 500;
-  font-size: clamp(14px, 2.5vw, 16px);
-  line-height: 100%;
-  letter-spacing: 0.06em;
-  text-align: center;
-  color: #374151;
-  margin-bottom: 4px;
-}
-
-/* =========================
-    ADDITIONAL IMAGE SECTION
-    ========================= */
-.additional-image-section {
-  display: flex;
-  justify-content: center;
-  margin-top: 80px;
-  position: relative;
-}
-
-.additional-image-section::before {
-  content: "";
-  position: absolute;
-  top: -50px;
-  left: -50px;
-  right: -50px;
-  bottom: -50px;
-  background-color: #a21317;
-  border-radius: 30px;
-  z-index: 1;
-}
-
-.additional-image-section .additional-main-image {
-  position: relative;
-  max-width: 100%;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  z-index: 2;
-}
-
-/* =========================
-    TAHFIDZ QUR'AN SECTION
-    ========================= */
-.tahfidz-quran-section {
-  width: 100%;
-  margin-top: 60px;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.tahfidz-quran-header-box {
-  color: #b22b1b;
-  padding: 15px 30px;
-  border-radius: 8px;
-  text-align: center;
-  margin: 0 auto 30px auto;
-  max-width: 400px;
-}
-
-.tahfidz-quran-title {
-  font-size: clamp(18px, 3.5vw, 22px);
-  font-weight: 700;
-  margin: 0;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.tahfidz-quran-intro {
-  font-size: clamp(14px, 2.5vw, 16px);
-  line-height: 1.6;
+.kg-card-desc {
+  font-size: 0.88rem;
   color: #555;
-  text-align: center;
-  margin-bottom: 40px;
-  padding: 0 20px;
-  font-weight: 600;
+  line-height: 1.65;
+  margin: 0;
 }
 
-.tahfidz-juz30-card {
-  padding: 30px;
-  max-width: 800px;
-  margin: 0 auto 80px auto;
-  color: #000000;
+/* =====================
+   PEMBEKALAN BANNER
+   ===================== */
+.kg-pembekalan-banner {
   position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  max-height: 340px;
 }
 
-.tahfidz-juz30-header {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.tahfidz-juz30-title {
-  font-size: clamp(20px, 4vw, 24px);
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #b22b1b;
-  text-align: center;
-}
-
-.tahfidz-juz30-content {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.tahfidz-juz30-image-wrapper {
-  flex-shrink: 0;
-  width: 150px;
-  height: 150px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 80px;
-}
-
-.tahfidz-juz30-icon {
-  width: 328px;
-  height: 328px;
-  border-radius: 50%;
-  background: linear-gradient(
-    to bottom,
-    rgba(178, 43, 27, 1) 30%,
-    rgba(178, 43, 27, 0) 100%
-  );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.tahfidz-juz30-moon {
-  position: absolute;
-  top: 0;
-  left: 0;
+.kg-banner-img {
   width: 100%;
-  height: 100%;
-  font-size: 180px;
-  color: rgba(255, 255, 255, 0.2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: rotate(-20deg);
-  z-index: 1;
-}
-
-.tahfidz-juz30-description {
-  font-size: clamp(14px, 2vw, 16px);
-  line-height: 1.7;
-  flex-grow: 1;
-  text-align: justify;
-}
-
-.tahfidz-vertical-label-wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: #a71d1d;
-  border-top-left-radius: 40px;
-  border-bottom-left-radius: 40px;
-  padding: 55px 20px 0 80px;
-}
-
-.tahfidz-main-image {
-  width: 100%;
-  max-width: 960px;
-  height: auto;
-  aspect-ratio: 16/6;
-  border-top-left-radius: 96px;
-  border-bottom-left-radius: 96px;
+  height: 340px;
   object-fit: cover;
   display: block;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.tahfidz-output-text {
+.kg-banner-overlay {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  color: #fff;
-  font-size: clamp(14px, 2vw, 16px);
-  line-height: 1.5;
-  font-weight: 600;
-}
-
-/* =========================
-    GALLERY SECTION
-    ========================= */
-.gallery-section {
-  padding: 40px 20px;
+  inset: 0;
+  background: linear-gradient(to top, rgba(21,101,192,0.85) 0%, rgba(21,101,192,0.2) 60%, transparent 100%);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  padding: 2rem;
 }
 
-.gallery-container {
+.kg-banner-overlay p {
+  color: #fff;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 700px;
+  font-weight: 500;
+}
+
+/* =====================
+   ENGLISH DAY
+   ===================== */
+.english-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  width: 100%;
-  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.gallery-image {
+.english-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e8eef8;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.english-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(21, 101, 192, 0.15);
+}
+
+.english-card-featured {
+  border-top: 4px solid #1565c0;
+  transform: translateY(-8px);
+}
+
+.english-card-featured:hover {
+  transform: translateY(-14px);
+}
+
+.english-card-img-wrap {
+  background: #f0f6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.english-card-img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+}
+
+.english-card-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+  flex: 1;
+}
+
+.english-card-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1565c0;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+.english-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.english-card-list li {
+  font-size: 0.88rem;
+  color: #444;
+  padding: 0.4rem 0.75rem;
+  background: #f5f8ff;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* =====================
+   FULL BANNER IMAGE
+   ===================== */
+.kg-banner-full {
   width: 100%;
-  max-width: 253px;
-  height: 286px;
-  border-radius: 30px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.kg-banner-full-img {
+  width: 100%;
+  height: auto;
+  display: block;
   object-fit: cover;
 }
 
-/* =========================
-    RESPONSIVE DESIGN
-    ========================= */
-
-/* Large screens (>1200px) */
-@media (min-width: 1201px) {
-  .kg-smp-hero {
-    min-height: 88vh;
-  }
-  .keunggulan-cards-container {
-    flex-wrap: nowrap;
-    max-width: 900px;
-  }
-  .keunggulan-card {
-    width: 500px;
-  }
-  .tahfidz-quran-intro {
-    padding: 0 250px;
-  }
+/* =====================
+   TAHFIDZ
+   ===================== */
+.tahfidz-card {
+  display: flex;
+  gap: 2rem;
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(21, 101, 192, 0.08);
+  border-left: 6px solid #1565c0;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
-/* Medium screens (993px - 1200px) */
-@media (max-width: 1200px) {
-  .kg-smp-hero {
-    min-height: 80vh;
-  }
-  .keunggulan-card {
-    width: 400px;
-  }
-  .card-icon-wrapper {
-    width: 120px;
-    height: 150px;
-  }
-  .card-icon {
-    width: 110px;
-    height: 110px;
-    top: -60px;
-  }
-  .tahfidz-quran-intro {
-    padding: 0 100px;
-  }
-  .tahfidz-juz30-icon {
-    width: 250px;
-    height: 250px;
-  }
-  .tahfidz-juz30-moon {
-    font-size: 140px;
-  }
-  .gallery-container {
+.tahfidz-card-icon {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  background: #e3f0ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tahfidz-icon-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.tahfidz-card-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1565c0;
+  margin: 0 0 0.75rem;
+}
+
+.tahfidz-card-desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #444;
+  margin: 0;
+}
+
+.tahfidz-image-wrap {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.tahfidz-main-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.tahfidz-img-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(21,101,192,0.88), transparent);
+  color: #fff;
+  padding: 1.5rem 1.5rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* =====================
+   GALLERY
+   ===================== */
+.kg-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.kg-gallery-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.kg-gallery-img:hover {
+  transform: scale(1.04);
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+@media (max-width: 992px) {
+  .kg-cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
-/* Tablets (769px - 992px) */
-@media (max-width: 992px) {
-  .kg-smp-hero {
-    min-height: 70vh;
+  .english-cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
   }
-  .keunggulan-cards-container {
-    flex-direction: column;
-    align-items: center;
-    max-width: 600px;
+
+  .english-card-featured {
+    transform: none;
   }
-  .keunggulan-card {
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    max-width: 400px;
-    padding: 20px;
-    text-align: center;
+
+  .kg-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .card-text-content {
-    padding-right: 0;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  .card-description {
-    text-align: center;
-  }
-  .card-icon-wrapper {
-    width: 100px;
-    height: 125px;
-  }
-  .card-icon {
-    width: 90px;
-    height: 90px;
-    top: -50px;
-  }
-  .tahfidz-quran-intro {
-    padding: 0 50px;
-  }
-  .tahfidz-juz30-content {
+
+  .tahfidz-card {
     flex-direction: column;
     text-align: center;
   }
-  .tahfidz-juz30-description {
-    text-align: center;
-  }
-  .tahfidz-juz30-icon {
-    width: 200px;
-    height: 200px;
-  }
-  .tahfidz-juz30-moon {
-    font-size: 120px;
-  }
-  .tahfidz-vertical-label-wrapper {
-    padding: 30px 10px 0 40px;
-  }
 }
 
-@media (min-width: 360px) and (max-width: 992px) {
-  .card-description {
-    margin-bottom: 50px;
-  }
-
-  .tahfidz-juz30-icon {
-    position: relative;
-    left: 45px;
-  }
-
-  .tahfidz-juz30-title {
-    margin-bottom: 50px;
-  }
-
-  .tahfidz-juz30-description {
-    margin-top: 20px;
-  }
-}
-
-@media (min-width: 900px) and (max-width: 1152px) {
-  .keunggulan-pembekalan {
-    position: relative;
-    
-  }
-}
-
-
-
-/* Mobile phones (481px - 768px) */
 @media (max-width: 768px) {
   .kg-smp-hero {
     min-height: 60vh;
   }
-  .keunggulanSMP-info-section {
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
-    top: -100px;
-    padding: 40px 15px;
-  }
-  .keunggulan-cards-container {
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-  .keunggulan-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 95%;
-    max-width: 350px;
-    padding: 15px;
-  }
-  .card-text-content {
-    margin-top: 20px;
-    padding: 0;
-    text-align: center;
-  }
-  .card-icon-wrapper {
-    width: 80px;
-    height: 100px;
-  }
-  .card-icon {
-    width: 70px;
-    height: 70px;
-    top: -40px;
-  }
-  .output-label {
-    width: 25%;
-    margin-left: -12%;
-  }
-  .english-day-cards-container {
+
+  .kg-cards-grid {
     grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .tahfidz-juz30-icon {
-    width: 180px;
-    height: 180px;
+
+  .kg-pembekalan-banner {
+    max-height: 260px;
   }
-  .tahfidz-juz30-moon {
-    font-size: 100px;
-  }
-  .tahfidz-vertical-label-wrapper {
-    padding: 20px 10px 0 30px;
-  }
-  .gallery-container {
-    grid-template-columns: 1fr;
+
+  .kg-banner-img {
+    height: 260px;
   }
 }
 
-/* Small screens (≤480px) */
 @media (max-width: 480px) {
   .kg-smp-hero {
     min-height: 50vh;
   }
-  .keunggulanSMP-info-section {
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    top: -50px;
-    padding: 30px 10px;
-  }
-  .keunggulan-cards-container {
-    margin-top: 40px;
-  }
-  .keunggulan-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .card-text-content {
-    order: 1;
-    margin-bottom: 20px;
-    padding: 0;
-  }
-  .card-icon-wrapper {
-    order: 2;
-    width: 120px;
-    height: 120px;
-    position: relative;
-    margin-top: 10px;
-  }
-  .card-icon {
-    top: -60px;
-    width: 100px;
-    height: 100px;
-  }
-  .output-label {
-    width: 30%;
-    margin-left: -15%;
-  }
-  .keunggulan-pembekalan {
-    min-height: 60px;
-    padding: 8px 15px;
-  }
-  .tahfidz-juz30-icon {
-    width: 150px;
-    height: 150px;
-  }
-  .tahfidz-juz30-moon {
-    font-size: 80px;
-  }
-  .tahfidz-vertical-label-wrapper {
-    padding: 15px 8px 0 20px;
-  }
-  .gallery-image {
-    height: 250px;
-  }
-}
 
-/* Extra small screens (≤360px) */
-@media (max-width: 360px) {
-  .kg-smp-hero {
-    min-height: 45vh;
+  .kg-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .kg-smp-hero-title {
-    font-size: clamp(18px, 4vw, 24px);
-  }
-  .kg-smp-teks1,
-  .kg-smp-teks2 {
-    font-size: clamp(25px, 5vw, 35px);
-  }
-  .keunggulanSMP-info-section {
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    top: -30px;
-    padding: 20px 8px;
-  }
-  .keunggulan-cards-container {
-    margin-top: 30px;
-    gap: 20px;
-  }
-  .english-day-cards-container {
-    grid-template-columns: 1fr;
-  }
-  .english-day-card {
-    height: 300px;
-    padding: 15px;
-  }
-  .english-day-card-image {
-    width: 120px;
-    height: 120px;
-  }
-  .gallery-container {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-  .gallery-image {
-    height: 200px;
-    border-radius: 20px;
-  }
-}
 
-/* Orientation specific adjustments */
-@media (max-width: 768px) and (orientation: landscape) {
-  .kg-smp-hero {
-    min-height: 100vh;
+  .tahfidz-card-icon {
+    width: 90px;
+    height: 90px;
   }
-  .keunggulanSMP-info-section {
-    top: -80px;
-  }
-}
 
-/* High resolution displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .kg-smp-hero {
-    background-image: url("/herosection@2x.jpg");
+  .tahfidz-icon-img {
+    width: 56px;
+    height: 56px;
   }
 }

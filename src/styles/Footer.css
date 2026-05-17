@@ -6,7 +6,7 @@
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   width: 100%;
-  border-top: 4px solid #ec3237;
+  border-top: 4px solid #1565c0;
 }
 
 .footer-new-inner {
@@ -74,7 +74,7 @@
 .footer-icon-inline {
   margin-top: 3px;
   flex-shrink: 0;
-  color: #ec3237;
+  color: #1565c0;
 }
 
 /* ---- Kolom Kontak (tengah) ---- */
@@ -100,7 +100,7 @@
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background: #ec3237;
+  background: #1565c0;
   font-size: 0.85rem;
   flex-shrink: 0;
   color: #ffffff;
@@ -192,7 +192,7 @@
 }
 
 .footer-links-list li a:hover {
-  color: #ec3237;
+  color: #1565c0;
 }
 
 /* ---- Copyright ---- */
