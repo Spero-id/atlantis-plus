@@ -26,17 +26,15 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: calc(100vh + 5rem);
   width: 100%;
   position: relative;
-  margin: 0;
+  margin-top: -5rem;
   padding: 0;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  bottom: 30px;
 }
 
 .StrukturSekolah-hero-overlay {

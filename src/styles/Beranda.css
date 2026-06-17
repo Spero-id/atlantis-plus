@@ -28,17 +28,16 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 94vh !important;
+  min-height: calc(94vh + 5rem) !important;
   width: 100%;
   position: relative;
   margin: 0;
+  margin-top: -5rem;
   padding: 0;
-  bottom: 0.5rem;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
 }
 
 .hero-overlay {
@@ -1037,7 +1036,7 @@ body {
 /* Large screens (>1200px) */
 @media (min-width: 1201px) {
   .hero {
-    min-height: 100vh;
+    min-height: calc(100vh + 5rem);
   }
   .hero-overlay h1 {
     font-size: clamp(3.125rem, 8vw, 5rem);
@@ -1118,8 +1117,8 @@ body {
 /* Medium screens (901px - 1200px) */
 @media (max-width: 1200px) {
   .hero {
-    min-height: 95vh;
-    bottom: 1.5rem;
+    min-height: calc(95vh + 5rem);
+    margin-top: -5rem;
     width: 100vw;
     right: 1.25rem;
   }
@@ -1229,8 +1228,8 @@ body {
 /* Tablets (769px - 900px) */
 @media (max-width: 900px) {
   .hero {
-    min-height: 95vh;
-    margin: 0;
+    min-height: calc(95vh + 5rem);
+    margin-top: -5rem;
     padding: 0;
   }
   .hero-overlay h1 {
@@ -1371,8 +1370,8 @@ body {
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 100vh;
-    bottom: 1.5rem;
+    min-height: calc(100vh + 5rem);
+    margin-top: -5rem;
     width: 100vw;
     left: 0;
   }
@@ -1520,9 +1519,8 @@ body {
 
 @media (min-width: 769px) and (max-width: 1200px) {
   .hero {
-    min-height: 95vh;
-    bottom: 1.5rem;
-    bottom: 1.5rem;
+    min-height: calc(95vh + 5rem);
+    margin-top: -5rem;
     width: 100vw;
     left: 0;
   }
@@ -1539,9 +1537,8 @@ body {
 
 @media (min-width: 361px) and (max-width: 768px) {
   .hero {
-    min-height: 94vh;
-    bottom: 1.5rem;
-    bottom: 1.5rem;
+    min-height: calc(94vh + 5rem);
+    margin-top: -5rem;
     width: 100vw;
     left: 0;
   }
@@ -1561,12 +1558,11 @@ body {
   }
 }
 
-/* Small screens (â‰¤400px) */
+/* Small screens (≤400px) */
 @media (max-width: 360px) {
   .hero {
-    min-height: 50vh;
-    bottom: 1.5rem;
-    bottom: 1.5rem;
+    min-height: calc(50vh + 5rem);
+    margin-top: -5rem;
     width: 100vw;
     left: 0;
   }

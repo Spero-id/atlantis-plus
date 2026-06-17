@@ -15,9 +15,10 @@
   background-image: url("/herosection.jpg");
   background-size: cover;
   background-position: center;
-  min-height: 88vh;
+  min-height: calc(88vh + 5rem);
   width: 100%;
   position: relative;
+  margin-top: -5rem;
   display: flex;
   justify-content: center;
   align-items: center;

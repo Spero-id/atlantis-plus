@@ -1,30 +1,97 @@
 /* Styling untuk Tampilan Desktop (Default) */
 .ppdb-tutup-box {
-    border: 2px solid #5e0000;
-    border-radius: 0.75rem;
-    padding: 2.5rem 2rem;
+    border-radius: 1.25rem;
+    padding: 3rem 2.5rem;
     text-align: center;
-    background-color: #fff5f5;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffffff 60%, #fff8f0 100%);
     margin-top: 2rem;
+    box-shadow: 0 8px 32px rgba(94, 0, 0, 0.10), 0 2px 8px rgba(0,0,0,0.06);
+    border: 1.5px solid #f0c0c0;
+    position: relative;
+    overflow: hidden;
+}
+
+.ppdb-tutup-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, #5e0000, #c0392b, #e67e22);
+    border-radius: 1.25rem 1.25rem 0 0;
+}
+
+.ppdb-tutup-icon-wrap {
+    width: 5rem;
+    height: 5rem;
+    background: linear-gradient(135deg, #5e0000, #c0392b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+    box-shadow: 0 4px 16px rgba(94, 0, 0, 0.25);
 }
 
 .ppdb-tutup-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    line-height: 1;
 }
 
 .ppdb-tutup-box h3 {
     color: #5e0000;
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+}
+
+.ppdb-tutup-divider {
+    width: 3rem;
+    height: 3px;
+    background: linear-gradient(to right, #5e0000, #e67e22);
+    border-radius: 2px;
+    margin: 0.75rem auto 1.25rem;
 }
 
 .ppdb-tutup-box p {
-    color: #444;
+    color: #555;
     font-size: 1rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
+    margin-bottom: 0.6rem;
+    line-height: 1.7;
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ppdb-tutup-box p:last-of-type {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.ppdb-tutup-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.75rem;
+    padding: 0.75rem 2rem;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.ppdb-tutup-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
 }
 
 .pendaftaran-container {

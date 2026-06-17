@@ -18,19 +18,19 @@
 }
 
 .keunggulanSMK-hero {
-  background-image: url("/herosection.jpg"); /* Pastikan path gambar hero section Anda benar */
+  background-image: url("/herosection.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 88vh;
+  min-height: calc(88vh + 5rem);
   width: 100%;
   position: relative;
-  margin: 0;
+  margin-top: -5rem;
   padding: 0;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  align-items: flex-end; /* Tetap flex-end untuk meniru Prestasi yang teksnya di bawah */
+  align-items: flex-end;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(21, 101, 192, 0.1);
 }
